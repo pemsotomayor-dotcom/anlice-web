@@ -179,3 +179,9 @@ section.solutions,section.method,section.about,section.proof{padding:90px 6%}
 .impact{margin-top:24px;padding:16px 18px;border-left:4px solid #0d6efd;background:#fff;border-radius:10px}.impact b,.impact span{display:block}.impact b{font-size:22px;color:#08264a}.impact span{color:#52708c}
 .video-card{position:relative;display:block;overflow:hidden;border-radius:16px;min-height:290px;background:#08264a;text-decoration:none}.video-card img{width:100%;height:290px;object-fit:cover;display:block;opacity:.82}.video-card>span{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);display:grid;place-items:center;width:66px;height:66px;border-radius:50%;background:#fff;color:#0d6efd;font-size:28px}.video-card>b{position:absolute;left:22px;bottom:18px;color:#fff;font-size:18px}
 @media(max-width:760px){.client-logos,.client-stories,.action-panel{grid-template-columns:1fr}.clients{padding:60px 5%}.client-logo{min-height:105px}.action-panel{padding:24px}.video-card,.video-card img{min-height:220px;height:220px}}
+
+/* ANLICE official logo consistency */
+header .brand-logo{display:flex;align-items:center;background:#fff!important;border-radius:10px;padding:5px 9px;overflow:hidden}
+header .brand-logo img{display:block!important;width:190px!important;height:auto!important;max-height:58px!important;object-fit:contain!important;filter:none!important;opacity:1!important}
+footer .footer-logo img{filter:none!important;opacity:1!important;object-fit:contain!important}
+@media(max-width:760px){header .brand-logo img{width:150px!important;max-height:48px!important}}
