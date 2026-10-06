@@ -157,57 +157,6 @@ section.solutions,section.method,section.about,section.proof{padding:90px 6%}
   .about .about-photo strong{font-size:19px}
   .about .about-photo figcaption span{padding-left:16px;font-size:12px}
   .proof .quote{padding:22px;font-size:18px}
-  /* CORRECCIÓN METODOLOGÍA ANLICE - 5 PASOS HORIZONTALES */
-.method-intro {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  width: 100%;
 }
-
-.method-intro > div:first-child {
-  grid-column: 1 / -1;
-}
-
-.method-intro article {
-  display: block;
-  background: #ffffff;
-  padding: 24px 20px;
-  border-radius: 12px;
-  border-top: 3px solid #39aaf5;
-  min-height: 150px;
-}
-
-.method-intro article b {
-  display: block;
-  color: #0874e8;
-  font-size: 14px;
-  margin-bottom: 15px;
-}
-
-.method-intro article h3 {
-  margin: 0 0 12px 0;
-  color: #073763;
-  font-size: 20px;
-}
-
-.method-intro article p {
-  margin: 0;
-  color: #315675;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-/* En celular sí se acomodan verticalmente */
-@media (max-width: 768px) {
-  .method-intro {
-    grid-template-columns: 1fr;
-  }
-
-  .method-intro > div:first-child {
-    grid-column: auto;
-  }
-}
-
 
 .whatsapp-float{position:fixed;right:24px;bottom:24px;z-index:100;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;text-decoration:none;font-size:27px;box-shadow:0 8px 24px rgba(0,0,0,.22);transition:transform .2s ease,box-shadow .2s ease}.whatsapp-float:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.28)}@media(max-width:520px){.whatsapp-float{right:16px;bottom:16px;width:54px;height:54px;font-size:25px}}
