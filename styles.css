@@ -213,3 +213,10 @@ header>a.brand .brand-logo img{display:block!important;visibility:visible!import
 .method blockquote{font-size:28px!important;line-height:1.35!important;margin-top:50px!important}
 @media(max-width:1100px){.method .method-grid article h3{font-size:20px!important}.method .method-grid article p{font-size:15px!important}}
 @media(max-width:760px){.method .method-grid article{min-height:auto!important}.method .method-icon{width:58px!important;height:58px!important;font-size:30px!important}.method blockquote{font-size:23px!important}}
+
+/* Definitive desktop header logo sizing */
+header{min-height:92px!important;padding-top:10px!important;padding-bottom:10px!important}
+header>a.brand{width:300px!important;min-width:300px!important;height:72px!important;padding:0!important;margin:0!important;overflow:visible!important}
+header>a.brand .brand-logo{width:300px!important;height:72px!important;padding:0!important;margin:0!important;border-radius:0!important;background:transparent!important;overflow:visible!important}
+header>a.brand .brand-logo img{width:280px!important;height:72px!important;max-width:280px!important;max-height:72px!important;object-fit:contain!important;object-position:left center!important;margin:0!important;padding:0!important}
+@media(max-width:760px){header{min-height:74px!important}header>a.brand{width:205px!important;min-width:205px!important;height:56px!important}header>a.brand .brand-logo{width:205px!important;height:56px!important}header>a.brand .brand-logo img{width:195px!important;height:56px!important;max-width:195px!important;max-height:56px!important}}
