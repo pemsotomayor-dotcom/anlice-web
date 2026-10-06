@@ -447,3 +447,22 @@ section{scroll-margin-top:96px}
 .founder-copy{position:relative}
 .founder-copy:before{content:"";position:absolute;left:48px;top:28px;width:42px;height:3px;border-radius:3px;background:#ffc928}
 @media(max-width:760px){.founder-copy:before{left:26px;top:20px}}
+
+/* Manual clean client-logo pass: one neutral card system, no nested color blocks */
+.clients-showcase .showcase-logos{gap:22px!important}
+.clients-showcase .showcase-logos .brand-real{height:138px!important;min-height:138px!important;background:#fff!important;border:1px solid #dfeaf5!important;border-radius:18px!important;padding:18px 24px!important;overflow:hidden!important;box-shadow:0 8px 24px rgba(6,43,91,.06)!important}
+.clients-showcase .showcase-logos .brand-real.uss{background:#fff!important}
+.clients-showcase .uss-lockup{transform:none!important;gap:15px!important}
+.clients-showcase .brand-real.uss .uss-mark{background:#5cf000!important;color:#252b31!important;border-radius:4px!important;padding:10px 12px!important;font-size:36px!important;letter-spacing:-4px!important;line-height:1!important}
+.clients-showcase .uss-name{font-size:11px!important;line-height:1.12!important;color:#252b31!important}
+.clients-showcase .brand-real.parque{background:#08764e!important;padding:0!important}
+.clients-showcase .brand-real.parque::after{content:none!important;display:none!important}
+.parque-lockup{width:100%;height:100%;display:flex;align-items:center;justify-content:center;gap:12px;color:#fff}
+.parque-tree{font-size:35px;line-height:1;transform:rotate(180deg);display:inline-block}
+.parque-lockup strong{font:800 16px/.92 Arial,Helvetica,sans-serif;letter-spacing:-.02em;text-align:left;color:#fff}
+.clients-showcase .brand-real.summa{background:#fff!important;padding:16px 20px!important}
+.clients-showcase .summa-lockup{transform:none!important;height:100%!important;width:100%!important;justify-content:center!important;white-space:normal!important}
+.clients-showcase .summa-symbol{width:52px!important;height:52px!important;flex:0 0 52px!important}
+.clients-showcase .summa-divider{height:50px!important;margin:0 12px!important}
+.clients-showcase .summa-lockup strong{font-size:17px!important;line-height:.9!important;letter-spacing:-.02em!important}
+@media(max-width:760px){.clients-showcase .showcase-logos .brand-real{height:124px!important;min-height:124px!important}.clients-showcase .summa-lockup{transform:none!important}}
