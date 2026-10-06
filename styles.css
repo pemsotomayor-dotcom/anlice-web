@@ -305,3 +305,7 @@ header.site-header{position:relative!important;top:auto!important;left:auto!impo
 /* Remove stray top seam on hero */
 main,.hero{border-top:0!important;outline:0!important}
 .hero{top:auto!important}
+
+/* Exact final sizing from user's reference images */
+.showcase-logos .brand-real.uss img{transform:scale(2.05)!important;object-fit:contain!important}
+.showcase-logos .brand-real.parque img{transform:scale(3.15)!important;object-fit:contain!important}
