@@ -279,3 +279,10 @@ header.site-header .header-anlice-logo{display:block!important;visibility:visibl
 .showcase-logos .brand-real.parque img{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important}
 .showcase-logos .brand-real.summa{padding:8px 16px!important;background:#fff!important}
 .showcase-logos .brand-real.summa img{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important}
+
+/* Exact visual correction for the square source logos */
+.showcase-logos .brand-real{height:150px!important}
+.showcase-logos .brand-real.uss,.showcase-logos .brand-real.parque{overflow:hidden!important;padding:0!important}
+.showcase-logos .brand-real.uss img{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important;transform:scale(1.72)!important;transform-origin:center!important}
+.showcase-logos .brand-real.parque img{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important;transform:scale(2.05)!important;transform-origin:center!important}
+.showcase-logos .brand-real.summa img{transform:scale(1.05)!important}
