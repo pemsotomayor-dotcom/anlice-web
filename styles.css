@@ -269,3 +269,13 @@ header.site-header .header-anlice-logo{display:block!important;visibility:visibl
 .about-story-photo img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
 @media(max-width:950px){.about.about-story{grid-template-columns:1fr!important;gap:32px!important}.about-story-photo{height:420px!important}.about-story-copy h2{font-size:42px!important}}
 @media(max-width:600px){.about-story-photo{height:310px!important}.about-story-copy h2{font-size:34px!important}.about-story-copy>p{font-size:16px!important}}
+
+/* Client logos: preserve original supplied artwork and make it readable */
+.showcase-logos .brand-real{height:130px!important;min-height:130px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:14px 22px!important;box-sizing:border-box!important;overflow:hidden!important}
+.showcase-logos .brand-real img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important}
+.showcase-logos .brand-real.uss{padding:0!important;background:#55f000!important}
+.showcase-logos .brand-real.uss img{width:130px!important;height:130px!important;max-width:130px!important;max-height:130px!important}
+.showcase-logos .brand-real.parque{padding:0!important;background:#08764e!important}
+.showcase-logos .brand-real.parque img{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important}
+.showcase-logos .brand-real.summa{padding:8px 16px!important;background:#fff!important}
+.showcase-logos .brand-real.summa img{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:contain!important}
