@@ -232,3 +232,19 @@ header>a.brand .brand-logo img{width:280px!important;height:72px!important;max-w
 .site-header .site-logo{width:330px!important;height:82px!important;display:flex!important;align-items:center!important;overflow:visible!important}
 .site-header .header-anlice-logo{display:block!important;width:320px!important;height:84px!important;max-width:none!important;overflow:visible!important}
 @media(max-width:900px){.site-header .site-logo{width:245px!important;height:68px!important}.site-header .header-anlice-logo{width:238px!important;height:64px!important}}
+
+/* Client showcase matching approved reference */
+.clients-showcase{padding:70px 6% 78px!important;background:#fff!important}
+.clients-showcase>h2{font-size:clamp(38px,4vw,58px)!important;margin:5px auto 10px!important}.clients-showcase>h2 span,.testimonials-title span{color:#0868ff}
+.clients-showcase>.lead{max-width:760px!important;margin-bottom:28px!important}
+.showcase-logos{grid-template-columns:1.05fr 1.05fr 1.05fr .9fr!important;gap:20px!important;margin-bottom:30px!important}
+.showcase-logos .client-logo{height:112px!important;min-height:112px!important;border-radius:14px!important;box-shadow:0 8px 28px rgba(8,38,74,.07)!important}
+.showcase-logos .more{background:#f8fbfe!important;text-align:center!important}.showcase-logos .more span{font-size:16px!important;line-height:1.35!important;color:#294967!important}
+.testimonials-kicker{margin-top:16px!important}.testimonials-title{font-size:clamp(28px,3vw,42px);color:#08264a;margin:5px auto 20px}
+.showcase-stories{grid-template-columns:repeat(3,1fr)!important;gap:22px!important;margin-bottom:22px!important}
+.showcase-stories article{min-height:215px!important;padding:26px 30px!important}.showcase-stories p{font-size:17px!important}
+.showcase-action{grid-template-columns:.9fr 1.2fr .65fr!important;gap:28px!important;padding:18px 28px!important}
+.showcase-action .action-copy h3{font-size:32px!important;margin:6px 0 10px!important}.showcase-action .action-copy .btn{display:inline-flex;margin-top:10px}
+.showcase-action .video-card,.showcase-action .video-card img{height:268px!important;min-height:268px!important}
+.action-stats{display:flex;flex-direction:column;gap:28px}.action-stats div{padding-left:16px;border-left:3px solid #8dc9ff}.action-stats b,.action-stats span{display:block}.action-stats b{font-size:19px;color:#08264a}.action-stats span{font-size:14px;color:#55718c;margin-top:3px;line-height:1.3}
+@media(max-width:900px){.showcase-logos,.showcase-stories,.showcase-action{grid-template-columns:1fr!important}.showcase-action .video-card,.showcase-action .video-card img{height:230px!important;min-height:230px!important}}
