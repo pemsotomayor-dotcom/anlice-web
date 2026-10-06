@@ -470,3 +470,9 @@ section{scroll-margin-top:96px}
 /* Approved exact client logo strip: preserve reference unchanged */
 .clients-showcase .showcase-logos.exact-client-logos{display:block!important;max-width:1355px!important;margin:0 auto 34px!important;background:#fff!important}
 .clients-showcase .showcase-logos.exact-client-logos img{display:block!important;width:100%!important;height:auto!important;max-width:none!important;max-height:none!important;object-fit:contain!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:#fff!important}
+
+/* Exact approved Eduardo + logos composition */
+.approved-profile{background:#fff!important;padding:0!important;margin:0!important;overflow:hidden!important}
+.approved-profile img{display:block!important;width:100%!important;height:auto!important;max-width:1920px!important;margin:0 auto!important;background:#fff!important}
+@media(max-width:760px){.approved-profile{overflow-x:hidden!important}.approved-profile img{width:100%!important;height:auto!important}}
+.clients-showcase{padding-top:54px!important}
