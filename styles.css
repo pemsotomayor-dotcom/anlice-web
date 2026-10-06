@@ -316,3 +316,15 @@ main,.hero{border-top:0!important;outline:0!important}
 /* Exact uploaded client artwork: show complete square image, never crop */
 .showcase-logos .brand-real.uss,.showcase-logos .brand-real.parque{padding:0!important;overflow:hidden!important}
 .showcase-logos .brand-real.uss img,.showcase-logos .brand-real.parque img{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important}
+
+/* ANLICE methodology cards v2 */
+.method .method-grid article{padding:24px 20px 25px!important;min-height:270px!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;border-top:3px solid #1aa7ec!important}
+.method .method-top{width:100%;display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.method .method-icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,#0877ef,#36b9e9);box-shadow:0 8px 20px rgba(8,119,239,.18)}
+.method .method-icon svg{width:29px;height:29px;fill:none;stroke:#fff;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.method .method-top b{width:40px;height:40px;border-radius:50%;display:grid!important;place-items:center;background:#edf6ff;color:#0672dc!important;font-size:14px!important;margin:0!important}
+.method .method-grid h3{font-size:21px!important;margin:0 0 10px!important;color:#062f57!important}
+.method .method-grid strong{display:block;color:#0b4e86;font-size:15px;line-height:1.35;margin-bottom:8px}
+.method .method-grid p{font-size:14px!important;line-height:1.55!important;margin:0!important;color:#486985!important}
+@media(max-width:980px){.method .method-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.method .method-grid article{min-height:230px!important}}
+@media(max-width:600px){.method .method-grid{grid-template-columns:1fr!important}.method .method-grid article{min-height:auto!important}}
