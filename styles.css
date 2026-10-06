@@ -354,3 +354,15 @@ main,.hero{border-top:0!important;outline:0!important}
 .showcase-logos .brand-real.uss .uss-mark{font-family:Impact,"Arial Black",Arial,sans-serif!important;font-size:64px!important;font-weight:900!important;letter-spacing:-5px!important;line-height:1!important;color:#292d31!important;transform:scaleX(.82)!important}
 .showcase-logos .brand-real.parque{background:#08764e!important}
 .showcase-logos .brand-real.parque img{display:block!important;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;max-width:100%!important;max-height:100%!important;object-fit:cover!important;object-position:center!important;transform:none!important}
+
+/* Testimonials visual reset based on the preferred ANLICE concept */
+.clients-showcase{background:linear-gradient(180deg,#fff 0%,#f7fbff 58%,#fff 100%)!important}
+.clients-showcase .testimonials-kicker{margin-top:34px!important;text-align:center!important;letter-spacing:.28em!important;color:#173e78!important;font-size:12px!important;font-weight:800!important}
+.clients-showcase .testimonials-title{text-align:center!important;color:#062c63!important;font-size:36px!important;line-height:1.1!important;margin:8px 0 24px!important}
+.clients-showcase .testimonials-title span{color:#087cf0!important}
+.clients-showcase .showcase-stories{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:24px!important;max-width:1320px!important;margin:0 auto 28px!important}
+.clients-showcase .showcase-stories article{position:relative!important;min-height:220px!important;padding:34px 34px 28px 78px!important;border:1px solid #dce9f6!important;border-radius:20px!important;background:linear-gradient(145deg,#f8fbff,#eef6ff)!important;box-shadow:0 10px 30px rgba(18,73,125,.07)!important;display:flex!important;flex-direction:column!important}
+.clients-showcase .showcase-stories .quote-mark{position:absolute!important;left:28px!important;top:18px!important;font-size:66px!important;line-height:1!important;color:#8fc5ff!important;font-family:Georgia,serif!important;font-weight:800!important}
+.clients-showcase .showcase-stories p{margin:0!important;color:#153b67!important;font-size:16px!important;line-height:1.55!important}
+.clients-showcase .showcase-stories .story-company{margin-top:auto!important;padding-top:22px!important;color:#0874e8!important;font-size:13px!important;font-weight:900!important;letter-spacing:.13em!important}
+@media(max-width:900px){.clients-showcase .showcase-stories{grid-template-columns:1fr!important}.clients-showcase .showcase-stories article{min-height:180px!important}.clients-showcase .testimonials-title{font-size:30px!important}}
