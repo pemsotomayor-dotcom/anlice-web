@@ -347,3 +347,10 @@ main,.hero{border-top:0!important;outline:0!important}
 .showcase-logos .brand-real.parque{background:#0c744f!important}
 .showcase-logos .brand-real.uss img{width:210px!important;height:210px!important;min-width:210px!important;min-height:210px!important;max-width:none!important;max-height:none!important;object-fit:contain!important;transform:none!important}
 .showcase-logos .brand-real.parque img{width:245px!important;height:245px!important;min-width:245px!important;min-height:245px!important;max-width:none!important;max-height:none!important;object-fit:contain!important;transform:none!important}
+
+/* Emergency verified client marks: override all legacy logo rules */
+.showcase-logos .brand-real.uss,.showcase-logos .brand-real.parque{height:148px!important;min-height:148px!important;padding:0!important;overflow:hidden!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.showcase-logos .brand-real.uss{background:#5df000!important}
+.showcase-logos .brand-real.uss .uss-mark{font-family:Impact,"Arial Black",Arial,sans-serif!important;font-size:64px!important;font-weight:900!important;letter-spacing:-5px!important;line-height:1!important;color:#292d31!important;transform:scaleX(.82)!important}
+.showcase-logos .brand-real.parque{background:#08764e!important}
+.showcase-logos .brand-real.parque img{display:block!important;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;max-width:100%!important;max-height:100%!important;object-fit:cover!important;object-position:center!important;transform:none!important}
