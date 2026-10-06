@@ -422,3 +422,16 @@ section{scroll-margin-top:96px}
 .summa-lockup strong{font:800 22px/.88 Arial,sans-serif!important;letter-spacing:-.03em!important;text-align:left!important;color:#123d72!important}
 .summa-lockup em{font-style:normal!important;font-weight:500!important}
 @media(max-width:760px){.showcase-logos .brand-real{height:120px!important;min-height:120px!important}.summa-lockup strong{font-size:19px!important}.summa-symbol{width:56px!important;height:56px!important}}
+
+/* Logo row final fit: keep every mark fully inside its card */
+.showcase-logos .brand-real{height:140px!important;min-height:140px!important;overflow:hidden!important}
+.showcase-logos .brand-real.uss{padding:16px 22px!important}
+.uss-lockup{transform:scale(.88)!important;transform-origin:center!important}
+.showcase-logos .brand-real.parque{padding:18px 28px!important}
+.showcase-logos .brand-real.parque img{width:76%!important;height:76%!important;max-width:76%!important;max-height:76%!important;object-fit:contain!important}
+.showcase-logos .brand-real.summa{padding:18px 24px!important;overflow:hidden!important}
+.summa-lockup{height:100%!important;transform:scale(.78)!important;transform-origin:center!important;white-space:nowrap!important}
+.summa-symbol{width:58px!important;height:58px!important;flex:0 0 58px!important}
+.summa-divider{height:54px!important;margin:0 14px 0 10px!important}
+.summa-lockup strong{font-size:19px!important;line-height:.92!important}
+@media(max-width:760px){.summa-lockup{transform:scale(.72)!important}.uss-lockup{transform:scale(.8)!important}}
