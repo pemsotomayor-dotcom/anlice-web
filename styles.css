@@ -297,3 +297,11 @@ header.site-header .header-anlice-logo{display:block!important;visibility:visibl
 header.site-header{position:relative!important;top:auto!important;left:auto!important;right:auto!important;height:96px!important;background:#fff!important;border:0!important;box-shadow:none!important;margin:0!important}
 .hero{margin-top:0!important;border-top:0!important}
 .hero::before,.hero::after{border-top:0!important}
+
+/* WhatsApp official-style mark */
+.whatsapp-real{position:fixed!important;right:28px!important;bottom:28px!important;z-index:2147483647!important;width:64px!important;height:64px!important;border-radius:50%!important;background:#25D366!important;color:#fff!important;display:flex!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;box-shadow:0 7px 24px rgba(0,0,0,.24)!important}
+.whatsapp-real svg{display:block!important;width:39px!important;height:39px!important}
+@media(max-width:520px){.whatsapp-real{right:16px!important;bottom:16px!important;width:58px!important;height:58px!important}.whatsapp-real svg{width:35px!important;height:35px!important}}
+/* Remove stray top seam on hero */
+main,.hero{border-top:0!important;outline:0!important}
+.hero{top:auto!important}
