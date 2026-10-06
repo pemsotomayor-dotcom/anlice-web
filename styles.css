@@ -476,3 +476,7 @@ section{scroll-margin-top:96px}
 .approved-profile img{display:block!important;width:100%!important;height:auto!important;max-width:1920px!important;margin:0 auto!important;background:#fff!important}
 @media(max-width:760px){.approved-profile{overflow-x:hidden!important}.approved-profile img{width:100%!important;height:auto!important}}
 .clients-showcase{padding-top:54px!important}
+
+/* Emergency exact profile render */
+section.approved-profile{display:block!important;position:relative!important;width:100%!important;max-width:none!important;height:auto!important;min-height:0!important;margin:0!important;padding:0!important;background:#fff!important;overflow:visible!important}
+section.approved-profile>img{display:block!important;position:relative!important;inset:auto!important;width:100%!important;max-width:1536px!important;height:auto!important;min-height:0!important;max-height:none!important;object-fit:contain!important;object-position:center!important;margin:0 auto!important;padding:0!important;opacity:1!important;visibility:visible!important;transform:none!important}
