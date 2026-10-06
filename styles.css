@@ -201,3 +201,15 @@ header>a.brand .brand-logo img{display:block!important;visibility:visible!import
 .method .method-grid article h3{margin-top:5px}
 .method blockquote{max-width:900px;margin:42px auto 0!important;position:relative}
 @media(max-width:760px){.method .method-grid:before{display:none}.method .method-icon{width:44px;height:44px;font-size:24px}}
+
+/* Methodology readability correction */
+.method .method-grid{gap:18px!important}
+.method .method-grid article{min-height:230px!important;padding:28px 24px 24px!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important}
+.method .method-icon{width:64px!important;height:64px!important;border-radius:16px!important;font-size:34px!important;margin-bottom:20px!important;line-height:1!important}
+.method .method-grid article>b{width:42px!important;height:42px!important;font-size:14px!important;right:20px!important;top:28px!important}
+.method .method-grid article h3{font-size:22px!important;line-height:1.15!important;margin:6px 0 10px!important;color:#062d55!important}
+.method .method-grid article p{font-size:16px!important;line-height:1.45!important;margin:0!important;color:#496983!important}
+.method .method-grid:before{top:61px!important}
+.method blockquote{font-size:28px!important;line-height:1.35!important;margin-top:50px!important}
+@media(max-width:1100px){.method .method-grid article h3{font-size:20px!important}.method .method-grid article p{font-size:15px!important}}
+@media(max-width:760px){.method .method-grid article{min-height:auto!important}.method .method-icon{width:58px!important;height:58px!important;font-size:30px!important}.method blockquote{font-size:23px!important}}
