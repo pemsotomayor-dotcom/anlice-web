@@ -405,3 +405,20 @@ section{scroll-margin-top:96px}
 .founder-copy>p:not(.expert-role):not(.founder-title){max-width:650px;color:#4b6987;line-height:1.7;font-size:16px}
 .founder-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}.founder-tags span{padding:9px 13px;border-radius:999px;background:#eef7ff;color:#0b65bd;font-size:12px;font-weight:800}
 @media(max-width:760px){.founder-card{grid-template-columns:1fr}.founder-photo-wrap{height:330px;min-height:0}.founder-copy{padding:32px 26px}}
+
+/* Client brand lockups: stable inline rendering, no broken external logo assets */
+.showcase-logos{align-items:stretch!important}
+.showcase-logos .brand-real{height:132px!important;min-height:132px!important;border-radius:16px!important;box-shadow:0 10px 26px rgba(10,54,95,.07)!important}
+.showcase-logos .brand-real.uss{background:#5CF000!important}
+.uss-lockup{display:flex!important;align-items:center!important;justify-content:center!important;gap:18px!important;width:100%!important}
+.showcase-logos .brand-real.uss .uss-mark{font-family:Impact,"Arial Black",Arial,sans-serif!important;font-size:48px!important;letter-spacing:-5px!important;color:#252b31!important;transform:scaleX(.82)!important}
+.uss-name{color:#252b31!important;font:800 12px/1.12 Arial,sans-serif!important;text-align:left!important}
+.showcase-logos .brand-real.parque{background:#08764e!important;padding:14px 24px!important}
+.showcase-logos .brand-real.parque img{width:82%!important;height:82%!important;max-width:82%!important;max-height:82%!important;object-fit:contain!important}
+.showcase-logos .brand-real.summa{background:#fff!important;padding:14px 22px!important;border:1px solid #e5eef7!important}
+.summa-lockup{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;color:#123d72!important}
+.summa-symbol{width:64px!important;height:64px!important;flex:0 0 64px!important}
+.summa-divider{width:1px!important;height:58px!important;background:#9db0c5!important;margin:0 16px 0 12px!important}
+.summa-lockup strong{font:800 22px/.88 Arial,sans-serif!important;letter-spacing:-.03em!important;text-align:left!important;color:#123d72!important}
+.summa-lockup em{font-style:normal!important;font-weight:500!important}
+@media(max-width:760px){.showcase-logos .brand-real{height:120px!important;min-height:120px!important}.summa-lockup strong{font-size:19px!important}.summa-symbol{width:56px!important;height:56px!important}}
