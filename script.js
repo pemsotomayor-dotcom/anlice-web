@@ -1,1 +1,36 @@
-const menu=document.querySelector('.menu'),nav=document.querySelector('nav');menu?.addEventListener('click',()=>{nav.style.display=nav.style.display==='flex'?'none':'flex';if(nav.style.display==='flex'){Object.assign(nav.style,{position:'absolute',top:'70px',left:'0',right:'0',background:'#fff',padding:'22px',flexDirection:'column',boxShadow:'0 15px 30px #0001'})}});document.getElementById('contactForm')?.addEventListener('submit',e=>{e.preventDefault();document.getElementById('formMsg').textContent='Formulario listo. Conectaremos el envío antes de publicar.'});
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('#main-nav');
+
+function closeMenu() {
+  nav?.classList.remove('is-open');
+  menu?.setAttribute('aria-expanded', 'false');
+  menu?.setAttribute('aria-label', 'Abrir menú');
+}
+
+menu?.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('is-open');
+  menu.setAttribute('aria-expanded', String(isOpen));
+  menu.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+});
+
+nav?.addEventListener('click', (event) => {
+  if (event.target.closest('a')) closeMenu();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && menu?.getAttribute('aria-expanded') === 'true') {
+    closeMenu();
+    menu.focus();
+  }
+});
+
+document.addEventListener('click', (event) => {
+  if (!event.target.closest('header')) closeMenu();
+});
+
+window.matchMedia('(min-width: 1101px)').addEventListener('change', closeMenu);
+
+document.getElementById('contactForm')?.addEventListener('submit', (event) => {
+  event.preventDefault();
+  document.getElementById('formMsg').textContent = 'Formulario listo. Conectaremos el envío antes de publicar.';
+});
