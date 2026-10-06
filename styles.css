@@ -312,3 +312,7 @@ main,.hero{border-top:0!important;outline:0!important}
 
 /* Correct source-image fit: no zoom, no horizontal clipping */
 .showcase-logos .brand-real.uss img,.showcase-logos .brand-real.parque img{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:center!important;transform:none!important}
+
+/* Exact uploaded client artwork: show complete square image, never crop */
+.showcase-logos .brand-real.uss,.showcase-logos .brand-real.parque{padding:0!important;overflow:hidden!important}
+.showcase-logos .brand-real.uss img,.showcase-logos .brand-real.parque img{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important}
