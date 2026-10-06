@@ -366,3 +366,9 @@ main,.hero{border-top:0!important;outline:0!important}
 .clients-showcase .showcase-stories p{margin:0!important;color:#153b67!important;font-size:16px!important;line-height:1.55!important}
 .clients-showcase .showcase-stories .story-company{margin-top:auto!important;padding-top:22px!important;color:#0874e8!important;font-size:13px!important;font-weight:900!important;letter-spacing:.13em!important}
 @media(max-width:900px){.clients-showcase .showcase-stories{grid-template-columns:1fr!important}.clients-showcase .showcase-stories article{min-height:180px!important}.clients-showcase .testimonials-title{font-size:30px!important}}
+
+/* Client logo scale polish: reduce marks only, never distort */
+.showcase-logos .client-logo{height:148px!important}
+.showcase-logos .brand-real.uss .uss-mark{font-size:54px!important;transform:scaleX(.82)!important}
+.showcase-logos .brand-real.parque img{width:88%!important;height:88%!important;max-width:88%!important;max-height:88%!important;object-fit:contain!important;object-position:center!important;transform:none!important}
+.showcase-logos .brand-real.summa img{width:88%!important;height:88%!important;max-width:88%!important;max-height:88%!important;object-fit:contain!important;object-position:center!important;transform:none!important}
