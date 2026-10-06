@@ -328,3 +328,9 @@ main,.hero{border-top:0!important;outline:0!important}
 .method .method-grid p{font-size:14px!important;line-height:1.55!important;margin:0!important;color:#486985!important}
 @media(max-width:980px){.method .method-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.method .method-grid article{min-height:230px!important}}
 @media(max-width:600px){.method .method-grid{grid-template-columns:1fr!important}.method .method-grid article{min-height:auto!important}}
+
+
+/* Methodology icon final polish */
+.method .method-icon{background:linear-gradient(145deg,#087cf0,#27afe9)!important;border-radius:14px!important;box-shadow:0 9px 22px rgba(8,124,240,.20)!important}
+.method .method-icon svg{width:28px!important;height:28px!important;fill:none!important;stroke:#fff!important;stroke-width:1.8!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+.method .method-icon svg *{fill:none!important;stroke:#fff!important}
