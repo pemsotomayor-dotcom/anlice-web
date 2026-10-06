@@ -435,3 +435,8 @@ section{scroll-margin-top:96px}
 .summa-divider{height:54px!important;margin:0 14px 0 10px!important}
 .summa-lockup strong{font-size:19px!important;line-height:.92!important}
 @media(max-width:760px){.summa-lockup{transform:scale(.72)!important}.uss-lockup{transform:scale(.8)!important}}
+
+/* Parque del Recuerdo: remove two-tone background caused by source image */
+.showcase-logos .brand-real.parque{background:#08764e!important;padding:0!important;position:relative!important}
+.showcase-logos .brand-real.parque img{display:none!important}
+.showcase-logos .brand-real.parque::after{content:"♣  PARQUE DEL\A RECUERDO";white-space:pre;display:flex;align-items:center;justify-content:center;text-align:left;width:100%;height:100%;color:#fff;font:800 17px/.88 Arial,Helvetica,sans-serif;letter-spacing:-.02em}
