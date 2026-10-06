@@ -480,3 +480,20 @@ section{scroll-margin-top:96px}
 /* Emergency exact profile render */
 section.approved-profile{display:block!important;position:relative!important;width:100%!important;max-width:none!important;height:auto!important;min-height:0!important;margin:0!important;padding:0!important;background:#fff!important;overflow:visible!important}
 section.approved-profile>img{display:block!important;position:relative!important;inset:auto!important;width:100%!important;max-width:1536px!important;height:auto!important;min-height:0!important;max-height:none!important;object-fit:contain!important;object-position:center!important;margin:0 auto!important;padding:0!important;opacity:1!important;visibility:visible!important;transform:none!important}
+
+/* Reliable founder profile, rebuilt from approved reference */
+.profile-final{background:#fff!important;padding:42px 5vw 34px!important;text-align:center!important;overflow:hidden!important}
+.profile-photo{width:min(520px,70vw)!important;margin:0 auto 8px!important;position:relative!important;background:radial-gradient(ellipse at center,#dceeff 0,#eef7ff 55%,#fff 72%)!important;border-radius:48% 52% 44% 56%!important}
+.profile-photo img{display:block!important;width:100%!important;height:auto!important;max-height:470px!important;object-fit:contain!important;object-position:center bottom!important;margin:0 auto!important}
+.profile-kicker{margin:6px 0 2px!important;color:#72b7ff!important;font-weight:800!important;letter-spacing:.38em!important;font-size:15px!important}
+.profile-final h2{margin:0!important;color:#062c63!important;font-size:clamp(36px,4vw,58px)!important;line-height:1.05!important}
+.profile-focus{margin:8px 0 30px!important;color:#60769a!important;font-size:clamp(16px,1.8vw,24px)!important}
+.profile-facts{display:grid!important;grid-template-columns:repeat(4,1fr)!important;gap:20px!important;max-width:1320px!important;margin:0 auto 30px!important;text-align:left!important}
+.profile-facts>div{display:flex!important;align-items:center!important;gap:16px!important;border-right:1px solid #d8e7f5!important;padding:4px 20px!important}
+.profile-facts>div:last-child{border-right:0!important}
+.profile-facts span{flex:0 0 58px!important;width:58px!important;height:58px!important;border-radius:50%!important;background:#eaf5ff!important;color:#0878f5!important;display:grid!important;place-items:center!important;font-size:28px!important}
+.profile-facts p{margin:0!important;color:#60769a!important;font-size:15px!important;line-height:1.35!important}
+.profile-facts b{color:#062c63!important;font-size:17px!important}
+.profile-logos-exact{display:block!important;width:min(1340px,100%)!important;height:auto!important;margin:0 auto!important;background:#fff!important}
+@media(max-width:850px){.profile-facts{grid-template-columns:1fr 1fr!important}.profile-facts>div{border-right:0!important}.profile-photo{width:min(460px,90vw)!important}}
+@media(max-width:520px){.profile-facts{grid-template-columns:1fr!important}.profile-final{padding-left:22px!important;padding-right:22px!important}}
