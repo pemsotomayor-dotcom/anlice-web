@@ -227,3 +227,8 @@ header>a.brand .brand-logo img{width:280px!important;height:72px!important;max-w
 .site-header .site-logo img{display:block!important;width:275px!important;height:74px!important;max-width:none!important;max-height:none!important;object-fit:contain!important;object-position:left center!important;margin:0!important;padding:0!important;visibility:visible!important;opacity:1!important}
 .site-header nav{justify-self:center!important}.site-header .header-cta{justify-self:end!important}.site-header .menu{justify-self:end!important}
 @media(max-width:900px){.site-header{grid-template-columns:220px 1fr auto!important;height:82px!important;min-height:82px!important}.site-header .site-logo{width:210px!important;height:64px!important}.site-header .site-logo img{width:205px!important;height:60px!important}.site-header nav{display:none}.site-header .header-cta{display:none}}
+
+/* Header logo inline SVG: no image crop, no inherited img rules */
+.site-header .site-logo{width:330px!important;height:82px!important;display:flex!important;align-items:center!important;overflow:visible!important}
+.site-header .header-anlice-logo{display:block!important;width:320px!important;height:84px!important;max-width:none!important;overflow:visible!important}
+@media(max-width:900px){.site-header .site-logo{width:245px!important;height:68px!important}.site-header .header-anlice-logo{width:238px!important;height:64px!important}}
