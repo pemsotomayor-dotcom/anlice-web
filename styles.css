@@ -466,3 +466,7 @@ section{scroll-margin-top:96px}
 .clients-showcase .summa-divider{height:50px!important;margin:0 12px!important}
 .clients-showcase .summa-lockup strong{font-size:17px!important;line-height:.9!important;letter-spacing:-.02em!important}
 @media(max-width:760px){.clients-showcase .showcase-logos .brand-real{height:124px!important;min-height:124px!important}.clients-showcase .summa-lockup{transform:none!important}}
+
+/* Approved exact client logo strip: preserve reference unchanged */
+.clients-showcase .showcase-logos.exact-client-logos{display:block!important;max-width:1355px!important;margin:0 auto 34px!important;background:#fff!important}
+.clients-showcase .showcase-logos.exact-client-logos img{display:block!important;width:100%!important;height:auto!important;max-width:none!important;max-height:none!important;object-fit:contain!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:#fff!important}
