@@ -259,3 +259,13 @@ header.site-header .header-anlice-logo{display:block!important;visibility:visibl
 .showcase-logos .brand-real img{display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important}
 .showcase-logos .brand-real.uss{background:#55f000!important}
 .showcase-logos .brand-real.parque{background:#08764e!important}
+
+/* Expanded ANLICE story */
+.about.about-story{display:grid!important;grid-template-columns:minmax(0,1.02fr) minmax(480px,.98fr)!important;gap:64px!important;align-items:center!important;padding-top:80px!important;padding-bottom:80px!important}
+.about-story-copy h2{font-size:clamp(42px,4.1vw,64px)!important;line-height:1.05!important;max-width:720px!important;margin:14px 0 28px!important}
+.about-story-copy>p{font-size:18px!important;line-height:1.65!important;max-width:760px!important;margin:0 0 19px!important}
+.about-story .about-close{font-size:18px!important;line-height:1.55!important;margin-top:26px!important;padding:22px 24px!important;border-left:4px solid #0868ff!important;background:#eef6ff!important;border-radius:10px!important}
+.about-story-photo{margin:0!important;width:100%!important;height:560px!important;border-radius:20px!important;overflow:hidden!important;box-shadow:0 20px 50px rgba(8,38,74,.13)!important}
+.about-story-photo img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
+@media(max-width:950px){.about.about-story{grid-template-columns:1fr!important;gap:32px!important}.about-story-photo{height:420px!important}.about-story-copy h2{font-size:42px!important}}
+@media(max-width:600px){.about-story-photo{height:310px!important}.about-story-copy h2{font-size:34px!important}.about-story-copy>p{font-size:16px!important}}
