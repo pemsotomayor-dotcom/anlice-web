@@ -292,3 +292,8 @@ header.site-header .header-anlice-logo{display:block!important;visibility:visibl
 .showcase-logos .brand-real.uss img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;transform:scale(1.05)!important}
 .showcase-logos .brand-real.parque img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;transform:scale(1.52)!important}
 .showcase-logos .brand-real.summa img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:center!important;transform:scale(1.08)!important}
+
+/* Final hero/header seam correction */
+header.site-header{position:relative!important;top:auto!important;left:auto!important;right:auto!important;height:96px!important;background:#fff!important;border:0!important;box-shadow:none!important;margin:0!important}
+.hero{margin-top:0!important;border-top:0!important}
+.hero::before,.hero::after{border-top:0!important}
