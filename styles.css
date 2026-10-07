@@ -734,3 +734,15 @@ body.quiz-open{overflow:hidden}
 
 .profile-orgs-grid .org-logo-card img{display:block;max-width:86%;max-height:68px;width:auto;height:auto;object-fit:contain}
 .profile-orgs-grid .org-logo-card:last-child img{max-height:76px}
+
+
+/* Organization strip v3: one unified visual band */
+.profile-orgs-grid{display:grid!important;grid-template-columns:minmax(0,3fr) minmax(150px,1fr) minmax(150px,1fr)!important;gap:0!important;align-items:center!important;padding:10px 18px!important;background:#fff!important;border:1px solid #e5edf5!important;border-radius:18px!important;box-shadow:0 10px 26px rgba(6,44,99,.045)!important;overflow:hidden!important}
+.profile-orgs-grid .profile-logos-exact,.profile-orgs-grid .org-logo-card{height:82px!important;border:0!important;border-radius:0!important;background:#fff!important;box-shadow:none!important;margin:0!important}
+.profile-orgs-grid .profile-logos-exact{padding:6px 20px!important;object-fit:contain!important;border-right:1px solid #edf2f7!important}
+.profile-orgs-grid .org-logo-card{position:relative!important;padding:6px 20px!important}
+.profile-orgs-grid .org-logo-card+ .org-logo-card:before{content:""!important;position:absolute!important;left:0!important;top:18px!important;bottom:18px!important;width:1px!important;background:#edf2f7!important}
+.profile-orgs-grid .org-logo-card img{max-width:82%!important;max-height:58px!important;object-fit:contain!important}
+.profile-orgs-grid .org-logo-card:last-child img{max-height:64px!important}
+@media(max-width:900px){.profile-orgs-grid{grid-template-columns:1fr 1fr!important}.profile-orgs-grid .profile-logos-exact{grid-column:1/-1!important;border-right:0!important;border-bottom:1px solid #edf2f7!important}.profile-orgs-grid .org-logo-card+ .org-logo-card:before{top:12px!important;bottom:12px!important}}
+@media(max-width:520px){.profile-orgs-grid{grid-template-columns:1fr!important;padding:8px 14px!important}.profile-orgs-grid .profile-logos-exact{grid-column:auto!important}.profile-orgs-grid .org-logo-card{border-top:1px solid #edf2f7!important}.profile-orgs-grid .org-logo-card+ .org-logo-card:before{display:none!important}}
