@@ -718,3 +718,16 @@ body.quiz-open{overflow:hidden}
 .activa-lower .activa-dims span{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:9px!important}
 .activa-lower .activa-dims span i{display:grid!important;place-items:center!important;width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;margin:0 auto!important;border-radius:50%!important;font-style:normal!important;font-size:23px!important;line-height:1!important;opacity:1!important;visibility:visible!important}
 .activa-lower .activa-dims span b{display:block!important;margin:0!important}
+
+
+/* Facilitator organizations: explicitly separate personal experience from ANLICE clients */
+.profile-orgs{max-width:1320px;margin:28px auto 0;padding-top:22px;border-top:1px solid #e4edf6;text-align:center}
+.profile-orgs-label{margin:0 0 6px!important;color:#5b83ad!important;font-size:11px!important;font-weight:850!important;letter-spacing:.18em!important}
+.profile-orgs-note{max-width:920px;margin:0 auto 18px!important;color:#8191a4!important;font-size:11px!important;line-height:1.45!important}
+.profile-orgs-grid{display:grid;grid-template-columns:minmax(520px,2.4fr) 1fr 1fr;gap:14px;align-items:stretch}
+.profile-orgs-grid .profile-logos-exact{width:100%!important;height:88px!important;object-fit:contain!important;margin:0!important;padding:8px 18px!important;border:1px solid #e5edf5!important;border-radius:15px!important;background:#fff!important;box-shadow:0 8px 20px rgba(6,44,99,.035)!important}
+.org-logo-card{height:88px;display:flex;align-items:center;justify-content:center;border:1px solid #e5edf5;border-radius:15px;background:#fff;box-shadow:0 8px 20px rgba(6,44,99,.035)}
+.org-utp{gap:0}.org-utp span{width:50px;height:48px;display:grid;place-items:center;font-size:25px;font-weight:900;color:#fff;background:#c81035}.org-utp span:nth-child(2){background:#111}
+.org-zegel{gap:10px;color:#c91b3d}.org-zegel>b{font-size:46px;font-style:italic;line-height:1}.org-zegel div{text-align:left;line-height:.9}.org-zegel strong{display:block;font-size:25px}.org-zegel small{display:block;margin-top:7px;font-size:17px;font-weight:800}
+@media(max-width:900px){.profile-orgs-grid{grid-template-columns:1fr 1fr}.profile-orgs-grid .profile-logos-exact{grid-column:1/-1}}
+@media(max-width:520px){.profile-orgs-grid{grid-template-columns:1fr}.profile-orgs-grid .profile-logos-exact{grid-column:auto}.profile-orgs-note{font-size:10px!important}}
