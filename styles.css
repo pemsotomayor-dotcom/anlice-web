@@ -876,3 +876,12 @@ body.quiz-open{overflow:hidden}
   border-color:#91c8f6!important;
   z-index:10!important;
 }
+
+
+/* v13 continuous soft floating motion */
+@keyframes anliceSoftFloat{0%,100%{translate:0 0}50%{translate:0 -8px}}
+.activa-lower .activa-dims>span,.anlice-impulsa .impulsa-skills>span{animation:anliceSoftFloat 3s ease-in-out infinite!important}
+.activa-lower .activa-dims>span:nth-child(2),.anlice-impulsa .impulsa-skills>span:nth-child(2){animation-delay:.22s!important}
+.activa-lower .activa-dims>span:nth-child(3),.anlice-impulsa .impulsa-skills>span:nth-child(3){animation-delay:.44s!important}
+.activa-lower .activa-dims>span:nth-child(4),.anlice-impulsa .impulsa-skills>span:nth-child(4){animation-delay:.66s!important}
+.activa-lower .activa-dims>span:nth-child(5),.anlice-impulsa .impulsa-skills>span:nth-child(5){animation-delay:.88s!important}
