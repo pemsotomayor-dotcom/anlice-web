@@ -697,3 +697,18 @@ body.quiz-open{overflow:hidden}
 .anlice-impulsa .impulsa-skills span:nth-child(2):after{background:#ff5d91}.anlice-impulsa .impulsa-skills span:nth-child(4):after{background:#9669ef}.anlice-impulsa .impulsa-skills span:nth-child(5):after{background:#ffbd17}
 @media(max-width:1100px){.anlice-impulsa .impulsa-skills{grid-template-columns:repeat(3,1fr)!important}}
 @media(max-width:650px){.anlice-impulsa .impulsa-skills{grid-template-columns:1fr 1fr!important;gap:10px!important}.anlice-impulsa .impulsa-skills span{min-height:190px!important;padding:18px 10px!important}.anlice-impulsa .impulsa-skills i{width:60px;height:60px;font-size:30px}.anlice-impulsa .impulsa-skills b{font-size:14px!important}.anlice-impulsa .impulsa-skills small{font-size:11px!important}}
+
+
+/* ACTIVA dimensions — uniform, softer visual system */
+.activa-dims{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:10px!important;align-items:stretch!important}
+.activa-dims span{min-height:126px!important;padding:16px 8px 14px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:10px!important;text-align:center!important;border-radius:20px!important;border:1px solid #e2edf7!important;background:#f5faff!important;color:#062c63!important;box-shadow:none!important}
+.activa-dims span:nth-child(2){background:#fff9e9!important}.activa-dims span:nth-child(3){background:#f4f9ff!important}.activa-dims span:nth-child(4){background:#f0faf7!important}.activa-dims span:nth-child(5){background:#f6f4ff!important}
+.activa-dims i{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;background:#e5f2ff;color:#3d83ca;font-style:normal;font-size:22px;font-weight:700}
+.activa-dims span:nth-child(2) i{background:#fff3d2;color:#c89328}.activa-dims span:nth-child(3) i{background:#eaf3ff;color:#487cb7}.activa-dims span:nth-child(4) i{background:#e5f5ef;color:#4c927e}.activa-dims span:nth-child(5) i{background:#eeeafb;color:#746ca8}
+.activa-dims b{font-size:13px!important;line-height:1.25!important;font-weight:800!important;color:#062c63!important}
+@media(max-width:1000px){.activa-dims{grid-template-columns:repeat(3,1fr)!important}}
+@media(max-width:650px){.activa-dims{grid-template-columns:1fr 1fr!important}.activa-dims span{min-height:112px!important}.activa-dims i{width:40px;height:40px;font-size:20px}}
+/* soften IMPULSA icon treatment */
+.anlice-impulsa .impulsa-skills i{font-size:30px!important;filter:saturate(.72)!important;box-shadow:none!important}
+.anlice-impulsa .impulsa-skills span{box-shadow:0 12px 28px rgba(8,66,130,.055)!important}
+.anlice-impulsa .impulsa-skills span:hover{box-shadow:0 17px 34px rgba(8,66,130,.09)!important}
