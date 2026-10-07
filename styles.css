@@ -1525,3 +1525,8 @@ img{max-width:100%}
 .profile-final .profile-orgs .exact-approved-band{height:180px!important;min-height:0!important}
 .profile-final .profile-orgs .exact-approved-band img{height:180px!important;width:100%!important;object-fit:fill!important}
 @media(max-width:680px){.profile-final .profile-orgs .exact-approved-band,.profile-final .profile-orgs .exact-approved-band img{height:115px!important}}
+
+/* v43: reduce logo artwork slightly inside the already-approved smaller band */
+.profile-final .profile-orgs .exact-approved-band{background:#e2f2ff!important}
+.profile-final .profile-orgs .exact-approved-band img{width:92%!important;height:160px!important;margin:10px auto!important;object-fit:fill!important}
+@media(max-width:680px){.profile-final .profile-orgs .exact-approved-band img{height:101px!important;margin:7px auto!important}}
