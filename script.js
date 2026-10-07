@@ -91,3 +91,19 @@ document.getElementById('contactForm')?.addEventListener('submit', (event) => {
  const contact=document.getElementById('impulsaContact');const msg='Hola ANLICE, hice mi Perfil IMPULSA. Obtuve '+total+'/100 y quiero reforzar '+gap+'. Mi siguiente paso recomendado es '+a[1]+'. Quisiera orientación para mejorar mi perfil.';contact.href='https://wa.me/51903220257?text='+encodeURIComponent(msg);contact.target='_blank';contact.rel='noopener noreferrer';}
  document.getElementById('restartImpulsa').addEventListener('click',reset);
 })();
+
+
+/* Persistent selection motion for ACTIVA + IMPULSA visual cards */
+(()=>{
+ const cards=[...document.querySelectorAll('.activa-dims span, .impulsa-skills span')];
+ cards.forEach(card=>{
+   card.setAttribute('tabindex','0');
+   const select=()=>{
+     const group=card.parentElement;
+     group.querySelectorAll('span.is-selected').forEach(x=>{if(x!==card)x.classList.remove('is-selected')});
+     card.classList.toggle('is-selected');
+   };
+   card.addEventListener('click',select);
+   card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select();}});
+ });
+})();
