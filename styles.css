@@ -545,3 +545,18 @@ blockquote{font-size:clamp(24px,2vw,31px);line-height:1.35;letter-spacing:-.02em
 .profile-final .profile-photo::after{z-index:1!important;left:10%!important;top:4%!important;width:92%!important;height:88%!important;border:2px solid rgba(60,151,255,.58)!important;border-left-color:transparent!important;border-bottom-color:transparent!important}
 .profile-final .profile-photo img{position:relative!important;z-index:2!important;clip-path:ellipse(48% 49% at 50% 50%)!important;filter:drop-shadow(0 12px 18px rgba(6,44,99,.12))!important}
 @media(max-width:520px){.profile-final .profile-photo{padding:14px 16px 2px!important}.profile-final .profile-photo img{clip-path:ellipse(49% 49% at 50% 50%)!important}}
+
+
+/* V3 mobile cards: explicit non-overlapping number badge */
+@media(max-width:900px){
+ .method .method-grid article{padding:24px 22px 28px!important}
+ .method .method-top{display:grid!important;grid-template-columns:64px 46px!important;column-gap:18px!important;align-items:center!important;justify-content:start!important;margin:0 0 24px!important;height:64px!important}
+ .method .method-icon{grid-column:1!important;grid-row:1!important;position:static!important;width:64px!important;height:64px!important;transform:none!important;margin:0!important}
+ .method .method-top>b{grid-column:2!important;grid-row:1!important;position:static!important;inset:auto!important;width:42px!important;height:42px!important;transform:none!important;margin:0!important;background:#edf6ff!important;color:#0875e8!important}
+}
+/* V3 profile background: visible layers above the white section, below portrait */
+.profile-final .profile-photo{z-index:0!important;isolation:isolate!important;min-height:360px!important;display:flex!important;align-items:flex-end!important;justify-content:center!important}
+.profile-final .profile-photo::before{content:""!important;display:block!important;position:absolute!important;z-index:0!important;inset:8% 3% 1% 3%!important;border-radius:58% 42% 55% 45% / 48% 57% 43% 52%!important;background:#dceeff!important;transform:rotate(-5deg)!important}
+.profile-final .profile-photo::after{content:""!important;display:block!important;position:absolute!important;z-index:1!important;left:9%!important;top:4%!important;width:88%!important;height:88%!important;border:3px solid #73b8ff!important;border-left-color:transparent!important;border-bottom-color:transparent!important;border-radius:50%!important;transform:rotate(16deg)!important}
+.profile-final .profile-photo>img{z-index:2!important;position:relative!important;width:92%!important;clip-path:none!important;background:transparent!important}
+@media(max-width:520px){.profile-final .profile-photo{min-height:300px!important}}
