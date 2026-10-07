@@ -88,6 +88,6 @@ document.getElementById('contactForm')?.addEventListener('submit', (event) => {
  document.getElementById('impulsaTotal').textContent=total;document.getElementById('impulsaLevel').textContent=total>=85?'IMPULSA Ready':total>=70?'IMPULSA Avanzado':total>=50?'IMPULSA en Desarrollo':'IMPULSA Inicial';
  document.getElementById('impulsaGap').textContent=gap;document.getElementById('impulsaInsight').textContent=a[0];document.getElementById('impulsaNext').textContent=a[1];
  document.getElementById('impulsaChart').innerHTML=qs.map((q,i)=>'<div><span>'+q.dataset.dim+'</span><b>'+scores[i]+'%</b><i><em style="width:'+scores[i]+'%"></em></i></div>').join('');
- document.getElementById('impulsaContact').onclick=(e)=>{e.preventDefault();const msg='Hola ANLICE, hice mi Perfil IMPULSA. Obtuve '+total+'/100 y quiero reforzar '+gap+'. Mi siguiente paso recomendado es '+a[1]+'. Quisiera orientación para mejorar mi perfil.';location.href='https://wa.me/51903220257?text='+encodeURIComponent(msg);};}
+ const contact=document.getElementById('impulsaContact');const msg='Hola ANLICE, hice mi Perfil IMPULSA. Obtuve '+total+'/100 y quiero reforzar '+gap+'. Mi siguiente paso recomendado es '+a[1]+'. Quisiera orientación para mejorar mi perfil.';contact.href='https://wa.me/51903220257?text='+encodeURIComponent(msg);contact.target='_blank';contact.rel='noopener noreferrer';}
  document.getElementById('restartImpulsa').addEventListener('click',reset);
 })();
