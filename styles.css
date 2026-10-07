@@ -1487,3 +1487,18 @@ img{max-width:100%}
   background:#d9edff url("assets/facilitator-logo-strip-reference.webp") center center / 100% 100% no-repeat!important;
 }
 .profile-final .profile-orgs .profile-logos-track{visibility:hidden!important}
+
+/* v38 COLOR ONLY — preserve exact logo geometry; wash embedded gray to white, then blend into celeste */
+.profile-final .profile-orgs .profile-logos-marquee{
+  background:#d9edff!important;
+}
+.profile-final .profile-orgs .profile-logos-track{visibility:visible!important}
+.profile-final .approved-real-logos .real-logo img{
+  filter:grayscale(1) brightness(1.58) contrast(1.28)!important;
+  mix-blend-mode:multiply!important;
+  opacity:1!important;
+}
+.profile-final .approved-real-logos .real-zegel img{
+  filter:grayscale(1) brightness(1.58) contrast(1.28)!important;
+}
+.profile-final .approved-real-logos .real-logo:not(:last-child)::after{background:#8fc8f4!important}
