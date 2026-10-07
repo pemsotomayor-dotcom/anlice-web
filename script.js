@@ -107,3 +107,17 @@ document.getElementById('contactForm')?.addEventListener('submit', (event) => {
    card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();select();}});
  });
 })();
+
+
+/* v12 force click animation + persistent selection */
+document.addEventListener('click',function(e){
+ const card=e.target.closest('.activa-dims span, .impulsa-skills span');
+ if(!card)return;
+ const group=card.parentElement;
+ group.querySelectorAll(':scope > span').forEach(x=>{if(x!==card)x.classList.remove('card-picked')});
+ card.classList.toggle('card-picked');
+ card.classList.remove('card-pop');
+ void card.offsetWidth;
+ card.classList.add('card-pop');
+ setTimeout(()=>card.classList.remove('card-pop'),520);
+});
