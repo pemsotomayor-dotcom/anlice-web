@@ -1399,3 +1399,15 @@ img{max-width:100%}
  .profile-final .exact-strip-track img{width:1439px!important;height:130px!important}
  @keyframes anliceExactStrip28{from{transform:translate3d(0,0,0)}to{transform:translate3d(-1439px,0,0)}}
 }
+
+/* v29 exact dimensions from user's approved reference */
+.profile-final .profile-orgs .exact-strip-marquee{height:261px!important;min-height:261px!important;background:#d9edff!important}
+.profile-final .exact-strip-track{height:261px!important}
+.profile-final .exact-strip-track img{width:2048px!important;height:261px!important;object-fit:fill!important;filter:none!important;opacity:1!important}
+@keyframes anliceExactStrip29{from{transform:translate3d(0,0,0)}to{transform:translate3d(-2048px,0,0)}}
+.profile-final .exact-strip-track{animation:anliceExactStrip29 55s linear infinite!important}
+@media(max-width:680px){
+ .profile-final .profile-orgs .exact-strip-marquee,.profile-final .exact-strip-track{height:184px!important;min-height:184px!important}
+ .profile-final .exact-strip-track img{width:1443px!important;height:184px!important}
+ @keyframes anliceExactStrip29{from{transform:translate3d(0,0,0)}to{transform:translate3d(-1443px,0,0)}}
+}
