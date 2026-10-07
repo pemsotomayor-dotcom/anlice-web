@@ -513,3 +513,11 @@ blockquote{font-size:clamp(24px,2vw,31px);line-height:1.35;letter-spacing:-.02em
 .profile-facts p{font-size:16px!important;line-height:1.48!important}
 .profile-facts b{font-size:18px!important;font-weight:750!important}
 @media(max-width:520px){body{font-size:16px}.solutions>.lead,.about p,.contact p{font-size:17px}.profile-facts p{font-size:15px!important}.profile-facts b{font-size:17px!important}}
+
+
+/* Profile portrait polish: organic visual treatment based on approved reference */
+.profile-photo{isolation:isolate!important;border-radius:0!important;background:transparent!important;overflow:visible!important;padding:18px 26px 0!important}
+.profile-photo::before{content:"";position:absolute!important;z-index:-2!important;left:5%!important;right:4%!important;top:4%!important;bottom:2%!important;border-radius:46% 54% 42% 58% / 54% 44% 56% 46%!important;background:linear-gradient(145deg,#d9edff 0%,#eef7ff 58%,#cfe7ff 100%)!important;transform:rotate(-4deg)!important}
+.profile-photo::after{content:"";position:absolute!important;z-index:-1!important;width:88%!important;height:82%!important;left:13%!important;top:8%!important;border:2px solid rgba(83,164,255,.55)!important;border-left-color:transparent!important;border-bottom-color:transparent!important;border-radius:50%!important;transform:rotate(15deg)!important}
+.profile-photo img{position:relative!important;z-index:2!important;border-radius:0!important;filter:drop-shadow(0 14px 18px rgba(6,44,99,.10))!important}
+@media(max-width:520px){.profile-photo{padding:12px 14px 0!important}.profile-photo::after{width:84%!important;height:78%!important;left:15%!important}}
