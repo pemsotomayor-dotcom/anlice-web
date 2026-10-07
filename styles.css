@@ -1520,3 +1520,8 @@ img{max-width:100%}
  margin:0!important;padding:0!important;object-fit:contain!important;
  filter:none!important;opacity:1!important;mix-blend-mode:normal!important;
 }
+
+/* v42 SIZE ONLY: retain identical approved image and colors */
+.profile-final .profile-orgs .exact-approved-band{height:180px!important;min-height:0!important}
+.profile-final .profile-orgs .exact-approved-band img{height:180px!important;width:100%!important;object-fit:fill!important}
+@media(max-width:680px){.profile-final .profile-orgs .exact-approved-band,.profile-final .profile-orgs .exact-approved-band img{height:115px!important}}
