@@ -1423,3 +1423,19 @@ img{max-width:100%}
 .profile-final .approved-real-logos .real-logo:not(:last-child)::after{
   background:#91c9f2!important;
 }
+
+/* v32 COLOR ONLY — preserve artwork and remove v31 flat-color boxes */
+.profile-final .profile-orgs .profile-logos-marquee{
+  background:linear-gradient(90deg,#eef8ff 0%,#d9edff 18%,#d5ebff 50%,#d9edff 82%,#eef8ff 100%)!important;
+}
+.profile-final .approved-real-logos .real-logo img{
+  filter:grayscale(1) saturate(0) contrast(1.22) brightness(.80)!important;
+  mix-blend-mode:multiply!important;
+  opacity:.92!important;
+}
+.profile-final .approved-real-logos .real-zegel img{
+  filter:grayscale(1) saturate(0) contrast(1.18) brightness(.82)!important;
+}
+.profile-final .approved-real-logos .real-logo:not(:last-child)::after{
+  background:#8fc8f4!important;
+}
