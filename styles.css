@@ -786,3 +786,13 @@ body.quiz-open{overflow:hidden}
 .profile-logo-zegel{flex:0 0 auto!important;width:auto!important;height:70px!important;max-width:165px!important;object-fit:contain!important}
 @media(max-width:900px){.profile-logos-row{gap:20px!important;padding:12px 18px!important}.profile-logo-group{flex-basis:560px!important}.profile-logo-utp{height:52px!important;max-width:155px!important}.profile-logo-zegel{height:64px!important;max-width:145px!important}}
 @media(max-width:680px){.profile-logos-row{flex-wrap:wrap!important}.profile-logo-group{flex:1 0 100%!important}.profile-logo-utp{height:50px!important}.profile-logo-zegel{height:60px!important}}
+
+
+/* Optical balance v7: five logos read with equal visual weight */
+.profile-logos-row{max-width:1220px!important;margin:16px auto 0!important;display:grid!important;grid-template-columns:minmax(0,3fr) 170px 170px!important;align-items:center!important;column-gap:18px!important;min-height:92px!important;padding:8px 18px!important;background:#fff!important}
+.profile-logo-group{width:100%!important;height:72px!important;display:flex!important;align-items:center!important;justify-content:center!important}
+.profile-logo-group img{width:100%!important;height:72px!important;object-fit:contain!important}
+.profile-logo-utp{width:150px!important;height:72px!important;max-width:none!important;object-fit:contain!important;transform:scale(1.55)!important;transform-origin:center!important}
+.profile-logo-zegel{width:150px!important;height:72px!important;max-width:none!important;object-fit:contain!important;transform:scale(.92)!important;transform-origin:center!important}
+@media(max-width:900px){.profile-logos-row{grid-template-columns:minmax(0,3fr) 140px 140px!important;column-gap:12px!important}.profile-logo-utp{width:125px!important;transform:scale(1.45)!important}.profile-logo-zegel{width:125px!important}}
+@media(max-width:680px){.profile-logos-row{grid-template-columns:1fr 1fr!important;row-gap:16px!important}.profile-logo-group{grid-column:1/-1!important}.profile-logo-utp,.profile-logo-zegel{justify-self:center!important}}
