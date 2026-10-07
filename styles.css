@@ -1466,3 +1466,13 @@ img{max-width:100%}
 .profile-final .approved-real-logos .real-logo:not(:last-child)::after{
   background:#8fc8f4!important;
 }
+
+/* v35 COLOR ONLY — transparent light/gray pixels so the strip blue is continuous */
+.profile-final .profile-orgs .profile-logos-marquee{
+ background:linear-gradient(90deg,#edf7ff 0%,#d9edff 18%,#d5ebff 50%,#d9edff 82%,#edf7ff 100%)!important;
+}
+.profile-final .approved-real-logos .real-logo img{
+ filter:url(#anliceLogoBlue)!important;
+ mix-blend-mode:normal!important;
+ opacity:1!important;
+}
