@@ -1539,3 +1539,7 @@ img{max-width:100%}
 /* v45 COLOR ONLY: merge pale image background into the same celeste band; keep exact sizes */
 .profile-final .profile-orgs .exact-approved-band{background:#d9edff!important}
 .profile-final .profile-orgs .exact-approved-band img{mix-blend-mode:multiply!important}
+
+/* v46 COLOR ONLY: eliminate the baked-in pale gradient while retaining dark logos */
+.profile-final .profile-orgs .exact-approved-band{background:#d9edff!important}
+.profile-final .profile-orgs .exact-approved-band img{filter:grayscale(1) brightness(1.16) contrast(2.1)!important;mix-blend-mode:multiply!important;opacity:1!important}
