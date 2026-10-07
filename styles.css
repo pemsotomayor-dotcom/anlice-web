@@ -1551,3 +1551,8 @@ img{max-width:100%}
 @keyframes anliceBandDrift47{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(max-width:680px){.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{height:96px!important}}
 @media(prefers-reduced-motion:reduce){.profile-final .profile-orgs .exact-approved-band .anlice-band-track{animation:none!important}}
+
+/* v48: stronger visible marquee and two-tone softer logos, no geometry changes */
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track{animation:anliceBandMove48 26s linear infinite!important;transform:translate3d(0,0,0);visibility:visible!important}
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{opacity:.42!important;filter:grayscale(1) brightness(1.16) contrast(2.1)!important}
+@keyframes anliceBandMove48{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}
