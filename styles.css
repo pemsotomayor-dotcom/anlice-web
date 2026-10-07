@@ -1535,3 +1535,7 @@ img{max-width:100%}
 .profile-final .profile-orgs .exact-approved-band{height:148px!important;min-height:0!important;background:#d9edff!important}
 .profile-final .profile-orgs .exact-approved-band img{display:block!important;width:100%!important;height:148px!important;max-width:none!important;margin:0!important;object-fit:contain!important;object-position:center center!important;transform:none!important}
 @media(max-width:680px){.profile-final .profile-orgs .exact-approved-band{height:96px!important}.profile-final .profile-orgs .exact-approved-band img{height:96px!important}}
+
+/* v45 COLOR ONLY: merge pale image background into the same celeste band; keep exact sizes */
+.profile-final .profile-orgs .exact-approved-band{background:#d9edff!important}
+.profile-final .profile-orgs .exact-approved-band img{mix-blend-mode:multiply!important}
