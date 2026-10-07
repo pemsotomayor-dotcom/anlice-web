@@ -1318,3 +1318,39 @@ img{max-width:100%}
   background:#40586f!important;
   color:#eef7ff!important;
 }
+
+
+/* FACILITATOR LOGO MARQUEE v26 — exact original artwork, reference composition */
+.profile-final .profile-orgs .profile-logos-marquee{
+  margin-top:0!important;min-height:205px!important;padding:34px 0!important;
+  background:linear-gradient(90deg,#edf7ff 0%,#d9edff 18%,#d5ebff 50%,#d9edff 82%,#edf7ff 100%)!important;
+}
+.profile-final .profile-orgs .approved-real-logos{
+  width:1740px!important;height:132px!important;padding:0 74px!important;gap:0!important;
+  display:flex!important;align-items:center!important;justify-content:space-between!important;flex:none!important;
+}
+.profile-final .approved-real-logos .real-logo{
+  position:relative!important;width:300px!important;height:112px!important;overflow:hidden!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;background:transparent!important;
+}
+.profile-final .approved-real-logos .real-logo:not(:last-child)::after{
+  content:""!important;position:absolute!important;right:0!important;top:24px!important;width:1px!important;height:64px!important;background:#8fc8f4!important;z-index:4!important;
+}
+.profile-final .approved-real-logos .real-logo img{
+  max-width:none!important;object-fit:contain!important;background:transparent!important;border:0!important;box-shadow:none!important;
+  filter:grayscale(1) brightness(1.72) contrast(5.5)!important;mix-blend-mode:multiply!important;opacity:.88!important;
+}
+.profile-final .approved-real-logos .real-logo>img:not(.real-summa-source):not(.real-uss-source):not(.real-parque-source){
+  width:220px!important;height:105px!important;
+}
+.profile-final .approved-real-logos .real-zegel img{width:125px!important;height:112px!important}
+.profile-final .approved-real-logos .real-summa-source,
+.profile-final .approved-real-logos .real-uss-source,
+.profile-final .approved-real-logos .real-parque-source{
+  width:900px!important;height:112px!important;position:absolute!important;left:50%!important;top:0!important;
+}
+.profile-final .approved-real-logos .real-summa-source{transform:translateX(calc(-50% - 300px))!important}
+.profile-final .approved-real-logos .real-uss-source{transform:translateX(calc(-50% + 300px))!important}
+.profile-final .approved-real-logos .real-parque-source{transform:translateX(-50%)!important}
+@keyframes anliceLogoDrive26{from{transform:translate3d(0,0,0)}to{transform:translate3d(-1740px,0,0)}}
+.profile-final .profile-orgs .profile-logos-track{animation:anliceLogoDrive26 52s linear infinite!important}
