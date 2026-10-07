@@ -1508,3 +1508,15 @@ img{max-width:100%}
  background:#d9edff url("assets/facilitator-strip-exact-approved.webp") center center / 100% 100% no-repeat!important;
 }
 .profile-final .profile-orgs .profile-logos-track{visibility:hidden!important}
+
+/* v40 definitive exact band */
+.profile-final .profile-orgs .exact-approved-band{
+ width:100vw!important;height:auto!important;min-height:0!important;
+ margin:0 0 0 calc(50% - 50vw)!important;padding:0!important;
+ overflow:hidden!important;background:#d9edff!important;display:block!important;
+}
+.profile-final .profile-orgs .exact-approved-band img{
+ display:block!important;width:100%!important;height:auto!important;max-width:none!important;
+ margin:0!important;padding:0!important;object-fit:contain!important;
+ filter:none!important;opacity:1!important;mix-blend-mode:normal!important;
+}
