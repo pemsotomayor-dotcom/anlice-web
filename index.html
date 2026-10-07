@@ -23,11 +23,32 @@
 <div class="hero-visual"><img src="assets/hero-anlice.png" width="1672" height="941" fetchpriority="high" decoding="async" alt="Persona caminando hacia una ciudad por un camino ascendente con las tarjetas Autoconocimiento, Habilidades, Experiencia, Empleabilidad y Tu mejor versión."></div>
 </section><section class="anlice-activa" id="activa">
 <div class="activa-head">
-<div class="activa-copy"><span class="activa-label">ANLICE ACTIVA</span><h2>Descubre qué está frenando <em>tus resultados.</em></h2><p>Un diagnóstico gratuito y práctico para identificar las principales brechas de tu organización y saber dónde actuar primero.</p><a class="btn activa-cta" href="#contacto">Realizar diagnóstico gratuito <span>→</span></a><div class="activa-benefits"><span>◷ Solo 10–15 minutos</span><span>▤ Resultados al instante</span><span>▥ Recomendaciones personalizadas</span><span>▣ Confidencial y sin costo</span></div></div>
+<div class="activa-copy"><span class="activa-label">ANLICE ACTIVA</span><h2>Descubre qué está frenando <em>tus resultados.</em></h2><p>Un diagnóstico gratuito y práctico para identificar las principales brechas de tu organización y saber dónde actuar primero.</p><button class="btn activa-cta" id="startActiva" type="button">Realizar diagnóstico gratuito <span>→</span></button><div class="activa-benefits"><span>◷ Solo 2 minutos</span><span>▤ Resultados al instante</span><span>▥ Recomendaciones personalizadas</span><span>▣ Confidencial y sin costo</span></div></div>
 <div class="activa-result"><p class="result-kicker">EJEMPLO DE RESULTADO</p><h3>Diagnóstico ANLICE 360°</h3><div class="result-body"><div class="score"><b>67</b><span>/100</span></div><div class="bars"><p><span>Experiencia del cliente</span><b>82%</b><i style="--p:82%"></i></p><p><span>Liderazgo</span><b>71%</b><i style="--p:71%"></i></p><p><span>Productividad</span><b>64%</b><i style="--p:64%"></i></p><p><span>Gestión comercial</span><b>52%</b><i style="--p:52%"></i></p><p><span>Ejecución y seguimiento</span><b>48%</b><i style="--p:48%"></i></p></div></div><div class="result-alerts"><div><b>🎯 Principal brecha detectada</b><strong>Gestión comercial</strong><small>Seguimiento de prospectos, conversión y disciplina comercial.</small></div><div><b>💡 Recomendación prioritaria</b><small>Revisar proceso comercial, indicadores de conversión y metodología de seguimiento.</small></div></div></div>
 </div>
 <div class="activa-lower"><div><h3>¿Cómo funciona?</h3><div class="activa-steps"><article><b>01</b><strong>Responde</strong><span>Un breve cuestionario de 10–15 minutos.</span></article><article><b>02</b><strong>Obtén tu diagnóstico</strong><span>Resultados por cada dimensión.</span></article><article><b>03</b><strong>Revisa recomendaciones</strong><span>Identifica brechas y oportunidades.</span></article><article><b>04</b><strong>Conversemos</strong><span>Revisamos contigo resultados y soluciones.</span></article></div></div><div><h3>Evalúa 5 dimensiones clave</h3><div class="activa-dims"><span>Productividad</span><span>Gestión comercial</span><span>Liderazgo</span><span>Experiencia del cliente</span><span>Ejecución y seguimiento</span></div></div></div>
-</section>
+<div class="activa-quiz" id="activaQuiz" hidden>
+<div class="quiz-card">
+<div class="quiz-top"><div><span class="activa-label">ACTIVA EXPRESS</span><h3>Diagnóstico organizacional</h3><p>6 preguntas · resultado inmediato · sin costo</p></div><button class="quiz-close" id="closeActiva" type="button" aria-label="Cerrar">×</button></div>
+<form id="activaForm">
+<div class="quiz-progress"><i id="quizProgress"></i></div>
+<div class="quiz-question active" data-dim="Ejecución y productividad"><b>01</b><h4>¿El equipo tiene claridad sobre sus objetivos, prioridades y los resultados que se esperan de él?</h4></div>
+<div class="quiz-question" data-dim="Liderazgo"><b>02</b><h4>¿Los líderes realizan seguimiento, dan feedback y ayudan a corregir desviaciones a tiempo?</h4></div>
+<div class="quiz-question" data-dim="Gestión comercial"><b>03</b><h4>¿El equipo comercial cuenta con un proceso claro para prospectar, convertir y hacer seguimiento a oportunidades?</h4></div>
+<div class="quiz-question" data-dim="Experiencia del cliente"><b>04</b><h4>¿Los colaboradores saben cómo actuar ante clientes difíciles, reclamos o situaciones críticas?</h4></div>
+<div class="quiz-question" data-dim="Comunicación y colaboración"><b>05</b><h4>¿Las áreas se comunican y coordinan adecuadamente para evitar retrasos, errores o retrabajos?</h4></div>
+<div class="quiz-question" data-dim="Gestión y seguimiento"><b>06</b><h4>¿La organización utiliza indicadores para detectar problemas y tomar acciones de mejora?</h4></div>
+<div class="quiz-scale" id="quizScale"><button type="button" data-value="1">Nunca</button><button type="button" data-value="2">Rara vez</button><button type="button" data-value="3">A veces</button><button type="button" data-value="4">Frecuentemente</button><button type="button" data-value="5">Siempre</button></div>
+<p class="quiz-note">Responde pensando en lo que ocurre hoy en tu organización, no en lo que debería ocurrir.</p>
+</form>
+<div class="quiz-result" id="quizResult" hidden>
+<div class="quiz-score"><span>Resultado general</span><strong id="quizTotal">0</strong><b>/100</b><small id="quizLevel"></small></div>
+<h4>Perfil organizacional ANLICE</h4><div class="quiz-chart" id="quizChart"></div>
+<div class="quiz-diagnosis"><span>🎯 Principal oportunidad detectada</span><h3 id="quizGap"></h3><p id="quizInsight"></p></div>
+<div class="quiz-workshop"><span>💡 Taller recomendado por ANLICE</span><h3 id="quizWorkshop"></h3><p id="quizWorkshopFocus"></p></div>
+<div class="quiz-actions"><button class="btn" id="restartActiva" type="button">Repetir diagnóstico</button><a class="btn quiz-contact" id="quizContact" href="#contacto">Quiero conversar sobre mi resultado →</a></div>
+<p class="quiz-disclaimer">Resultado orientativo basado en la percepción declarada por el participante. No constituye una auditoría organizacional.</p>
+</div></div></div></section>
 <section class="anlice-impulsa" id="impulsa"><div><span class="impulsa-label">NUESTRA INICIATIVA SOCIAL</span><h2><b>an<span>lice</span></b> IMPULSA 💡</h2><h3>Competencias para tu primer gran paso.</h3><p>Creemos en el talento de los jóvenes peruanos. Compartimos recursos, herramientas y experiencias para desarrollar las competencias que hoy demanda el mundo laboral.</p><a class="btn" href="#contacto">Conoce ANLICE IMPULSA →</a></div><div class="impulsa-skills"><span>💬 Comunicación efectiva</span><span>♡ Inteligencia emocional</span><span>↗ Liderazgo personal</span><span>▣ Empleabilidad digital</span><span>◎ Orientación al cliente</span></div></section>
 
 <section class="solutions" id="soluciones"><h2>Soluciones que transforman resultados</h2><p class="lead">Tres enfoques. Un mismo propósito: convertir el potencial de las personas en resultados.</p>
