@@ -802,3 +802,10 @@ body.quiz-open{overflow:hidden}
 .profile-logos-row,.profile-logo-group,.profile-logo-group img,.profile-logo-utp,.profile-logo-zegel{background:#fff!important}
 .profile-logo-group{border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important}
 .profile-logo-group img{border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important}
+
+
+/* v9: neutralize the pale-blue tone baked into the first logo artwork.
+   No dimensions, transforms or spacing are changed. */
+.profile-logo-group img{
+  filter:brightness(1.035) contrast(1.075)!important;
+}
