@@ -712,3 +712,9 @@ body.quiz-open{overflow:hidden}
 .anlice-impulsa .impulsa-skills i{font-size:30px!important;filter:saturate(.72)!important;box-shadow:none!important}
 .anlice-impulsa .impulsa-skills span{box-shadow:0 12px 28px rgba(8,66,130,.055)!important}
 .anlice-impulsa .impulsa-skills span:hover{box-shadow:0 17px 34px rgba(8,66,130,.09)!important}
+
+
+/* Ensure ACTIVA dimension icons remain visible over legacy span rules */
+.activa-lower .activa-dims span{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:9px!important}
+.activa-lower .activa-dims span i{display:grid!important;place-items:center!important;width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;margin:0 auto!important;border-radius:50%!important;font-style:normal!important;font-size:23px!important;line-height:1!important;opacity:1!important;visibility:visible!important}
+.activa-lower .activa-dims span b{display:block!important;margin:0!important}
