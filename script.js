@@ -60,7 +60,7 @@ document.getElementById('contactForm')?.addEventListener('submit', (event) => {
     document.getElementById('quizTotal').textContent=total;document.getElementById('quizLevel').textContent=total>=80?'Fortaleza consolidada':total>=60?'En desarrollo':total>=40?'Requiere atención':'Prioridad de intervención';
     document.getElementById('quizGap').textContent=gap;document.getElementById('quizInsight').textContent=w[2];document.getElementById('quizWorkshop').textContent=w[0];document.getElementById('quizWorkshopFocus').textContent=w[1];
     document.getElementById('quizChart').innerHTML=qs.map((q,i)=>'<div><span>'+q.dataset.dim+'</span><b>'+scores[i]+'%</b><i><em style="width:'+scores[i]+'%"></em></i></div>').join('');
-    document.getElementById('quizContact').onclick=()=>{modal.hidden=true;document.body.classList.remove('quiz-open');const ta=document.querySelector('#contactForm textarea');if(ta)ta.value='Realicé ACTIVA Express. Mi principal oportunidad detectada fue '+gap+' ('+min+'%). Resultado general: '+total+'/100. Quisiera conocer una propuesta para '+w[0]+'.';};
+    const contact=document.getElementById('quizContact');const msg='Hola ANLICE, realicé ACTIVA Express. Mi resultado general fue '+total+'/100 y mi principal oportunidad detectada fue '+gap+' ('+min+'%). Me recomendaron '+w[0]+'. Quisiera conversar sobre mi resultado.';contact.href='https://wa.me/51903220257?text='+encodeURIComponent(msg);contact.target='_blank';contact.rel='noopener noreferrer';contact.onclick=null;
   }
   document.getElementById('restartActiva')?.addEventListener('click',reset);
 })();
