@@ -885,3 +885,52 @@ body.quiz-open{overflow:hidden}
 .activa-lower .activa-dims>span:nth-child(3),.anlice-impulsa .impulsa-skills>span:nth-child(3){animation-delay:.44s!important}
 .activa-lower .activa-dims>span:nth-child(4),.anlice-impulsa .impulsa-skills>span:nth-child(4){animation-delay:.66s!important}
 .activa-lower .activa-dims>span:nth-child(5),.anlice-impulsa .impulsa-skills>span:nth-child(5){animation-delay:.88s!important}
+
+
+/* FINAL POLISH v14 — consistency only; approved layouts, logo sizes and brand colors preserved */
+:root{
+  --an-section-space:clamp(68px,6.6vw,92px);
+  --an-title-size:clamp(32px,3.15vw,46px);
+  --an-body-size:16px;
+  --an-body-leading:1.62;
+  --an-card-radius:18px;
+  --an-soft-shadow:0 12px 32px rgba(6,44,99,.065);
+}
+body{font-family:Inter,Arial,Helvetica,sans-serif;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+section:not(.hero):not(.anlice-activa):not(.anlice-impulsa){padding-top:var(--an-section-space);padding-bottom:var(--an-section-space)}
+.solutions h2,.method h2,.about h2,.contact h2,.clients-showcase .testimonials-title{font-size:var(--an-title-size);line-height:1.12;letter-spacing:-.035em}
+.solutions>.lead,.method .lead,.about p,.contact p{line-height:var(--an-body-leading)}
+.btn{transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,.quiz-scale button:focus-visible,.quiz-close:focus-visible{outline:3px solid #ffd334;outline-offset:3px}
+.solutions .cards article,.method-grid article,.client-stories article,.profile-competencies>div{border-radius:var(--an-card-radius)}
+img{max-width:100%}
+.contact input,.contact textarea{font-size:16px}
+@media(max-width:900px){
+  section:not(.hero):not(.anlice-activa):not(.anlice-impulsa){padding-top:62px;padding-bottom:62px}
+  .site-header{gap:14px}
+  .contact{gap:30px}
+}
+@media(max-width:650px){
+  section:not(.hero):not(.anlice-activa):not(.anlice-impulsa){padding-top:52px;padding-bottom:52px}
+  .activa-lower{padding-left:5%!important;padding-right:5%!important}
+  .activa-steps{gap:10px!important}
+  .activa-lower .activa-dims{gap:10px!important}
+  .anlice-impulsa{padding-left:5%!important;padding-right:5%!important}
+  .anlice-impulsa .impulsa-skills{gap:10px!important}
+  .quiz-card{width:min(100%,94vw)!important}
+  .quiz-scale{gap:6px!important}
+  .quiz-scale button{min-height:48px!important;padding:10px 5px!important;font-size:12px!important}
+  .contact form{padding:20px!important}
+  .profile-editorial-grid{gap:32px!important}
+}
+@media(max-width:420px){
+  .activa-lower .activa-dims,.anlice-impulsa .impulsa-skills{grid-template-columns:1fr!important}
+  .activa-lower .activa-dims span,.anlice-impulsa .impulsa-skills span{min-height:0!important}
+  .quiz-actions{grid-template-columns:1fr!important}
+  footer{gap:10px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .activa-lower .activa-dims>span,.anlice-impulsa .impulsa-skills>span{animation:none!important}
+  *,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important}
+}
