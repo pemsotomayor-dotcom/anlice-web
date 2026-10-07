@@ -1080,3 +1080,41 @@ img{max-width:100%}
  .profile-final .profile-orgs .profile-logos-row{width:980px!important;grid-template-columns:minmax(0,3fr) 145px 145px!important;column-gap:28px!important;padding:0 32px!important}
  @keyframes anliceLogoDrive18{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-980px,0,0)}}
 }
+
+
+/* FACILITATOR LOGO MARQUEE v19 — approved clean reference */
+.profile-final .profile-orgs .profile-logos-marquee{
+  margin-top:46px!important;
+  min-height:180px!important;
+  padding:30px 0!important;
+  background:linear-gradient(90deg,#edf7ff 0%,#d5ebff 18%,#d0e8fd 50%,#d5ebff 82%,#edf7ff 100%)!important;
+}
+.profile-final .profile-orgs .profile-logos-row{
+  width:1500px!important;
+  min-height:120px!important;
+  padding:0 70px!important;
+  grid-template-columns:minmax(0,3fr) 230px 230px!important;
+  column-gap:70px!important;
+}
+.profile-final .profile-orgs .profile-logo-group,
+.profile-final .profile-orgs .profile-logo-utp,
+.profile-final .profile-orgs .profile-logo-zegel{
+  background:transparent!important;
+}
+.profile-final .profile-orgs .profile-logo-group img,
+.profile-final .profile-orgs .profile-logo-utp,
+.profile-final .profile-orgs .profile-logo-zegel{
+  background:transparent!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  filter:grayscale(1) saturate(0) brightness(.66) contrast(.92)!important;
+  opacity:.72!important;
+}
+.profile-final .profile-orgs .profile-logo-group{height:100px!important}
+.profile-final .profile-orgs .profile-logo-group img{height:100px!important}
+.profile-final .profile-orgs .profile-logo-utp{width:205px!important;height:100px!important;transform:scale(1.28)!important}
+.profile-final .profile-orgs .profile-logo-zegel{width:190px!important;height:100px!important;transform:scale(1)!important}
+.profile-final .profile-orgs .profile-logos-marquee::before{width:12vw!important;background:linear-gradient(90deg,#edf7ff 0%,rgba(237,247,255,0) 100%)!important}
+.profile-final .profile-orgs .profile-logos-marquee::after{width:12vw!important;background:linear-gradient(270deg,#edf7ff 0%,rgba(237,247,255,0) 100%)!important}
+@keyframes anliceLogoDrive19{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-1500px,0,0)}}
+.profile-final .profile-orgs .profile-logos-track{animation:anliceLogoDrive19 48s linear infinite!important}
