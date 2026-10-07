@@ -1118,3 +1118,46 @@ img{max-width:100%}
 .profile-final .profile-orgs .profile-logos-marquee::after{width:12vw!important;background:linear-gradient(270deg,#edf7ff 0%,rgba(237,247,255,0) 100%)!important}
 @keyframes anliceLogoDrive19{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-1500px,0,0)}}
 .profile-final .profile-orgs .profile-logos-track{animation:anliceLogoDrive19 48s linear infinite!important}
+
+
+/* FACILITATOR LOGO MARQUEE v20 — individual logos, no card effect */
+.profile-final .profile-orgs .profile-logos-marquee{
+  min-height:180px!important;padding:30px 0!important;
+  background:linear-gradient(90deg,#edf7ff,#d3eaff 18%,#cfe7fb 50%,#d3eaff 82%,#edf7ff)!important;
+}
+.profile-final .profile-orgs .profile-logos-track{
+  display:flex!important;align-items:center!important;width:max-content!important;
+  animation:anliceLogoDrive20 48s linear infinite!important;
+}
+.profile-final .profile-orgs .profile-logos-set{
+  width:1540px!important;height:120px!important;padding:0 80px!important;
+  display:flex!important;align-items:center!important;justify-content:space-between!important;
+  gap:72px!important;flex:none!important;
+}
+.profile-final .profile-orgs .profile-logo-crop,
+.profile-final .profile-orgs .profile-logo-item{
+  width:245px!important;height:100px!important;overflow:hidden!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  background:transparent!important;border:0!important;box-shadow:none!important;
+}
+.profile-final .profile-orgs .profile-logo-crop img{
+  max-width:none!important;width:735px!important;height:100px!important;object-fit:contain!important;
+  filter:grayscale(1) saturate(0) brightness(.66) contrast(.92)!important;opacity:.72!important;
+}
+.profile-final .profile-orgs .profile-logo-uss img{transform:translateX(245px)!important}
+.profile-final .profile-orgs .profile-logo-parque img{transform:translateX(0)!important}
+.profile-final .profile-orgs .profile-logo-summa img{transform:translateX(-245px)!important}
+.profile-final .profile-orgs .profile-logo-item img{
+  width:220px!important;height:100px!important;object-fit:contain!important;
+  transform:none!important;background:transparent!important;border:0!important;box-shadow:none!important;
+  filter:grayscale(1) saturate(0) brightness(.66) contrast(.92)!important;opacity:.72!important;
+}
+@keyframes anliceLogoDrive20{from{transform:translate3d(0,0,0)}to{transform:translate3d(-1540px,0,0)}}
+@media(max-width:680px){
+ .profile-final .profile-orgs .profile-logos-set{width:1150px!important;padding:0 42px!important;gap:38px!important}
+ .profile-final .profile-orgs .profile-logo-crop,.profile-final .profile-orgs .profile-logo-item{width:190px!important}
+ .profile-final .profile-orgs .profile-logo-crop img{width:570px!important}
+ .profile-final .profile-orgs .profile-logo-uss img{transform:translateX(190px)!important}
+ .profile-final .profile-orgs .profile-logo-summa img{transform:translateX(-190px)!important}
+ @keyframes anliceLogoDrive20{from{transform:translate3d(0,0,0)}to{transform:translate3d(-1150px,0,0)}}
+}
