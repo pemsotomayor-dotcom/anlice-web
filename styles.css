@@ -1556,3 +1556,8 @@ img{max-width:100%}
 .profile-final .profile-orgs .exact-approved-band .anlice-band-track{animation:anliceBandMove48 26s linear infinite!important;transform:translate3d(0,0,0);visibility:visible!important}
 .profile-final .profile-orgs .exact-approved-band .anlice-band-track img{opacity:.42!important;filter:grayscale(1) brightness(1.16) contrast(2.1)!important}
 @keyframes anliceBandMove48{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-50%,0,0)}}
+
+/* v49: actual HTML marquee, gentle watermark ink */
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track{animation:anliceBandMove49 22s linear infinite!important;animation-play-state:running!important;display:flex!important;width:200vw!important}
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{opacity:.32!important;filter:grayscale(1) contrast(1.1)!important;mix-blend-mode:multiply!important;flex:0 0 100vw!important}
+@keyframes anliceBandMove49{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
