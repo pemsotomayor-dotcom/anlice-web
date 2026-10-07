@@ -949,3 +949,53 @@ img{max-width:100%}
 .profile-logo-group img{
   filter:grayscale(1) saturate(0) contrast(.88) opacity(.72)!important;
 }
+
+
+/* FACILITATOR LOGO MARQUEE v16 */
+.profile-logos-marquee{
+  width:100vw!important;
+  margin-left:calc(50% - 50vw)!important;
+  overflow:hidden!important;
+  background:linear-gradient(90deg,#e7f3ff 0%,#cfe8ff 48%,#e7f3ff 100%)!important;
+  border-top:1px solid rgba(18,91,160,.08)!important;
+  border-bottom:1px solid rgba(18,91,160,.08)!important;
+  padding:20px 0!important;
+  position:relative!important;
+}
+.profile-logos-marquee::before,.profile-logos-marquee::after{
+  content:""!important;position:absolute!important;top:0!important;bottom:0!important;width:7vw!important;z-index:2!important;pointer-events:none!important;
+}
+.profile-logos-marquee::before{left:0!important;background:linear-gradient(90deg,#e7f3ff,rgba(231,243,255,0))!important}
+.profile-logos-marquee::after{right:0!important;background:linear-gradient(270deg,#e7f3ff,rgba(231,243,255,0))!important}
+.profile-logos-track{
+  display:flex!important;width:max-content!important;align-items:center!important;
+  animation:anliceLogoDrive 30s linear infinite!important;
+  will-change:transform!important;
+}
+.profile-logos-marquee .profile-logos-row{
+  flex:0 0 auto!important;
+  width:1100px!important;max-width:none!important;
+  min-height:88px!important;margin:0!important;padding:6px 38px!important;
+  display:grid!important;grid-template-columns:minmax(0,3fr) 170px 170px!important;
+  column-gap:28px!important;align-items:center!important;
+  background:transparent!important;
+}
+.profile-logos-marquee .profile-logo-group,
+.profile-logos-marquee .profile-logo-group img,
+.profile-logos-marquee .profile-logo-utp,
+.profile-logos-marquee .profile-logo-zegel{
+  background:transparent!important;
+}
+.profile-logos-marquee .profile-logo-group img,
+.profile-logos-marquee .profile-logo-utp,
+.profile-logos-marquee .profile-logo-zegel{
+  filter:grayscale(1) saturate(0) brightness(.62) contrast(1.08)!important;
+  opacity:.88!important;mix-blend-mode:multiply!important;
+}
+@keyframes anliceLogoDrive{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:680px){
+ .profile-logos-marquee{padding:14px 0!important}
+ .profile-logos-marquee .profile-logos-row{width:820px!important;grid-template-columns:minmax(0,3fr) 125px 125px!important;column-gap:18px!important;padding:4px 24px!important}
+ .profile-logos-track{animation-duration:26s!important}
+}
+@media(prefers-reduced-motion:reduce){.profile-logos-track{animation:none!important}}
