@@ -809,3 +809,41 @@ body.quiz-open{overflow:hidden}
 .profile-logo-group img{
   filter:brightness(1.035) contrast(1.075)!important;
 }
+
+
+/* v10: same sustained interaction for ACTIVA + IMPULSA cards */
+.activa-lower .activa-dims span,
+.anlice-impulsa .impulsa-skills span{
+  cursor:pointer!important;
+  transition:transform .38s cubic-bezier(.2,.8,.2,1),box-shadow .38s ease,border-color .38s ease!important;
+  will-change:transform;
+}
+.activa-lower .activa-dims span:hover,
+.activa-lower .activa-dims span:focus-within,
+.anlice-impulsa .impulsa-skills span:hover,
+.anlice-impulsa .impulsa-skills span:focus-within{
+  transform:translateY(-9px) scale(1.025)!important;
+  box-shadow:0 18px 34px rgba(6,44,99,.13)!important;
+  border-color:#b9d9f7!important;
+}
+.activa-lower .activa-dims span:active,
+.anlice-impulsa .impulsa-skills span:active{
+  transform:translateY(-7px) scale(1.018)!important;
+  transition-duration:.12s!important;
+}
+@media(hover:hover){
+  .activa-lower .activa-dims span:hover i,
+  .anlice-impulsa .impulsa-skills span:hover i{
+    transform:translateY(-2px) scale(1.06)!important;
+  }
+}
+.activa-lower .activa-dims i,
+.anlice-impulsa .impulsa-skills i{
+  transition:transform .38s cubic-bezier(.2,.8,.2,1)!important;
+}
+@media(prefers-reduced-motion:reduce){
+  .activa-lower .activa-dims span,
+  .anlice-impulsa .impulsa-skills span,
+  .activa-lower .activa-dims i,
+  .anlice-impulsa .impulsa-skills i{transition:none!important}
+}
