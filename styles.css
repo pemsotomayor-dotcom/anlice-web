@@ -1439,3 +1439,14 @@ img{max-width:100%}
 .profile-final .approved-real-logos .real-logo:not(:last-child)::after{
   background:#8fc8f4!important;
 }
+
+/* v33 COLOR ONLY: neutralize baked light backgrounds, keep exact geometry */
+.profile-final .profile-orgs .profile-logos-marquee{
+ background:linear-gradient(90deg,#eef8ff 0%,#d9edff 18%,#d5ebff 50%,#d9edff 82%,#eef8ff 100%)!important;
+}
+.profile-final .approved-real-logos .real-logo img{
+ filter:url(#anliceLogoBlue)!important;
+ mix-blend-mode:normal!important;
+ opacity:1!important;
+}
+.profile-final .approved-real-logos .real-logo:not(:last-child)::after{background:#8fc8f4!important}
