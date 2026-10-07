@@ -934,3 +934,18 @@ img{max-width:100%}
   .activa-lower .activa-dims>span,.anlice-impulsa .impulsa-skills>span{animation:none!important}
   *,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important}
 }
+
+
+/* LOGO STRIP LEGAL/VISUAL POLISH v15 — neutral informational treatment */
+.profile-logos-row{
+  background:#fff!important;
+}
+.profile-logo-group img,
+.profile-logo-utp,
+.profile-logo-zegel{
+  filter:grayscale(1) saturate(0) contrast(.9) opacity(.72)!important;
+  mix-blend-mode:multiply;
+}
+.profile-logo-group img{
+  filter:grayscale(1) saturate(0) contrast(.88) opacity(.72)!important;
+}
