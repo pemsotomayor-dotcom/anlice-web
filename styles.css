@@ -847,3 +847,17 @@ body.quiz-open{overflow:hidden}
   .activa-lower .activa-dims i,
   .anlice-impulsa .impulsa-skills i{transition:none!important}
 }
+
+
+/* v11: clicked card stays visibly raised until another card is selected */
+.activa-lower .activa-dims span.is-selected,
+.anlice-impulsa .impulsa-skills span.is-selected{
+  transform:translateY(-10px) scale(1.03)!important;
+  box-shadow:0 20px 38px rgba(6,44,99,.16)!important;
+  border-color:#9fcdf5!important;
+  z-index:3!important;
+}
+.activa-lower .activa-dims span.is-selected i,
+.anlice-impulsa .impulsa-skills span.is-selected i{
+  transform:translateY(-2px) scale(1.07)!important;
+}
