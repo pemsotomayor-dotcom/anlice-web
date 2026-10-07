@@ -861,3 +861,18 @@ body.quiz-open{overflow:hidden}
 .anlice-impulsa .impulsa-skills span.is-selected i{
   transform:translateY(-2px) scale(1.07)!important;
 }
+
+
+/* v12 unmistakable click motion, identical in both card groups */
+@keyframes anliceCardPop{
+  0%{transform:translateY(0) scale(1)}
+  45%{transform:translateY(-14px) scale(1.045)}
+  100%{transform:translateY(-10px) scale(1.03)}
+}
+.activa-dims>span.card-pop,.impulsa-skills>span.card-pop{animation:anliceCardPop .52s cubic-bezier(.2,.9,.25,1) both!important}
+.activa-dims>span.card-picked,.impulsa-skills>span.card-picked{
+  transform:translateY(-10px) scale(1.03)!important;
+  box-shadow:0 22px 42px rgba(6,44,99,.18)!important;
+  border-color:#91c8f6!important;
+  z-index:10!important;
+}
