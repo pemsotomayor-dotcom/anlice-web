@@ -1476,3 +1476,8 @@ img{max-width:100%}
  mix-blend-mode:normal!important;
  opacity:1!important;
 }
+
+/* v36 COLOR ONLY — exact continuous celeste; no geometry changes */
+.profile-final .profile-orgs .profile-logos-marquee{background:#d9edff!important}
+.profile-final .approved-real-logos .real-logo img{filter:url(#anliceLogoBlue)!important;mix-blend-mode:normal!important;opacity:1!important}
+.profile-final .approved-real-logos .real-logo:not(:last-child)::after{background:#8fc8f4!important}
