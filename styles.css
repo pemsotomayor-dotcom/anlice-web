@@ -1161,3 +1161,26 @@ img{max-width:100%}
  .profile-final .profile-orgs .profile-logo-summa img{transform:translateX(-190px)!important}
  @keyframes anliceLogoDrive20{from{transform:translate3d(0,0,0)}to{transform:translate3d(-1150px,0,0)}}
 }
+
+
+/* FACILITATOR LOGO MARQUEE v21 — one visual tone across every logo */
+.profile-final .profile-orgs .profile-logos-marquee{
+  background:#dceeff!important;
+}
+.profile-final .profile-orgs .profile-logo-crop,
+.profile-final .profile-orgs .profile-logo-item{
+  background:#dceeff!important;
+}
+.profile-final .profile-orgs .profile-logo-crop img,
+.profile-final .profile-orgs .profile-logo-item img{
+  filter:grayscale(1) saturate(0) brightness(.52) contrast(1.25)!important;
+  opacity:.78!important;
+  mix-blend-mode:multiply!important;
+}
+.profile-final .profile-orgs .profile-logo-crop::before,
+.profile-final .profile-orgs .profile-logo-item::before{
+  content:""!important;position:absolute!important;inset:0!important;
+  background:#dceeff!important;mix-blend-mode:screen!important;opacity:.12!important;pointer-events:none!important;
+}
+.profile-final .profile-orgs .profile-logo-crop,
+.profile-final .profile-orgs .profile-logo-item{position:relative!important}
