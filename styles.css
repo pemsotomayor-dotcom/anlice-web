@@ -1374,3 +1374,28 @@ img{max-width:100%}
 .profile-final .approved-real-logos .real-zegel img{
   filter:grayscale(1) saturate(0) contrast(1.12) brightness(.82)!important;
 }
+
+
+/* FACILITATOR LOGO STRIP v28 — exact approved artwork, no filters */
+.profile-final .profile-orgs .exact-strip-marquee{
+  width:100vw!important;max-width:none!important;margin:0 0 0 calc(50% - 50vw)!important;
+  padding:0!important;min-height:185px!important;height:185px!important;overflow:hidden!important;
+  background:#d9edff!important;border:0!important;
+}
+.profile-final .profile-orgs .exact-strip-marquee::before,
+.profile-final .profile-orgs .exact-strip-marquee::after{display:none!important}
+.profile-final .exact-strip-track{
+  display:flex!important;width:max-content!important;height:185px!important;align-items:stretch!important;
+  animation:anliceExactStrip28 55s linear infinite!important;will-change:transform!important;
+}
+.profile-final .exact-strip-track img{
+  display:block!important;flex:none!important;width:2048px!important;height:185px!important;
+  object-fit:fill!important;max-width:none!important;filter:none!important;opacity:1!important;
+  mix-blend-mode:normal!important;background:transparent!important;border:0!important;box-shadow:none!important;
+}
+@keyframes anliceExactStrip28{from{transform:translate3d(0,0,0)}to{transform:translate3d(-2048px,0,0)}}
+@media(max-width:680px){
+ .profile-final .profile-orgs .exact-strip-marquee,.profile-final .exact-strip-track{height:130px!important;min-height:130px!important}
+ .profile-final .exact-strip-track img{width:1439px!important;height:130px!important}
+ @keyframes anliceExactStrip28{from{transform:translate3d(0,0,0)}to{transform:translate3d(-1439px,0,0)}}
+}
