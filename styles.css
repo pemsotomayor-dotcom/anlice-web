@@ -766,3 +766,13 @@ body.quiz-open{overflow:hidden}
 .profile-logo-utp{height:38px!important;max-width:150px!important}
 .profile-logo-zegel{height:68px!important;width:auto!important;max-width:120px!important;object-fit:contain!important}
 @media(max-width:760px){.profile-logos-row{grid-template-columns:1fr 1fr!important;gap:18px!important}.profile-logos-main{grid-column:1/-1!important}.profile-logo-zegel{height:62px!important}}
+
+
+/* Unified institutional logo rhythm */
+.profile-logos-row{grid-template-columns:minmax(0,3fr) 220px 220px!important;gap:0!important;padding:10px 20px!important}
+.profile-logos-main{width:100%!important;height:72px!important;padding:0!important;margin:0!important;object-fit:contain!important}
+.profile-logo-utp,.profile-logo-zegel{justify-self:center!important;margin:0!important}
+.profile-logo-utp{height:38px!important;width:150px!important;object-fit:contain!important}
+.profile-logo-zegel{height:68px!important;width:150px!important;object-fit:contain!important}
+@media(max-width:900px){.profile-logos-row{grid-template-columns:minmax(0,2.4fr) 150px 150px!important}.profile-logo-utp,.profile-logo-zegel{width:120px!important}}
+@media(max-width:680px){.profile-logos-row{grid-template-columns:1fr 1fr!important;gap:12px!important}.profile-logos-main{grid-column:1/-1!important}.profile-logo-utp,.profile-logo-zegel{width:120px!important}}
