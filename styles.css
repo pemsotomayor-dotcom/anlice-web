@@ -1481,3 +1481,9 @@ img{max-width:100%}
 .profile-final .profile-orgs .profile-logos-marquee{background:#d9edff!important}
 .profile-final .approved-real-logos .real-logo img{filter:url(#anliceLogoBlue)!important;mix-blend-mode:normal!important;opacity:1!important}
 .profile-final .approved-real-logos .real-logo:not(:last-child)::after{background:#8fc8f4!important}
+
+/* v37 EXACT APPROVED VISUAL — use the already approved strip artwork */
+.profile-final .profile-orgs .profile-logos-marquee{
+  background:#d9edff url("assets/facilitator-logo-strip-reference.webp") center center / 100% 100% no-repeat!important;
+}
+.profile-final .profile-orgs .profile-logos-track{visibility:hidden!important}
