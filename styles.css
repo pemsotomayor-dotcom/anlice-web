@@ -1543,3 +1543,11 @@ img{max-width:100%}
 /* v46 COLOR ONLY: eliminate the baked-in pale gradient while retaining dark logos */
 .profile-final .profile-orgs .exact-approved-band{background:#d9edff!important}
 .profile-final .profile-orgs .exact-approved-band img{filter:grayscale(1) brightness(1.16) contrast(2.1)!important;mix-blend-mode:multiply!important;opacity:1!important}
+
+/* v47: subtle watermark tone and seamless horizontal movement */
+.profile-final .profile-orgs .exact-approved-band{overflow:hidden!important;position:relative!important}
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track{display:flex!important;align-items:center!important;width:max-content!important;height:100%!important;animation:anliceBandDrift47 48s linear infinite!important;will-change:transform}
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{flex:0 0 100vw!important;width:100vw!important;height:148px!important;max-width:none!important;margin:0!important;object-fit:contain!important;filter:grayscale(1) brightness(1.16) contrast(2.1)!important;mix-blend-mode:multiply!important;opacity:.67!important}
+@keyframes anliceBandDrift47{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:680px){.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{height:96px!important}}
+@media(prefers-reduced-motion:reduce){.profile-final .profile-orgs .exact-approved-band .anlice-band-track{animation:none!important}}
