@@ -1502,3 +1502,9 @@ img{max-width:100%}
   filter:grayscale(1) brightness(1.58) contrast(1.28)!important;
 }
 .profile-final .approved-real-logos .real-logo:not(:last-child)::after{background:#8fc8f4!important}
+
+/* v39 EXACT USER REFERENCE — the band is the exact crop supplied by the user */
+.profile-final .profile-orgs .profile-logos-marquee{
+ background:#d9edff url("assets/facilitator-strip-exact-approved.webp") center center / 100% 100% no-repeat!important;
+}
+.profile-final .profile-orgs .profile-logos-track{visibility:hidden!important}
