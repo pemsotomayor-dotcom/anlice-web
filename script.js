@@ -64,3 +64,30 @@ document.getElementById('contactForm')?.addEventListener('submit', (event) => {
   }
   document.getElementById('restartActiva')?.addEventListener('click',reset);
 })();
+
+/* ANLICE IMPULSA profile */
+(() => {
+ const open=document.getElementById('startImpulsa'), modal=document.getElementById('impulsaQuiz'), close=document.getElementById('closeImpulsa'), form=document.getElementById('impulsaForm'), result=document.getElementById('impulsaResult'), scale=document.getElementById('impulsaScale');
+ if(!open||!modal) return;
+ const qs=[...modal.querySelectorAll('.impulsa-question')], answers=[];
+ const advice={
+ 'Comunicación':['Practica presentar tus ideas en 60 segundos con una estructura clara: idea, razón y ejemplo.','Comunicación que conecta'],
+ 'Inteligencia emocional':['Entrena cómo reconocer la emoción, hacer una pausa y elegir tu respuesta ante presión o frustración.','Gestión emocional'],
+ 'Iniciativa':['Empieza a convertir problemas pequeños en propuestas: identifica, plantea una solución y toma acción.','Iniciativa y liderazgo personal'],
+ 'Trabajo en equipo':['Practica escuchar perspectivas diferentes, acordar responsabilidades y construir soluciones con otros.','Colaboración efectiva'],
+ 'Empleabilidad':['Prepara una presentación breve de quién eres, qué sabes hacer y qué valor puedes aportar.','CV, LinkedIn y entrevistas'],
+ 'Competencias digitales':['Fortalece herramientas digitales para organizarte, crear, comunicar y resolver problemas con mayor autonomía.','Empleabilidad digital']
+ };
+ let step=0;
+ function show(){qs.forEach((q,i)=>q.classList.toggle('active',i===step));document.getElementById('impulsaProgress').style.width=((step+1)/qs.length*100)+'%';}
+ function reset(){step=0;answers.length=0;form.hidden=false;result.hidden=true;scale.querySelectorAll('button').forEach(b=>b.classList.remove('selected'));show();}
+ open.addEventListener('click',()=>{modal.hidden=false;document.body.classList.add('quiz-open');reset();});
+ close.addEventListener('click',()=>{modal.hidden=true;document.body.classList.remove('quiz-open');});
+ scale.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;answers[step]=+b.dataset.value;b.classList.add('selected');setTimeout(()=>{if(step<qs.length-1){step++;scale.querySelectorAll('button').forEach(x=>x.classList.remove('selected'));show();}else finish();},180);});
+ function finish(){form.hidden=true;result.hidden=false;const scores=answers.map(v=>v*20),total=Math.round(scores.reduce((a,b)=>a+b,0)/scores.length),min=Math.min(...scores),idx=scores.indexOf(min),gap=qs[idx].dataset.dim,a=advice[gap];
+ document.getElementById('impulsaTotal').textContent=total;document.getElementById('impulsaLevel').textContent=total>=85?'IMPULSA Ready':total>=70?'IMPULSA Avanzado':total>=50?'IMPULSA en Desarrollo':'IMPULSA Inicial';
+ document.getElementById('impulsaGap').textContent=gap;document.getElementById('impulsaInsight').textContent=a[0];document.getElementById('impulsaNext').textContent=a[1];
+ document.getElementById('impulsaChart').innerHTML=qs.map((q,i)=>'<div><span>'+q.dataset.dim+'</span><b>'+scores[i]+'%</b><i><em style="width:'+scores[i]+'%"></em></i></div>').join('');
+ document.getElementById('impulsaContact').onclick=(e)=>{e.preventDefault();const msg='Hola ANLICE, hice mi Perfil IMPULSA. Obtuve '+total+'/100 y quiero reforzar '+gap+'. Mi siguiente paso recomendado es '+a[1]+'. Quisiera orientación para mejorar mi perfil.';location.href='https://wa.me/51903220257?text='+encodeURIComponent(msg);};}
+ document.getElementById('restartImpulsa').addEventListener('click',reset);
+})();
