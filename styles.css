@@ -1293,3 +1293,28 @@ img{max-width:100%}
 .profile-final .brand-zegel span{font-size:31px!important;color:#344b61!important;font-weight:700!important}
 @keyframes anliceLogoDrive24{from{transform:translate3d(0,0,0)}to{transform:translate3d(-1700px,0,0)}}
 .profile-final .profile-orgs .profile-logos-track{animation:anliceLogoDrive24 52s linear infinite!important}
+
+
+/* FACILITATOR LOGO MARQUEE v25 — keep approved forms, only strengthen tone/type */
+.profile-final .brand-wordmark{
+  color:#40586f!important;
+  opacity:1!important;
+}
+.profile-final .brand-wordmark *{color:inherit!important}
+.profile-final .brand-summa>span:last-child,
+.profile-final .brand-uss span,
+.profile-final .brand-parque>span:last-child{
+  font-weight:800!important;
+  color:#40586f!important;
+}
+.profile-final .brand-summa .brand-hex,
+.profile-final .brand-uss strong,
+.profile-final .brand-parque .brand-tree,
+.profile-final .brand-zegel strong,
+.profile-final .brand-zegel span{
+  color:#40586f!important;
+}
+.profile-final .brand-utp i{
+  background:#40586f!important;
+  color:#eef7ff!important;
+}
