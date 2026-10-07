@@ -999,3 +999,43 @@ img{max-width:100%}
  .profile-logos-track{animation-duration:26s!important}
 }
 @media(prefers-reduced-motion:reduce){.profile-logos-track{animation:none!important}}
+
+
+/* FACILITATOR LOGO MARQUEE v17 — stronger blue band + force motion */
+.profile-final .profile-orgs .profile-logos-marquee{
+  width:100vw!important;max-width:none!important;
+  margin:28px 0 0 calc(50% - 50vw)!important;
+  padding:24px 0!important;
+  overflow:hidden!important;
+  background:#d9ecff!important;
+  border:0!important;
+}
+.profile-final .profile-orgs .profile-logos-track{
+  display:flex!important;
+  flex-wrap:nowrap!important;
+  width:max-content!important;
+  transform:translate3d(0,0,0);
+  animation:anliceLogoDrive17 34s linear infinite!important;
+}
+.profile-final .profile-orgs .profile-logos-row{
+  flex:none!important;width:1120px!important;max-width:none!important;
+  background:transparent!important;
+}
+@keyframes anliceLogoDrive17{
+  0%{transform:translate3d(0,0,0)}
+  100%{transform:translate3d(-1120px,0,0)}
+}
+.profile-final .profile-orgs .profile-logo-group,
+.profile-final .profile-orgs .profile-logo-group img,
+.profile-final .profile-orgs .profile-logo-single{
+  background:transparent!important;box-shadow:none!important;border:0!important;
+}
+.profile-final .profile-orgs .profile-logo-group img,
+.profile-final .profile-orgs .profile-logo-single{
+  filter:grayscale(1) saturate(0) brightness(.55) contrast(1.12)!important;
+  opacity:.9!important;
+}
+@media(max-width:680px){
+ .profile-final .profile-orgs .profile-logos-row{width:820px!important}
+ @keyframes anliceLogoDrive17{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-820px,0,0)}}
+}
