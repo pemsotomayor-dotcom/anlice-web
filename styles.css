@@ -1411,3 +1411,15 @@ img{max-width:100%}
  .profile-final .exact-strip-track img{width:1443px!important;height:184px!important}
  @keyframes anliceExactStrip29{from{transform:translate3d(0,0,0)}to{transform:translate3d(-1443px,0,0)}}
 }
+
+/* v31 COLOR ONLY — do not alter logo artwork, size, position or motion */
+.profile-final .profile-orgs .profile-logos-marquee{
+  background:linear-gradient(90deg,#eef8ff 0%,#dceeff 18%,#d7ecff 50%,#dceeff 82%,#eef8ff 100%)!important;
+}
+.profile-final .approved-real-logos .real-logo img{
+  filter:brightness(0) saturate(100%) invert(31%) sepia(18%) saturate(1450%) hue-rotate(166deg) brightness(88%) contrast(90%)!important;
+  opacity:1!important;
+}
+.profile-final .approved-real-logos .real-logo:not(:last-child)::after{
+  background:#91c9f2!important;
+}
