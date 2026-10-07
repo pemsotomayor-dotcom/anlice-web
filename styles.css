@@ -1184,3 +1184,25 @@ img{max-width:100%}
 }
 .profile-final .profile-orgs .profile-logo-crop,
 .profile-final .profile-orgs .profile-logo-item{position:relative!important}
+
+
+/* FACILITATOR LOGO MARQUEE v22 — neutralize baked image backgrounds */
+.profile-final .profile-orgs .profile-logos-marquee,
+.profile-final .profile-orgs .profile-logo-crop,
+.profile-final .profile-orgs .profile-logo-item{
+  background:#d8ecff!important;
+}
+.profile-final .profile-orgs .profile-logo-crop::before,
+.profile-final .profile-orgs .profile-logo-item::before{display:none!important}
+.profile-final .profile-orgs .profile-logo-crop img,
+.profile-final .profile-orgs .profile-logo-item img{
+  filter:grayscale(1) brightness(2.15) contrast(2.65)!important;
+  opacity:.82!important;
+  mix-blend-mode:multiply!important;
+}
+.profile-final .profile-orgs .profile-logos-marquee::before{
+  background:linear-gradient(90deg,#d8ecff 0%,rgba(216,236,255,0) 100%)!important
+}
+.profile-final .profile-orgs .profile-logos-marquee::after{
+  background:linear-gradient(270deg,#d8ecff 0%,rgba(216,236,255,0) 100%)!important
+}
