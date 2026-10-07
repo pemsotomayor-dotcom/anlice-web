@@ -731,3 +731,6 @@ body.quiz-open{overflow:hidden}
 .org-zegel{gap:10px;color:#c91b3d}.org-zegel>b{font-size:46px;font-style:italic;line-height:1}.org-zegel div{text-align:left;line-height:.9}.org-zegel strong{display:block;font-size:25px}.org-zegel small{display:block;margin-top:7px;font-size:17px;font-weight:800}
 @media(max-width:900px){.profile-orgs-grid{grid-template-columns:1fr 1fr}.profile-orgs-grid .profile-logos-exact{grid-column:1/-1}}
 @media(max-width:520px){.profile-orgs-grid{grid-template-columns:1fr}.profile-orgs-grid .profile-logos-exact{grid-column:auto}.profile-orgs-note{font-size:10px!important}}
+
+.profile-orgs-grid .org-logo-card img{display:block;max-width:86%;max-height:68px;width:auto;height:auto;object-fit:contain}
+.profile-orgs-grid .org-logo-card:last-child img{max-height:76px}
