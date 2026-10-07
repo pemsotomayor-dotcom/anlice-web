@@ -1450,3 +1450,19 @@ img{max-width:100%}
  opacity:1!important;
 }
 .profile-final .approved-real-logos .real-logo:not(:last-child)::after{background:#8fc8f4!important}
+
+/* v34 FINAL COLOR ONLY — restore approved reference treatment; geometry untouched */
+.profile-final .profile-orgs .profile-logos-marquee{
+  background:linear-gradient(90deg,#edf7ff 0%,#d9edff 18%,#d5ebff 50%,#d9edff 82%,#edf7ff 100%)!important;
+}
+.profile-final .approved-real-logos .real-logo img{
+  filter:grayscale(1) brightness(1.72) contrast(5.5)!important;
+  mix-blend-mode:multiply!important;
+  opacity:.88!important;
+}
+.profile-final .approved-real-logos .real-zegel img{
+  filter:grayscale(1) brightness(1.72) contrast(5.5)!important;
+}
+.profile-final .approved-real-logos .real-logo:not(:last-child)::after{
+  background:#8fc8f4!important;
+}
