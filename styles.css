@@ -1039,3 +1039,44 @@ img{max-width:100%}
  .profile-final .profile-orgs .profile-logos-row{width:820px!important}
  @keyframes anliceLogoDrive17{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-820px,0,0)}}
 }
+
+
+/* FACILITATOR LOGO MARQUEE v18 — match approved reference */
+.profile-final .profile-orgs{overflow:visible!important}
+.profile-final .profile-orgs .profile-logos-marquee{
+  margin-top:46px!important;
+  padding:34px 0!important;
+  min-height:184px!important;
+  display:flex!important;align-items:center!important;
+  background:linear-gradient(90deg,#e8f4ff 0%,#cfe7fb 50%,#e8f4ff 100%)!important;
+}
+.profile-final .profile-orgs .profile-logos-track{align-items:center!important}
+.profile-final .profile-orgs .profile-logos-row{
+  width:1380px!important;min-height:116px!important;
+  padding:0 56px!important;
+  grid-template-columns:minmax(0,3fr) 210px 210px!important;
+  column-gap:54px!important;
+}
+.profile-final .profile-orgs .profile-logo-group{height:94px!important}
+.profile-final .profile-orgs .profile-logo-group img{height:94px!important}
+.profile-final .profile-orgs .profile-logo-utp,
+.profile-final .profile-orgs .profile-logo-zegel{
+  width:190px!important;height:94px!important;
+}
+.profile-final .profile-orgs .profile-logo-utp{transform:scale(1.42)!important}
+.profile-final .profile-orgs .profile-logo-zegel{transform:scale(1.05)!important}
+.profile-final .profile-orgs .profile-logo-group img,
+.profile-final .profile-orgs .profile-logo-single{
+  filter:grayscale(1) saturate(0) brightness(.58) contrast(1.08)!important;
+  opacity:.82!important;
+}
+.profile-final .profile-orgs .profile-logo-group,
+.profile-final .profile-orgs .profile-logo-group img,
+.profile-final .profile-orgs .profile-logo-single{background:transparent!important}
+@keyframes anliceLogoDrive18{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-1380px,0,0)}}
+.profile-final .profile-orgs .profile-logos-track{animation:anliceLogoDrive18 42s linear infinite!important}
+@media(max-width:680px){
+ .profile-final .profile-orgs .profile-logos-marquee{min-height:138px!important;padding:22px 0!important}
+ .profile-final .profile-orgs .profile-logos-row{width:980px!important;grid-template-columns:minmax(0,3fr) 145px 145px!important;column-gap:28px!important;padding:0 32px!important}
+ @keyframes anliceLogoDrive18{0%{transform:translate3d(0,0,0)}100%{transform:translate3d(-980px,0,0)}}
+}
