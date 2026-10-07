@@ -1241,3 +1241,55 @@ img{max-width:100%}
 .profile-final .profile-orgs .profile-logos-track{animation:anliceLogoDrive23 48s linear infinite!important}
 .profile-final .profile-orgs .profile-logos-marquee::before{background:linear-gradient(90deg,#eef7ff,rgba(238,247,255,0))!important}
 .profile-final .profile-orgs .profile-logos-marquee::after{background:linear-gradient(270deg,#eef7ff,rgba(238,247,255,0))!important}
+
+
+/* FACILITATOR LOGO MARQUEE v24 — exact approved visual balance */
+.profile-final .profile-orgs{
+  padding-top:64px!important;
+}
+.profile-final .profile-orgs .profile-orgs-title{
+  color:#1971c9!important;
+  font-size:17px!important;
+  letter-spacing:5px!important;
+  font-weight:800!important;
+  margin-bottom:18px!important;
+}
+.profile-final .profile-orgs .profile-orgs-note{
+  color:#58738e!important;
+  font-size:13px!important;
+  line-height:1.45!important;
+  margin-bottom:42px!important;
+}
+.profile-final .profile-orgs .profile-logos-marquee{
+  margin-top:0!important;
+  min-height:200px!important;
+  padding:34px 0!important;
+  background:linear-gradient(90deg,#edf7ff 0%,#d9edff 18%,#d5ebff 50%,#d9edff 82%,#edf7ff 100%)!important;
+}
+.profile-final .profile-orgs .profile-logos-set{
+  width:1700px!important;height:132px!important;padding:0 86px!important;gap:0!important;
+}
+.profile-final .brand-wordmark{
+  width:300px!important;height:112px!important;
+  color:#344b61!important;opacity:1!important;
+  position:relative!important;gap:16px!important;
+  text-shadow:none!important;
+}
+.profile-final .brand-wordmark:not(:last-child)::after{
+  content:""!important;position:absolute!important;right:-20px!important;top:25px!important;
+  width:1px!important;height:62px!important;background:#8ec7f4!important;
+}
+.profile-final .brand-uss strong{font-size:55px!important;font-weight:900!important;color:#344b61!important}
+.profile-final .brand-uss span{font-size:16px!important;font-weight:800!important;line-height:1.04!important;color:#344b61!important}
+.profile-final .brand-parque .brand-tree{font-size:54px!important;color:#344b61!important}
+.profile-final .brand-parque>span:last-child{font-size:21px!important;font-weight:700!important;line-height:.94!important;color:#344b61!important}
+.profile-final .brand-summa .brand-hex{font-size:51px!important;color:#344b61!important}
+.profile-final .brand-summa>span:last-child{font-size:19px!important;font-weight:700!important;line-height:.9!important;color:#344b61!important}
+.profile-final .brand-utp i{
+  font-size:38px!important;font-weight:900!important;padding:11px 15px!important;
+  background:#344b61!important;color:#e9f5ff!important;
+}
+.profile-final .brand-zegel strong{font-size:74px!important;color:#344b61!important;font-weight:900!important}
+.profile-final .brand-zegel span{font-size:31px!important;color:#344b61!important;font-weight:700!important}
+@keyframes anliceLogoDrive24{from{transform:translate3d(0,0,0)}to{transform:translate3d(-1700px,0,0)}}
+.profile-final .profile-orgs .profile-logos-track{animation:anliceLogoDrive24 52s linear infinite!important}
