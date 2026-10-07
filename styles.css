@@ -531,3 +531,17 @@ blockquote{font-size:clamp(24px,2vw,31px);line-height:1.35;letter-spacing:-.02em
  .method-icon svg{width:31px!important;height:31px!important;display:block!important}
  .method-top b{position:static!important;flex:0 0 42px!important;width:42px!important;height:42px!important;margin:0!important;border-radius:50%!important;display:grid!important;place-items:center!important;background:#edf6ff!important;color:#0672dc!important;font-size:14px!important;line-height:1!important;z-index:2!important;transform:none!important}
 }
+
+
+/* Definitive mobile methodology + facilitator visual fix */
+@media(max-width:900px){
+ .method .method-grid article{padding:24px 22px 26px!important;min-height:auto!important}
+ .method .method-top{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:18px!important;width:100%!important;margin:0 0 22px!important;position:relative!important}
+ .method .method-icon{position:relative!important;left:auto!important;top:auto!important;flex:0 0 64px!important;width:64px!important;height:64px!important;margin:0!important}
+ .method .method-top b{position:static!important;left:auto!important;right:auto!important;top:auto!important;flex:0 0 42px!important;width:42px!important;height:42px!important;margin:0!important;transform:none!important}
+}
+.profile-final .profile-photo{position:relative!important;isolation:isolate!important;overflow:visible!important;background:transparent!important;padding:20px 28px 4px!important}
+.profile-final .profile-photo::before{z-index:0!important;left:0!important;right:0!important;top:2%!important;bottom:0!important;background:linear-gradient(145deg,#cfe8ff 0%,#eaf6ff 58%,#d9ecff 100%)!important;box-shadow:0 20px 50px rgba(31,112,190,.10)!important}
+.profile-final .profile-photo::after{z-index:1!important;left:10%!important;top:4%!important;width:92%!important;height:88%!important;border:2px solid rgba(60,151,255,.58)!important;border-left-color:transparent!important;border-bottom-color:transparent!important}
+.profile-final .profile-photo img{position:relative!important;z-index:2!important;clip-path:ellipse(48% 49% at 50% 50%)!important;filter:drop-shadow(0 12px 18px rgba(6,44,99,.12))!important}
+@media(max-width:520px){.profile-final .profile-photo{padding:14px 16px 2px!important}.profile-final .profile-photo img{clip-path:ellipse(49% 49% at 50% 50%)!important}}
