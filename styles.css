@@ -1354,3 +1354,23 @@ img{max-width:100%}
 .profile-final .approved-real-logos .real-parque-source{transform:translateX(-50%)!important}
 @keyframes anliceLogoDrive26{from{transform:translate3d(0,0,0)}to{transform:translate3d(-1740px,0,0)}}
 .profile-final .profile-orgs .profile-logos-track{animation:anliceLogoDrive26 52s linear infinite!important}
+
+
+/* FACILITATOR LOGO MARQUEE v27 — remove white boxes, preserve original artwork */
+.profile-final .profile-orgs .profile-logos-marquee,
+.profile-final .approved-real-logos,
+.profile-final .approved-real-logos .real-logo{
+  isolation:auto!important;
+}
+.profile-final .approved-real-logos .real-logo{
+  background:transparent!important;
+}
+.profile-final .approved-real-logos .real-logo img{
+  background:transparent!important;
+  opacity:1!important;
+  filter:grayscale(1) saturate(0) contrast(1.18) brightness(.78)!important;
+  mix-blend-mode:multiply!important;
+}
+.profile-final .approved-real-logos .real-zegel img{
+  filter:grayscale(1) saturate(0) contrast(1.12) brightness(.82)!important;
+}
