@@ -650,3 +650,8 @@ body.quiz-open{overflow:hidden}
  .quiz-actions{display:grid}.quiz-actions .btn{width:100%;text-align:center;justify-content:center}
  .quiz-score small{margin-left:0}
 }
+
+.impulsa-micro{display:block;margin-top:10px;color:#617894;font-size:12px;font-weight:700}
+.impulsa-quiz[hidden]{display:none!important}.impulsa-quiz{position:fixed;inset:0;z-index:10001;display:grid;place-items:center;padding:24px;background:rgba(5,31,64,.72);backdrop-filter:blur(10px);overflow:auto}
+.impulsa-question{display:none;min-height:170px;animation:quizIn .24s ease}.impulsa-question.active{display:block}.impulsa-question>b{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:50%;background:#fff2bd;color:#a66a00;font-size:14px;margin-bottom:18px}.impulsa-question h4{margin:0;max-width:720px;font-size:clamp(22px,2.7vw,30px);line-height:1.25;letter-spacing:-.025em;color:#062c63}
+@media(max-width:650px){.impulsa-quiz{padding:10px;place-items:start center}.impulsa-question{min-height:150px}.impulsa-question h4{font-size:21px}}
