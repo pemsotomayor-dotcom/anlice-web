@@ -1564,3 +1564,10 @@ img{max-width:100%}
 
 /* v50: typography only, consistent with profile text */
 .profile-final .profile-practical strong{font-style:normal!important;font-family:inherit!important;font-weight:700!important;letter-spacing:normal!important}
+
+/* Privacy consent: scoped to contact form only */
+#contactForm .privacy-consent{display:grid;gap:12px;margin:12px 0 18px;font-size:13px;line-height:1.5;color:#34516f}
+#contactForm .privacy-consent label{display:flex;align-items:flex-start;gap:9px;cursor:pointer}
+#contactForm .privacy-consent input[type=checkbox]{width:17px;height:17px;flex:none;margin-top:2px;accent-color:#0870e8}
+#contactForm .privacy-consent a,.privacy-footer a{color:#0863c5;text-decoration:underline}
+.privacy-footer{font-size:13px;margin-top:12px}
