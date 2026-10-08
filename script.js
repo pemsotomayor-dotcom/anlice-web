@@ -121,3 +121,23 @@ document.addEventListener('click',function(e){
  card.classList.add('card-pop');
  setTimeout(()=>card.classList.remove('card-pop'),520);
 });
+
+/* Privacy consent for voluntary diagnostic sharing through WhatsApp. */
+(()=>{
+ ['quizContact','impulsaContact'].forEach(id=>{
+  const link=document.getElementById(id), consent=document.querySelector('[data-consent-for="'+id+'"]');
+  if(!link||!consent)return;
+  link.addEventListener('click',event=>{
+   if(!consent.checked){event.preventDefault();consent.focus();consent.closest('label')?.classList.add('privacy-attention');return;}
+   const href=link.getAttribute('href');
+   if(href?.startsWith('https://wa.me/')){
+    const url=new URL(href), msg=url.searchParams.get('text')||'';
+    if(!msg.includes('Aviso de Privacidad')){
+     url.searchParams.set('text',msg+' He leído el Aviso de Privacidad de ANLICE y autorizo el tratamiento de mis datos para atender esta consulta.');
+     link.href=url.toString();
+    }
+   }
+  });
+  consent.addEventListener('change',()=>consent.closest('label')?.classList.remove('privacy-attention'));
+ });
+})();
