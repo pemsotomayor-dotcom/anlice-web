@@ -1571,3 +1571,9 @@ img{max-width:100%}
 #contactForm .privacy-consent input[type=checkbox]{width:17px;height:17px;flex:none;margin-top:2px;accent-color:#0870e8}
 #contactForm .privacy-consent a,.privacy-footer a{color:#0863c5;text-decoration:underline}
 .privacy-footer{font-size:13px;margin-top:12px}
+
+/* Privacy opt-in for ACTIVA and IMPULSA WhatsApp results */
+.diagnostic-privacy{display:flex;align-items:flex-start;gap:8px;font-size:12px;line-height:1.45;color:#34516f;max-width:480px;margin:10px 0}
+.diagnostic-privacy input{width:17px;height:17px;flex:none;accent-color:#0870e8;margin-top:1px}
+.diagnostic-privacy a{color:#0863c5;text-decoration:underline}
+.diagnostic-privacy.privacy-attention{outline:2px solid #e9a24b;outline-offset:4px;border-radius:3px}
