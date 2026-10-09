@@ -1577,3 +1577,16 @@ img{max-width:100%}
 .diagnostic-privacy input{width:17px;height:17px;flex:none;accent-color:#0870e8;margin-top:1px}
 .diagnostic-privacy a{color:#0863c5;text-decoration:underline}
 .diagnostic-privacy.privacy-attention{outline:2px solid #e9a24b;outline-offset:4px;border-radius:3px}
+
+/* ANLICE IMPULSA: keep long card headings inside their cards on all screens */
+.anlice-impulsa .impulsa-skills{min-width:0!important}
+.anlice-impulsa .impulsa-skills>span{min-width:0!important;box-sizing:border-box!important}
+.anlice-impulsa .impulsa-skills b{max-width:100%!important;min-width:0!important;font-size:clamp(12px,1.05vw,16px)!important;line-height:1.25!important;overflow-wrap:anywhere!important;word-break:normal!important;hyphens:auto!important}
+.anlice-impulsa .impulsa-skills small{max-width:100%!important;overflow-wrap:break-word!important}
+@media(min-width:651px) and (max-width:1450px){
+ .anlice-impulsa .impulsa-skills{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:650px){
+ .anlice-impulsa .impulsa-skills{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .anlice-impulsa .impulsa-skills b{font-size:14px!important}
+}
