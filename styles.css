@@ -1590,3 +1590,13 @@ img{max-width:100%}
  .anlice-impulsa .impulsa-skills{grid-template-columns:repeat(2,minmax(0,1fr))!important}
  .anlice-impulsa .impulsa-skills b{font-size:14px!important}
 }
+
+/* FIX: IMPULSA cards must not be squeezed into the right half of a two-column section. */
+.anlice-impulsa{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:28px!important}
+.anlice-impulsa>div{min-width:0!important;width:100%!important;max-width:100%!important}
+.anlice-impulsa .impulsa-skills{width:100%!important;max-width:1200px!important;margin-inline:auto!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:14px!important}
+.anlice-impulsa .impulsa-skills>span{width:100%!important;min-width:0!important;padding:22px 12px 22px!important}
+.anlice-impulsa .impulsa-skills b{width:100%!important;max-width:100%!important;white-space:normal!important;overflow-wrap:break-word!important;word-break:normal!important;font-size:clamp(14px,1.2vw,17px)!important;line-height:1.25!important}
+@media(max-width:850px){.anlice-impulsa .impulsa-skills{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
+@media(max-width:540px){.anlice-impulsa .impulsa-skills{grid-template-columns:repeat(2,minmax(0,1fr))!important}.anlice-impulsa .impulsa-skills b{font-size:14px!important}}
+@media(max-width:360px){.anlice-impulsa .impulsa-skills{grid-template-columns:1fr!important}}
