@@ -180,7 +180,7 @@ section.solutions,section.method,section.about,section.proof{padding:90px 6%}
 .video-card{position:relative;display:block;overflow:hidden;border-radius:16px;min-height:290px;background:#08264a;text-decoration:none}.video-card img{width:100%;height:290px;object-fit:cover;display:block;opacity:.82}.video-card>span{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);display:grid;place-items:center;width:66px;height:66px;border-radius:50%;background:#fff;color:#0d6efd;font-size:28px}.video-card>b{position:absolute;left:22px;bottom:18px;color:#fff;font-size:18px}
 @media(max-width:760px){.client-logos,.client-stories,.action-panel{grid-template-columns:1fr}.clients{padding:60px 5%}.client-logo{min-height:105px}.action-panel{padding:24px}.video-card,.video-card img{min-height:220px;height:220px}}
 
-/* ANLICE official logo consistency */
+/* anlice official logo consistency */
 header .brand-logo{display:flex;align-items:center;background:#fff!important;border-radius:10px;padding:5px 9px;overflow:hidden}
 header .brand-logo img{display:block!important;width:190px!important;height:auto!important;max-height:58px!important;object-fit:contain!important;filter:none!important;opacity:1!important}
 footer .footer-logo img{filter:none!important;opacity:1!important;object-fit:contain!important}
@@ -260,7 +260,7 @@ header.site-header .header-anlice-logo{display:block!important;visibility:visibl
 .showcase-logos .brand-real.uss{background:#55f000!important}
 .showcase-logos .brand-real.parque{background:#08764e!important}
 
-/* Expanded ANLICE story */
+/* Expanded anlice story */
 .about.about-story{display:grid!important;grid-template-columns:minmax(0,1.02fr) minmax(480px,.98fr)!important;gap:64px!important;align-items:center!important;padding-top:80px!important;padding-bottom:80px!important}
 .about-story-copy h2{font-size:clamp(42px,4.1vw,64px)!important;line-height:1.05!important;max-width:720px!important;margin:14px 0 28px!important}
 .about-story-copy>p{font-size:18px!important;line-height:1.65!important;max-width:760px!important;margin:0 0 19px!important}
@@ -317,7 +317,7 @@ main,.hero{border-top:0!important;outline:0!important}
 .showcase-logos .brand-real.uss,.showcase-logos .brand-real.parque{padding:0!important;overflow:hidden!important}
 .showcase-logos .brand-real.uss img,.showcase-logos .brand-real.parque img{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important}
 
-/* ANLICE methodology cards v2 */
+/* anlice methodology cards v2 */
 .method .method-grid article{padding:24px 20px 25px!important;min-height:270px!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;border-top:3px solid #1aa7ec!important}
 .method .method-top{width:100%;display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
 .method .method-icon{width:52px;height:52px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(135deg,#0877ef,#36b9e9);box-shadow:0 8px 20px rgba(8,119,239,.18)}
@@ -355,7 +355,7 @@ main,.hero{border-top:0!important;outline:0!important}
 .showcase-logos .brand-real.parque{background:#08764e!important}
 .showcase-logos .brand-real.parque img{display:block!important;width:100%!important;height:100%!important;min-width:0!important;min-height:0!important;max-width:100%!important;max-height:100%!important;object-fit:cover!important;object-position:center!important;transform:none!important}
 
-/* Testimonials visual reset based on the preferred ANLICE concept */
+/* Testimonials visual reset based on the preferred anlice concept */
 .clients-showcase{background:linear-gradient(180deg,#fff 0%,#f7fbff 58%,#fff 100%)!important}
 .clients-showcase .testimonials-kicker{margin-top:34px!important;text-align:center!important;letter-spacing:.28em!important;color:#173e78!important;font-size:12px!important;font-weight:800!important}
 .clients-showcase .testimonials-title{text-align:center!important;color:#062c63!important;font-size:36px!important;line-height:1.1!important;margin:8px 0 24px!important}
@@ -373,7 +373,7 @@ main,.hero{border-top:0!important;outline:0!important}
 .showcase-logos .brand-real.parque img{width:88%!important;height:88%!important;max-width:88%!important;max-height:88%!important;object-fit:contain!important;object-position:center!important;transform:none!important}
 .showcase-logos .brand-real.summa img{width:88%!important;height:88%!important;max-width:88%!important;max-height:88%!important;object-fit:contain!important;object-position:center!important;transform:none!important}
 
-/* ANLICE premium visual layer */
+/* anlice premium visual layer */
 :root{--an-navy:#062b5b;--an-blue:#0878f5;--an-sky:#eef7ff;--an-yellow:#ffc928;--an-ink:#12385f}
 body{color:var(--an-ink);letter-spacing:-.01em}
 h1,h2,h3{letter-spacing:-.035em}
@@ -499,7 +499,7 @@ section.approved-profile>img{display:block!important;position:relative!important
 @media(max-width:520px){.profile-facts{grid-template-columns:1fr!important}.profile-final{padding-left:22px!important;padding-right:22px!important}}
 
 
-/* ANLICE typography refinement: preserve approved layout and imagery */
+/* anlice typography refinement: preserve approved layout and imagery */
 body{font-family:Inter,Arial,sans-serif;font-size:17px;line-height:1.58}
 section:not(.hero) p{line-height:1.62}
 section:not(.hero) h2{font-weight:750;letter-spacing:-.035em;line-height:1.08}
@@ -570,7 +570,7 @@ blockquote{font-size:clamp(24px,2vw,31px);line-height:1.35;letter-spacing:-.02em
 @media(max-width:520px){.profile-final .profile-photo{padding:12px 10px 0!important}.profile-final .profile-photo::before{left:5%!important;right:5%!important}.profile-final .profile-photo::after{left:13%!important;width:82%!important}.profile-final .profile-photo>img{width:100%!important}}
 
 
-/* ANLICE ACTIVA + IMPULSA */
+/* anlice ACTIVA + IMPULSA */
 .anlice-activa{padding:0!important;background:#fff;color:#092f57}
 .activa-head{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;padding:74px 6%;background:radial-gradient(circle at 2% 0,#fff2bd 0,transparent 18%),linear-gradient(115deg,#edf7ff 0,#fff 55%,#eef7ff 100%)}
 .activa-copy{align-self:center}.activa-label,.impulsa-label{display:inline-block;padding:8px 15px;border-radius:999px;background:#cfe8ff;color:#075bb8;font-size:12px;font-weight:850;letter-spacing:.04em}
@@ -720,7 +720,7 @@ body.quiz-open{overflow:hidden}
 .activa-lower .activa-dims span b{display:block!important;margin:0!important}
 
 
-/* Facilitator organizations: explicitly separate personal experience from ANLICE clients */
+/* Facilitator organizations: explicitly separate personal experience from anlice clients */
 .profile-orgs{max-width:1320px;margin:28px auto 0;padding-top:22px;border-top:1px solid #e4edf6;text-align:center}
 .profile-orgs-label{margin:0 0 6px!important;color:#5b83ad!important;font-size:11px!important;font-weight:850!important;letter-spacing:.18em!important}
 .profile-orgs-note{max-width:920px;margin:0 auto 18px!important;color:#8191a4!important;font-size:11px!important;line-height:1.45!important}
@@ -1578,7 +1578,7 @@ img{max-width:100%}
 .diagnostic-privacy a{color:#0863c5;text-decoration:underline}
 .diagnostic-privacy.privacy-attention{outline:2px solid #e9a24b;outline-offset:4px;border-radius:3px}
 
-/* ANLICE IMPULSA: keep long card headings inside their cards on all screens */
+/* anlice IMPULSA: keep long card headings inside their cards on all screens */
 .anlice-impulsa .impulsa-skills{min-width:0!important}
 .anlice-impulsa .impulsa-skills>span{min-width:0!important;box-sizing:border-box!important}
 .anlice-impulsa .impulsa-skills b{max-width:100%!important;min-width:0!important;font-size:clamp(12px,1.05vw,16px)!important;line-height:1.25!important;overflow-wrap:anywhere!important;word-break:normal!important;hyphens:auto!important}
