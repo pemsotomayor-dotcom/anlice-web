@@ -35,7 +35,7 @@ document.getElementById('contactForm')?.addEventListener('submit', (event) => {
   document.getElementById('formMsg').textContent = 'Formulario listo. Conectaremos el envío antes de publicar.';
 });
 
-/* ANLICE ACTIVA Express */
+/* anlice ACTIVA Express */
 (() => {
   const openBtn=document.getElementById('startActiva'), modal=document.getElementById('activaQuiz'), closeBtn=document.getElementById('closeActiva');
   const form=document.getElementById('activaForm'), result=document.getElementById('quizResult'), scale=document.getElementById('quizScale');
@@ -60,12 +60,12 @@ document.getElementById('contactForm')?.addEventListener('submit', (event) => {
     document.getElementById('quizTotal').textContent=total;document.getElementById('quizLevel').textContent=total>=80?'Fortaleza consolidada':total>=60?'En desarrollo':total>=40?'Requiere atención':'Prioridad de intervención';
     document.getElementById('quizGap').textContent=gap;document.getElementById('quizInsight').textContent=w[2];document.getElementById('quizWorkshop').textContent=w[0];document.getElementById('quizWorkshopFocus').textContent=w[1];
     document.getElementById('quizChart').innerHTML=qs.map((q,i)=>'<div><span>'+q.dataset.dim+'</span><b>'+scores[i]+'%</b><i><em style="width:'+scores[i]+'%"></em></i></div>').join('');
-    const contact=document.getElementById('quizContact');const msg='Hola ANLICE, realicé ACTIVA Express. Mi resultado general fue '+total+'/100 y mi principal oportunidad detectada fue '+gap+' ('+min+'%). Me recomendaron '+w[0]+'. Quisiera conversar sobre mi resultado.';contact.href='https://wa.me/51903220257?text='+encodeURIComponent(msg);contact.target='_blank';contact.rel='noopener noreferrer';contact.onclick=null;
+    const contact=document.getElementById('quizContact');const msg='Hola anlice, realicé ACTIVA Express. Mi resultado general fue '+total+'/100 y mi principal oportunidad detectada fue '+gap+' ('+min+'%). Me recomendaron '+w[0]+'. Quisiera conversar sobre mi resultado.';contact.href='https://wa.me/51903220257?text='+encodeURIComponent(msg);contact.target='_blank';contact.rel='noopener noreferrer';contact.onclick=null;
   }
   document.getElementById('restartActiva')?.addEventListener('click',reset);
 })();
 
-/* ANLICE IMPULSA profile */
+/* anlice IMPULSA profile */
 (() => {
  const open=document.getElementById('startImpulsa'), modal=document.getElementById('impulsaQuiz'), close=document.getElementById('closeImpulsa'), form=document.getElementById('impulsaForm'), result=document.getElementById('impulsaResult'), scale=document.getElementById('impulsaScale');
  if(!open||!modal) return;
@@ -88,7 +88,7 @@ document.getElementById('contactForm')?.addEventListener('submit', (event) => {
  document.getElementById('impulsaTotal').textContent=total;document.getElementById('impulsaLevel').textContent=total>=85?'IMPULSA Ready':total>=70?'IMPULSA Avanzado':total>=50?'IMPULSA en Desarrollo':'IMPULSA Inicial';
  document.getElementById('impulsaGap').textContent=gap;document.getElementById('impulsaInsight').textContent=a[0];document.getElementById('impulsaNext').textContent=a[1];
  document.getElementById('impulsaChart').innerHTML=qs.map((q,i)=>'<div><span>'+q.dataset.dim+'</span><b>'+scores[i]+'%</b><i><em style="width:'+scores[i]+'%"></em></i></div>').join('');
- const contact=document.getElementById('impulsaContact');const msg='Hola ANLICE, hice mi Perfil IMPULSA. Obtuve '+total+'/100 y quiero reforzar '+gap+'. Mi siguiente paso recomendado es '+a[1]+'. Quisiera orientación para mejorar mi perfil.';contact.href='https://wa.me/51903220257?text='+encodeURIComponent(msg);contact.target='_blank';contact.rel='noopener noreferrer';}
+ const contact=document.getElementById('impulsaContact');const msg='Hola anlice, hice mi Perfil IMPULSA. Obtuve '+total+'/100 y quiero reforzar '+gap+'. Mi siguiente paso recomendado es '+a[1]+'. Quisiera orientación para mejorar mi perfil.';contact.href='https://wa.me/51903220257?text='+encodeURIComponent(msg);contact.target='_blank';contact.rel='noopener noreferrer';}
  document.getElementById('restartImpulsa').addEventListener('click',reset);
 })();
 
@@ -133,7 +133,7 @@ document.addEventListener('click',function(e){
    if(href?.startsWith('https://wa.me/')){
     const url=new URL(href), msg=url.searchParams.get('text')||'';
     if(!msg.includes('Aviso de Privacidad')){
-     url.searchParams.set('text',msg+' He leído el Aviso de Privacidad de ANLICE y autorizo el tratamiento de mis datos para atender esta consulta.');
+     url.searchParams.set('text',msg+' He leído el Aviso de Privacidad de anlice y autorizo el tratamiento de mis datos para atender esta consulta.');
      link.href=url.toString();
     }
    }
