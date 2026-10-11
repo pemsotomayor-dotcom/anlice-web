@@ -1600,3 +1600,80 @@ img{max-width:100%}
 @media(max-width:850px){.anlice-impulsa .impulsa-skills{grid-template-columns:repeat(3,minmax(0,1fr))!important}}
 @media(max-width:540px){.anlice-impulsa .impulsa-skills{grid-template-columns:repeat(2,minmax(0,1fr))!important}.anlice-impulsa .impulsa-skills b{font-size:14px!important}}
 @media(max-width:360px){.anlice-impulsa .impulsa-skills{grid-template-columns:1fr!important}}
+
+
+/* ANLICE floating premium navigation, approved October 2026 */
+@media (min-width:1101px) {
+  body { background:#f7fbff; }
+  header.site-header {
+    position:sticky!important;
+    top:10px!important;
+    z-index:1000!important;
+    width:calc(100% - 36px)!important;
+    max-width:1920px!important;
+    margin:10px auto 6px!important;
+    padding:0 24px!important;
+    min-height:98px!important;
+    height:auto!important;
+    border:1px solid rgba(220,232,246,.8)!important;
+    border-radius:24px!important;
+    background:rgba(255,255,255,.97)!important;
+    box-shadow:0 12px 34px rgba(17,56,105,.10)!important;
+    backdrop-filter:blur(14px);
+    display:flex!important;
+    align-items:center!important;
+    gap:22px!important;
+  }
+  header.site-header .site-logo {
+    flex:0 0 clamp(215px,21vw,340px)!important;
+    width:clamp(215px,21vw,340px)!important;
+    border-right:1px solid #e3ebf5;
+    padding-right:16px;
+  }
+  header.site-header .header-anlice-logo {
+    width:100%!important;
+    max-width:320px!important;
+    height:auto!important;
+  }
+  header.site-header nav {
+    display:flex!important;
+    flex:1 1 auto!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:clamp(8px,1.3vw,24px)!important;
+    min-width:0!important;
+    margin:0!important;
+  }
+  header.site-header nav a {
+    font-size:clamp(12px,1vw,16px)!important;
+    white-space:nowrap!important;
+    font-weight:500!important;
+    padding:15px 0!important;
+    transition:color .2s ease;
+  }
+  header.site-header nav a:hover {color:#0868ff!important}
+  header.site-header nav a.current {color:#0868ff!important}
+  header.site-header .header-cta {
+    flex:0 0 auto!important;
+    padding:18px 25px!important;
+    border-radius:13px!important;
+    box-shadow:0 8px 18px rgba(8,104,255,.19);
+    white-space:nowrap!important;
+    transition:transform .2s ease,box-shadow .2s ease;
+  }
+  header.site-header .header-cta:hover {transform:translateY(-2px);box-shadow:0 12px 22px rgba(8,104,255,.25)}
+}
+@media (min-width:1101px) and (max-width:1370px) {
+  header.site-header {gap:12px!important;padding:0 17px!important}
+  header.site-header .site-logo {flex-basis:210px!important;width:210px!important;padding-right:10px}
+  header.site-header nav {gap:8px!important}
+  header.site-header nav a {font-size:12px!important}
+  header.site-header .header-cta {padding:14px 16px!important;font-size:13px!important}
+}
+@media (max-width:1100px) {
+  header.site-header {
+    border-radius:0 0 16px 16px!important;
+    box-shadow:0 7px 22px rgba(17,56,105,.08)!important;
+    background:#fff!important;
+  }
+}
