@@ -30,48 +30,6 @@ document.addEventListener('click', (event) => {
 
 window.matchMedia('(min-width: 1101px)').addEventListener('change', closeMenu);
 
-document.getElementById('contactForm')?.addEventListener('submit', async (event) => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const msg = document.getElementById('formMsg');
-  const button = form.querySelector('button[type="submit"]');
-  if (!form.reportValidity()) return;
-  const fields = form.querySelectorAll('input:not([type="checkbox"]), textarea');
-  const values = [...fields].map(field => field.value.trim());
-  if (values.length !== 4) {
-    msg.textContent = 'No se pudo procesar el formulario. Escríbenos a conecta@anlice.pe.';
-    return;
-  }
-  button.disabled = true;
-  msg.textContent = 'Enviando tu solicitud...';
-  try {
-    const response = await fetch('https://formsubmit.co/ajax/conecta@anlice.pe', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify({
-        _subject: 'Nueva solicitud de propuesta | ANLICE',
-        _template: 'table',
-        _honey: '',
-        nombre: values[0],
-        email: values[1],
-        empresa: values[2],
-        necesidades_de_capacitacion: values[3],
-        autorizacion_para_atender_solicitud: document.getElementById('privacyContact')?.checked ? 'Sí' : 'No',
-        autorizacion_para_promociones: document.getElementById('privacyMarketing')?.checked ? 'Sí' : 'No',
-        origen: 'https://anlice.pe/#contacto'
-      })
-    });
-    const data = await response.json();
-    if (!response.ok || data.success === false || data.success === 'false') throw new Error('Submission rejected');
-    msg.textContent = 'Gracias por contactar con ANLICE. Hemos recibido tu solicitud y pronto nos comunicaremos contigo.';
-    form.reset();
-  } catch (error) {
-    msg.textContent = 'No se pudo enviar la solicitud. Por favor, escríbenos a conecta@anlice.pe.';
-  } finally {
-    button.disabled = false;
-  }
-});
-
 /* anlice ACTIVA Express */
 (() => {
   const openBtn=document.getElementById('startActiva'), modal=document.getElementById('activaQuiz'), closeBtn=document.getElementById('closeActiva');
