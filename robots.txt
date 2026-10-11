@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anlice.pe/sitemap.xml
