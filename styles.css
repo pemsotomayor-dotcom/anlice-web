@@ -1744,3 +1744,15 @@ img{max-width:100%}
   opacity:.58!important;
   mix-blend-mode:normal!important;
 }
+
+
+/* v57: exact final approved uploaded strip, natural muted gray and original logo sizes */
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{
+ content:url("Logos%20institucionales%20en%20banda%20azul.png")!important;
+ filter:none!important;
+ opacity:1!important;
+ mix-blend-mode:normal!important;
+ background:transparent!important;
+ object-fit:contain!important;
+ object-position:center center!important;
+}
