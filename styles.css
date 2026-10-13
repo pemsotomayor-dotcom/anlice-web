@@ -1719,3 +1719,20 @@ img{max-width:100%}
   mix-blend-mode:multiply!important;
   opacity:1!important;
 }
+
+
+/* v55: use the exact user-uploaded artwork, untouched. No recoloring. */
+.profile-final .profile-orgs .exact-approved-band,
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track {
+ background:#f3f9ff!important;
+ background-image:none!important;
+}
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track img {
+ content:url("Franja%20corporativa%20de%20logos%20en%20azul%20p%C3%A1lido.png")!important;
+ filter:none!important;
+ opacity:1!important;
+ mix-blend-mode:normal!important;
+ background:transparent!important;
+ object-fit:cover!important;
+ object-position:center center!important;
+}
