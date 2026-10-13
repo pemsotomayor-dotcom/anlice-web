@@ -1697,3 +1697,14 @@ img{max-width:100%}
   mix-blend-mode:multiply!important;
   opacity:.42!important;
 }
+
+
+/* v53: dark charcoal logos on the approved uniform pale-blue moving strip */
+.profile-final .profile-orgs .exact-approved-band,
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track{background:#d9edff!important;background-image:none!important}
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{
+ background:transparent!important;
+ filter:grayscale(1) brightness(.72) contrast(2.8)!important;
+ mix-blend-mode:multiply!important;
+ opacity:1!important;
+}
