@@ -1677,26 +1677,3 @@ img{max-width:100%}
     background:#fff!important;
   }
 }
-
-
-/* Definitive partner strip: crop original file using an SVG viewport, no white margins. */
-.profile-final .profile-orgs .exact-approved-band,
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track{
-  height:160px!important;min-height:160px!important;
-  padding:0!important;margin-top:0!important;margin-bottom:0!important;
-  background:#f0f8ff!important;overflow:hidden!important;
-}
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{
-  content:url("franja-anlice-recortada.svg")!important;
-  display:block!important;width:100vw!important;min-width:100vw!important;
-  max-width:none!important;height:160px!important;min-height:160px!important;
-  flex:0 0 100vw!important;margin:0!important;padding:0!important;
-  background:transparent!important;background-image:none!important;
-  object-fit:fill!important;transform:none!important;
-  filter:none!important;opacity:1!important;mix-blend-mode:normal!important;
-}
-@media(max-width:680px){
-.profile-final .profile-orgs .exact-approved-band,
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track{height:100px!important;min-height:100px!important}
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{height:100px!important;min-height:100px!important}
-}
