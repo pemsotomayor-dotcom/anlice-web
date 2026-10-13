@@ -1736,3 +1736,11 @@ img{max-width:100%}
  object-fit:cover!important;
  object-position:center center!important;
 }
+
+
+/* v56: soften the actual uploaded artwork to subtle medium gray, not black. */
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{
+  filter:none!important;
+  opacity:.58!important;
+  mix-blend-mode:normal!important;
+}
