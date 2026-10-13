@@ -1708,3 +1708,14 @@ img{max-width:100%}
  mix-blend-mode:multiply!important;
  opacity:1!important;
 }
+
+
+/* v54: separate the dark logo ink from the baked-in pale artwork background.
+   High contrast makes light pixels white (transparent under multiply),
+   while keeping the marks dark on the single celeste strip. */
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{
+  background:transparent!important;
+  filter:grayscale(1) brightness(.82) contrast(12)!important;
+  mix-blend-mode:multiply!important;
+  opacity:1!important;
+}
