@@ -1682,3 +1682,18 @@ img{max-width:100%}
 .profile-final .profile-orgs .exact-approved-band{background:#d9edff!important;isolation:isolate!important}
 .profile-final .profile-orgs .exact-approved-band .anlice-band-track{background:#d9edff!important}
 .profile-final .profile-orgs .exact-approved-band .anlice-band-track img{background:#d9edff!important;filter:grayscale(1) brightness(1.45) contrast(5)!important;mix-blend-mode:multiply!important;opacity:.42!important}
+
+
+/* v52: uniform flat background for the moving ANLICE logo band; no gradient or colored image tiles */
+.profile-final .profile-orgs .exact-approved-band,
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track {
+  background-color:#d9edff!important;
+  background-image:none!important;
+}
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track img {
+  background:transparent!important;
+  /* Turn near-white pixels in the supplied artwork into the same band tone. */
+  filter:grayscale(1) brightness(1.8) contrast(7)!important;
+  mix-blend-mode:multiply!important;
+  opacity:.42!important;
+}
