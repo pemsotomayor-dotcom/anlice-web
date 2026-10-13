@@ -1678,143 +1678,25 @@ img{max-width:100%}
   }
 }
 
-/* v51: one uniform celeste background across the moving strip */
-.profile-final .profile-orgs .exact-approved-band{background:#d9edff!important;isolation:isolate!important}
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track{background:#d9edff!important}
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{background:#d9edff!important;filter:grayscale(1) brightness(1.45) contrast(5)!important;mix-blend-mode:multiply!important;opacity:.42!important}
 
-
-/* v52: uniform flat background for the moving ANLICE logo band; no gradient or colored image tiles */
-.profile-final .profile-orgs .exact-approved-band,
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track {
-  background-color:#d9edff!important;
-  background-image:none!important;
-}
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track img {
-  background:transparent!important;
-  /* Turn near-white pixels in the supplied artwork into the same band tone. */
-  filter:grayscale(1) brightness(1.8) contrast(7)!important;
-  mix-blend-mode:multiply!important;
-  opacity:.42!important;
-}
-
-
-/* v53: dark charcoal logos on the approved uniform pale-blue moving strip */
-.profile-final .profile-orgs .exact-approved-band,
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track{background:#d9edff!important;background-image:none!important}
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{
- background:transparent!important;
- filter:grayscale(1) brightness(.72) contrast(2.8)!important;
- mix-blend-mode:multiply!important;
- opacity:1!important;
-}
-
-
-/* v54: separate the dark logo ink from the baked-in pale artwork background.
-   High contrast makes light pixels white (transparent under multiply),
-   while keeping the marks dark on the single celeste strip. */
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{
-  background:transparent!important;
-  filter:grayscale(1) brightness(.82) contrast(12)!important;
-  mix-blend-mode:multiply!important;
-  opacity:1!important;
-}
-
-
-/* v55: use the exact user-uploaded artwork, untouched. No recoloring. */
-.profile-final .profile-orgs .exact-approved-band,
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track {
- background:#f3f9ff!important;
- background-image:none!important;
-}
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track img {
- content:url("Franja%20corporativa%20de%20logos%20en%20azul%20p%C3%A1lido.png")!important;
- filter:none!important;
- opacity:1!important;
- mix-blend-mode:normal!important;
- background:transparent!important;
- object-fit:cover!important;
- object-position:center center!important;
-}
-
-
-/* v56: soften the actual uploaded artwork to subtle medium gray, not black. */
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{
-  filter:none!important;
-  opacity:.58!important;
-  mix-blend-mode:normal!important;
-}
-
-
-/* v57: exact final approved uploaded strip, natural muted gray and original logo sizes */
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{
- content:url("Logos%20institucionales%20en%20banda%20azul.png")!important;
- filter:none!important;
- opacity:1!important;
- mix-blend-mode:normal!important;
- background:transparent!important;
- object-fit:contain!important;
- object-position:center center!important;
-}
-
-
-/* v58: size correction only. Preserve approved uploaded colors, background and motion. */
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{
-  object-fit:contain!important;
-  transform:scale(.72)!important;
-  transform-origin:center center!important;
-}
-
-
-/* v59: remove white margins baked into uploaded graphic, keep the actual gray logos and soft blue band at original proportional size. */
+/* Definitive partner strip: crop original file using an SVG viewport, no white margins. */
 .profile-final .profile-orgs .exact-approved-band,
 .profile-final .profile-orgs .exact-approved-band .anlice-band-track{
- background:#eef7ff!important;
+  height:160px!important;min-height:160px!important;
+  padding:0!important;margin-top:0!important;margin-bottom:0!important;
+  background:#f0f8ff!important;overflow:hidden!important;
 }
 .profile-final .profile-orgs .exact-approved-band .anlice-band-track img{
- content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='148'%3E%3C/svg%3E")!important;
- background-image:url("Logos%20institucionales%20en%20banda%20azul.png")!important;
- background-repeat:no-repeat!important;
- background-size:100% auto!important;
- background-position:center center!important;
- width:100vw!important;
- height:148px!important;
- flex:0 0 100vw!important;
- object-fit:fill!important;
- transform:none!important;
- opacity:1!important;
- filter:none!important;
- mix-blend-mode:normal!important;
+  content:url("franja-anlice-recortada.svg")!important;
+  display:block!important;width:100vw!important;min-width:100vw!important;
+  max-width:none!important;height:160px!important;min-height:160px!important;
+  flex:0 0 100vw!important;margin:0!important;padding:0!important;
+  background:transparent!important;background-image:none!important;
+  object-fit:fill!important;transform:none!important;
+  filter:none!important;opacity:1!important;mix-blend-mode:normal!important;
 }
 @media(max-width:680px){
- .profile-final .profile-orgs .exact-approved-band .anlice-band-track img{height:96px!important;background-size:auto 290%!important}
-}
-
-
-/* v60: show only the central blue/logo portion of the uploaded artwork.
-   Crop white top/bottom via background zoom, not by shrinking the whole image. */
 .profile-final .profile-orgs .exact-approved-band,
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track{
- height:180px!important;min-height:180px!important;
- background-color:#f1f8ff!important;overflow:hidden!important;
-}
-.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{
- content:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='180'%3E%3C/svg%3E")!important;
- display:block!important;
- width:100vw!important;min-width:100vw!important;max-width:none!important;
- height:180px!important;min-height:180px!important;
- flex:0 0 100vw!important;
- margin:0!important;padding:0!important;
- transform:none!important;
- background-color:#f1f8ff!important;
- background-image:url("Logos%20institucionales%20en%20banda%20azul.png")!important;
- background-repeat:no-repeat!important;
- background-position:center center!important;
- background-size:100% 345%!important;
- opacity:1!important;filter:none!important;mix-blend-mode:normal!important;
-}
-@media(max-width:680px){
- .profile-final .profile-orgs .exact-approved-band,
- .profile-final .profile-orgs .exact-approved-band .anlice-band-track{height:110px!important;min-height:110px!important}
- .profile-final .profile-orgs .exact-approved-band .anlice-band-track img{height:110px!important;min-height:110px!important;background-size:auto 345%!important}
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track{height:100px!important;min-height:100px!important}
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{height:100px!important;min-height:100px!important}
 }
