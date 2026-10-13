@@ -1677,3 +1677,10 @@ img{max-width:100%}
     background:#fff!important;
   }
 }
+
+
+/* Subtle pale-blue container tone only; preserve partner logo artwork, geometry and animation. */
+.profile-final .profile-orgs .exact-approved-band,
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track{
+ background-color:#edf7ff!important;
+}
