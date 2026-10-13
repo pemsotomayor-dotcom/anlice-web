@@ -1677,3 +1677,8 @@ img{max-width:100%}
     background:#fff!important;
   }
 }
+
+/* v51: one uniform celeste background across the moving strip */
+.profile-final .profile-orgs .exact-approved-band{background:#d9edff!important;isolation:isolate!important}
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track{background:#d9edff!important}
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{background:#d9edff!important;filter:grayscale(1) brightness(1.45) contrast(5)!important;mix-blend-mode:multiply!important;opacity:.42!important}
