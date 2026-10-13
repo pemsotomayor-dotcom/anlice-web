@@ -1756,3 +1756,11 @@ img{max-width:100%}
  object-fit:contain!important;
  object-position:center center!important;
 }
+
+
+/* v58: size correction only. Preserve approved uploaded colors, background and motion. */
+.profile-final .profile-orgs .exact-approved-band .anlice-band-track img{
+  object-fit:contain!important;
+  transform:scale(.72)!important;
+  transform-origin:center center!important;
+}
