@@ -158,21 +158,40 @@ document.addEventListener('click',function(e){
 
 
 
-/* Agenda directa en la sección de contacto. Mantener el enlace flotante de WhatsApp. */
+
+/* Sustituye la sección de solicitud de propuestas por la agenda directa. */
 (() => {
-  const heading = [...document.querySelectorAll('h1,h2,h3,h4')].find(el => el.textContent.trim().includes('¿Qué resultado quieres mejorar en tu equipo?'));
-  if (!heading) return;
-  let section = heading.closest('section');
-  if (!section || !section.querySelector('form')) {
-    section = [...document.querySelectorAll('section')].filter(el => el.contains(heading) && el.querySelector('form')).sort((a,b)=>a.querySelectorAll('*').length-b.querySelectorAll('*').length)[0];
+  function mountAgenda() {
+    if (document.querySelector('.anlice-agenda-embed')) return;
+    const all = [...document.querySelectorAll('body *')];
+    const form = [...document.querySelectorAll('form')].find(f => {
+      const t = (f.innerText || f.textContent || '').toLowerCase();
+      return t.includes('solicita una propuesta') || !!f.querySelector('textarea[placeholder*="resultado"]');
+    });
+    if (!form) return;
+    const heading = all.find(el => el.children.length === 0 && (el.textContent || '').includes('¿Qué resultado quieres mejorar en tu equipo?'));
+    let target = form;
+    for (let i=0;i<7 && target.parentElement;i++) {
+      const parent=target.parentElement;
+      if (heading && parent.contains(heading)) { target=parent; break; }
+      target=parent;
+    }
+    if (!heading || !target.contains(heading)) {
+      const ancestor = all.filter(el => el.contains(form) && el.textContent.includes('¿Qué resultado quieres mejorar en tu equipo?')).sort((a,b)=>a.querySelectorAll('*').length-b.querySelectorAll('*').length)[0];
+      if (ancestor) target=ancestor;
+    }
+    const wrapper=document.createElement('div');
+    wrapper.className='anlice-agenda-embed';
+    wrapper.style.cssText='width:100%;max-width:1100px;margin:0 auto;padding:0 12px';
+    const frame=document.createElement('iframe');
+    frame.src='/agenda.html';
+    frame.title='Agenda una reunión con anlice';
+    frame.loading='eager';
+    frame.style.cssText='width:100%;height:990px;border:0;border-radius:22px;background:#f3f7fc;display:block';
+    wrapper.appendChild(frame);
+    target.replaceWith(wrapper);
   }
-  if (!section) return;
-  const oldForm = section.querySelector('form');
-  if (!oldForm) return;
-  const anchor = document.createElement('div');
-  anchor.className = 'anlice-agenda-embed';
-  anchor.style.cssText = 'width:100%;max-width:1040px;margin:0 auto;padding:10px 12px 28px';
-  anchor.innerHTML = '<iframe src="/agenda.html" title="Agenda tu reunión con anlice" loading="eager" style="width:100%;height:950px;max-width:100%;border:0;border-radius:22px;background:#f3f7fc" referrerpolicy="strict-origin-when-cross-origin"></iframe>';
-  section.replaceChildren(anchor);
-  section.style.cssText += ';display:block;max-width:100%;padding:12px 0;background:#f3f7fc;';
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded',mountAgenda);
+  else mountAgenda();
+  window.addEventListener('load',mountAgenda,{once:true});
 })();
