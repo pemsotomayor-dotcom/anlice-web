@@ -154,3 +154,16 @@ document.addEventListener('click',function(e){
   addEventListener('hashchange', revealHistory);
   revealHistory();
 })();
+
+
+/* Acceso directo a la agenda de reuniones. No modifica WhatsApp. */
+(() => {
+  if (document.querySelector('.anlice-agenda-link')) return;
+  const link = document.createElement('a');
+  link.className = 'anlice-agenda-link';
+  link.href = '/agenda.html';
+  link.textContent = '📅 Agenda una conversación';
+  link.setAttribute('aria-label', 'Agendar una conversación con anlice');
+  link.style.cssText = 'position:fixed;left:18px;bottom:20px;z-index:998;background:#0b376c;color:#fff;text-decoration:none;padding:14px 19px;border-radius:999px;box-shadow:0 8px 25px #082d4d40;font:600 14px system-ui,Arial;max-width:calc(100vw - 110px);text-align:center';
+  document.body.appendChild(link);
+})();
