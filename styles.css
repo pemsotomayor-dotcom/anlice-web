@@ -1684,3 +1684,104 @@ img{max-width:100%}
 .profile-final .profile-orgs .exact-approved-band .anlice-band-track{
  background-color:#edf7ff!important;
 }
+
+/* ANLICE: ice-blue and violet visual direction. */
+:root {
+  --design-ink: #121b46;
+  --design-ice: #edf3ff;
+  --design-lavender: #f2ebff;
+  --design-violet: #5518bf;
+  --design-blue: #2638cf;
+  --design-route: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 160' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='a'%3E%3Cstop stop-color='%232638cf'/%3E%3Cstop offset='1' stop-color='%23732ce9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 122C190 122 185 22 385 32S670 148 842 118 1040 15 1200 37' fill='none' stroke='url(%23a)' stroke-width='4'/%3E%3Ccircle cx='385' cy='32' r='9' fill='%232638cf'/%3E%3Ccircle cx='842' cy='118' r='9' fill='%23732ce9'/%3E%3C/svg%3E");
+}
+.anlice-top-contact, footer { background: var(--design-ink) !important; }
+header.site-header { background: #fff !important; }
+header.site-header nav a.current,
+header.site-header nav a:hover { color: var(--design-violet) !important; }
+body :is(.header-cta, .hero-cta, .carousel-cta, #startActiva, #startImpulsa, #contactForm button[type=submit]) {
+  background: var(--design-violet) !important;
+  color: #fff !important;
+  border-radius: 999px !important;
+}
+body :is(.header-cta, .hero-cta, .carousel-cta, #startActiva, #startImpulsa, #contactForm button[type=submit]):hover {
+  background: #40108e !important;
+}
+main > #inicio.anlice-carousel,
+main > #activa,
+main > #expertos { background: var(--design-ice) !important; }
+main > #soluciones, main > #nosotros, main > #resultados { background: #fff !important; }
+main > #metodologia, main > #impulsa, main > #contacto { background: var(--design-lavender) !important; }
+#inicio .welcome-slide, #inicio .workshop-slide {
+  background: var(--design-route) center bottom 42px / 100% 115px no-repeat, var(--design-ice) !important;
+  min-height: clamp(440px, 43vw, 660px) !important;
+}
+#inicio .welcome-slide {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr) !important;
+  align-items: center;
+}
+#inicio .welcome-slide .hero-copy { padding: 62px max(7%, 48px) 136px !important; max-width: none !important; }
+#inicio .welcome-slide .hero-visual {
+  min-height: 200px !important;
+  background: var(--design-route) center / 100% 75% no-repeat, radial-gradient(ellipse, #e0d6fc, transparent 72%) !important;
+}
+#inicio .welcome-slide .hero-visual img,
+#inicio .workshop-slide :is(.carousel-image, .carousel-shade) { display: none !important; }
+#inicio .workshop-slide { justify-content: center; text-align: center; }
+#inicio .workshop-slide .carousel-copy { padding-bottom: 145px; }
+#inicio .workshop-slide .carousel-copy h2 { margin-inline: auto; }
+#inicio .workshop-slide :is(h2, .carousel-applied),
+#inicio .welcome-slide :is(h1, .hero-description),
+main > section:not(#inicio) h2 { color: var(--design-ink) !important; }
+#inicio .welcome-slide h1 span,
+#inicio .carousel-label { color: var(--design-violet) !important; }
+#inicio .carousel-label { display: inline-block; border: 1px solid currentColor; border-radius: 999px; padding: 7px 16px; }
+#inicio .carousel-pause { background: #fff; color: var(--design-ink); border-color: #d9def3; }
+#inicio .carousel-dots button[aria-pressed=true]::after { background: var(--design-violet); }
+#soluciones .cards > article, #expertos .profile-competencies > div,
+#impulsa .impulsa-skills > span, #resultados .client-stories > article {
+  border: 1px solid #e0d9f4 !important;
+  box-shadow: 0 12px 32px #2224580c !important;
+}
+#expertos .profile-photo::before { background: #ded3fa !important; }
+#expertos .profile-orgs .anlice-logos-viewport .exact-approved-band { border-radius: 16px; }
+#expertos .anlice-band-track { animation-direction: reverse !important; }
+#metodologia .method-photo {
+  display: grid !important;
+  place-items: center;
+  position: relative;
+  min-height: 230px;
+  background: radial-gradient(ellipse, #dfccff, transparent 70%) !important;
+  overflow: hidden;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+#metodologia .method-photo img { display: none !important; }
+#metodologia .method-photo::after {
+  content: "";
+  display: block;
+  width: min(58%, 245px);
+  aspect-ratio: 1;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x2='1' y2='1'%3E%3Cstop stop-color='%23ac70ff'/%3E%3Cstop offset='1' stop-color='%235518bf'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' fill-rule='evenodd' d='M42 3h16l3 11 8 4 10-5 11 11-5 10 4 8 11 3v15l-11 3-4 8 5 10-11 11-10-5-8 4-3 9H42l-3-9-8-4-10 5-11-11 5-10-4-8L0 60V45l11-3 4-8-5-10 11-11 10 5 8-4zM50 30a20 20 0 1 0 0 40 20 20 0 1 0 0-40'/%3E%3C/svg%3E") center / contain no-repeat;
+  filter: drop-shadow(0 14px 12px #43108b44);
+  transform: rotate(var(--method-rotation, 0deg));
+}
+#metodologia .method-grid article { border-top-color: #a78bea !important; }
+#metodologia .method-grid article.is-method-current { border-top-color: var(--design-violet) !important; background: #fff !important; box-shadow: 0 12px 28px #5518bf22; }
+#metodologia .method-icon { background: var(--design-violet) !important; }
+@media (max-width: 760px) {
+  #inicio .welcome-slide { grid-template-columns: minmax(0, 1fr) !important; }
+  #inicio .welcome-slide .hero-copy { padding: 45px 55px 12px !important; }
+  #inicio .welcome-slide .hero-visual { background: none !important; min-height: 100px !important; }
+  #inicio .workshop-slide .carousel-copy { padding-bottom: 140px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #expertos .anlice-band-track { animation: none !important; }
+  #expertos .exact-approved-band { overflow-x: auto !important; }
+  #metodologia .method-photo::after { transform: none; }
+}
+#inicio.anlice-carousel .carousel-slide[hidden] { display: none !important; }
+#expertos .profile-orgs .exact-approved-band .anlice-band-track img { opacity: .65 !important; }
+#inicio .welcome-slide .hero-copy { background: transparent !important; min-height: 0 !important; }
+#inicio .welcome-slide h1 span::after { border-top-color: var(--design-violet); }
+#expertos .profile-kicker { color: var(--design-violet) !important; }

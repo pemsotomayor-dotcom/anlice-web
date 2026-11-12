@@ -136,3 +136,36 @@ document.addEventListener('click',function(e){
   consent.addEventListener('change',()=>consent.closest('label')?.classList.remove('privacy-attention'));
  });
 })();
+
+(() => {
+  const programs = document.getElementById('soluciones');
+  const diagnostic = document.getElementById('activa');
+  const youthInitiative = document.getElementById('impulsa');
+  const results = document.getElementById('resultados');
+  if (programs && diagnostic) programs.after(diagnostic);
+  if (results && youthInitiative) results.after(youthInitiative);
+
+  const method = document.getElementById('metodologia');
+  const steps = method?.querySelectorAll('.method-grid article');
+  if (!steps?.length) return;
+
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let frame = 0;
+  function updateMethod() {
+    frame = 0;
+    const bounds = method.getBoundingClientRect();
+    const progress = Math.max(0, Math.min(1, (innerHeight * .7 - bounds.top) / Math.max(bounds.height, 1)));
+    const current = Math.min(steps.length - 1, Math.floor(progress * steps.length));
+    method.style.setProperty('--method-rotation', reducedMotion.matches ? '0deg' : `${progress * 220}deg`);
+    steps.forEach((step, index) => step.classList.toggle('is-method-current', index === current));
+  }
+
+  function scheduleUpdate() {
+    if (!frame) frame = requestAnimationFrame(updateMethod);
+  }
+
+  addEventListener('scroll', scheduleUpdate, { passive: true });
+  addEventListener('resize', scheduleUpdate);
+  reducedMotion.addEventListener('change', scheduleUpdate);
+  scheduleUpdate();
+})();
