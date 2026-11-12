@@ -176,6 +176,35 @@
   overflow-wrap: anywhere;
   text-wrap: balance;
 }
+</style><style id="activa-scroll-chart">
+@property --activa-fill {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) and (animation-range: entry 0% entry 100%) {
+    #activa .activa-result .result-body { view-timeline-name: --activa-chart; }
+    #activa .activa-result :is(.score, .bars i) {
+      animation: activa-fill-chart 1s ease-out both;
+      animation-timeline: --activa-chart;
+      animation-range: entry 0% entry 100%;
+    }
+    #activa .activa-result .score {
+      --activa-target: 67%;
+      background: radial-gradient(circle, #fff 58%, transparent 60%),
+        conic-gradient(#0877f9 var(--activa-fill), #e5f0fb var(--activa-fill));
+    }
+    #activa .activa-result .bars i {
+      --activa-target: var(--p);
+      background: linear-gradient(90deg, #0877f9 var(--activa-fill), #e6eef7 var(--activa-fill));
+    }
+    @keyframes activa-fill-chart {
+      from { --activa-fill: 0%; }
+      to { --activa-fill: var(--activa-target); }
+    }
+  }
+}
 </style></head>
 <body><div class="anlice-loader" id="anliceLoader" aria-hidden="true"><div class="loader-brand"><div class="loader-bulb">💡</div><div class="loader-name">an<span>lice</span></div><div class="loader-tag">SOLUCIONES EMPRESARIALES</div></div></div>
 <div class="anlice-top-contact" aria-label="Contacto comercial"><div class="anlice-top-contact-inner"><a href="tel:+51903220257"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-3 2a15 15 0 0 0 6 6l2-3 5 2v4c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z"/><path d="M15 3a6 6 0 0 1 6 6M15 7a2 2 0 0 1 2 2"/></svg><span><small>Contactar con ventas</small><strong>+51 903 220 257</strong></span></a><a href="mailto:conecta@anlice.pe"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="m3 5 9 8 9-8"/></svg><span><small>Escríbenos a</small><strong>conecta@anlice.pe</strong></span></a></div></div><header class="site-header">
