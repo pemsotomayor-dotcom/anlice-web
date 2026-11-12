@@ -1785,3 +1785,65 @@ main > section:not(#inicio) h2 { color: var(--design-ink) !important; }
 #inicio .welcome-slide .hero-copy { background: transparent !important; min-height: 0 !important; }
 #inicio .welcome-slide h1 span::after { border-top-color: var(--design-violet); }
 #expertos .profile-kicker { color: var(--design-violet) !important; }
+
+footer.anlice-footer {
+  display: block;
+  padding: clamp(40px, 5vw, 72px) 7% 24px;
+  color: #dce6ff;
+}
+.anlice-footer .footer-columns {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+  gap: 24px 32px;
+  max-width: 1320px;
+  margin-inline: auto;
+}
+.anlice-footer .footer-columns h2 {
+  color: #fff;
+  font-size: .84rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+.anlice-footer .footer-columns a {
+  display: block;
+  width: fit-content;
+  color: inherit;
+  margin-block: 8px;
+  overflow-wrap: anywhere;
+}
+.anlice-footer a:hover { color: #fff; text-decoration: underline; }
+.anlice-footer address { font-style: normal; line-height: 1.65; }
+.anlice-footer .footer-history,
+.anlice-footer .footer-bottom {
+  max-width: 1320px;
+  margin: 26px auto 0;
+  padding-top: 16px;
+  border-top: 1px solid #ffffff32;
+}
+.anlice-footer .footer-history { scroll-margin-top: 125px; }
+.anlice-footer .footer-history:not([open]) { display: none; }
+.anlice-footer .footer-history summary { cursor: pointer; color: #fff; }
+.anlice-footer .footer-history .about-story {
+  margin-top: 16px;
+  padding-inline: clamp(18px, 4vw, 48px);
+  border-radius: 16px;
+  color: var(--design-ink);
+  background: #fff;
+}
+.anlice-footer .footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: .82rem;
+}
+.anlice-footer .footer-bottom p { margin: 0; }
+.anlice-footer .footer-bottom a { color: #dce6ff; }
+#expertos > #nosotros { display: block; scroll-margin-top: 135px; }
+@media (max-width: 900px) {
+  .anlice-footer .footer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .anlice-footer .footer-columns { grid-template-columns: 1fr; }
+}
