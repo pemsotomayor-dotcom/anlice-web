@@ -156,14 +156,23 @@ document.addEventListener('click',function(e){
 })();
 
 
-/* Acceso directo a la agenda de reuniones. No modifica WhatsApp. */
+
+
+/* Agenda directa en la sección de contacto. Mantener el enlace flotante de WhatsApp. */
 (() => {
-  if (document.querySelector('.anlice-agenda-link')) return;
-  const link = document.createElement('a');
-  link.className = 'anlice-agenda-link';
-  link.href = '/agenda.html';
-  link.textContent = '📅 Agenda una conversación';
-  link.setAttribute('aria-label', 'Agendar una conversación con anlice');
-  link.style.cssText = 'position:fixed;left:18px;bottom:20px;z-index:998;background:#0b376c;color:#fff;text-decoration:none;padding:14px 19px;border-radius:999px;box-shadow:0 8px 25px #082d4d40;font:600 14px system-ui,Arial;max-width:calc(100vw - 110px);text-align:center';
-  document.body.appendChild(link);
+  const heading = [...document.querySelectorAll('h1,h2,h3,h4')].find(el => el.textContent.trim().includes('¿Qué resultado quieres mejorar en tu equipo?'));
+  if (!heading) return;
+  let section = heading.closest('section');
+  if (!section || !section.querySelector('form')) {
+    section = [...document.querySelectorAll('section')].filter(el => el.contains(heading) && el.querySelector('form')).sort((a,b)=>a.querySelectorAll('*').length-b.querySelectorAll('*').length)[0];
+  }
+  if (!section) return;
+  const oldForm = section.querySelector('form');
+  if (!oldForm) return;
+  const anchor = document.createElement('div');
+  anchor.className = 'anlice-agenda-embed';
+  anchor.style.cssText = 'width:100%;max-width:1040px;margin:0 auto;padding:10px 12px 28px';
+  anchor.innerHTML = '<iframe src="/agenda.html" title="Agenda tu reunión con anlice" loading="eager" style="width:100%;height:950px;max-width:100%;border:0;border-radius:22px;background:#f3f7fc" referrerpolicy="strict-origin-when-cross-origin"></iframe>';
+  section.replaceChildren(anchor);
+  section.style.cssText += ';display:block;max-width:100%;padding:12px 0;background:#f3f7fc;';
 })();
