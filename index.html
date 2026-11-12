@@ -184,6 +184,18 @@
 #activa .activa-result .bars i {
   background: linear-gradient(90deg, #0877f9 var(--activa-fill, var(--p)), #e6eef7 var(--activa-fill, var(--p)));
 }
+#activa .activa-chart-replay {
+  display: block;
+  margin: 10px 0 0 auto;
+  padding: 6px 10px;
+  border: 1px solid #c9def4;
+  border-radius: 8px;
+  background: #fff;
+  color: #07356f;
+  font: inherit;
+  font-size: .8rem;
+  cursor: pointer;
+}
 </style></head>
 <body><div class="anlice-loader" id="anliceLoader" aria-hidden="true"><div class="loader-brand"><div class="loader-bulb">💡</div><div class="loader-name">an<span>lice</span></div><div class="loader-tag">SOLUCIONES EMPRESARIALES</div></div></div>
 <div class="anlice-top-contact" aria-label="Contacto comercial"><div class="anlice-top-contact-inner"><a href="tel:+51903220257"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-3 2a15 15 0 0 0 6 6l2-3 5 2v4c0 1-1 2-2 2C10 21 3 14 3 5c0-1 1-2 2-2Z"/><path d="M15 3a6 6 0 0 1 6 6M15 7a2 2 0 0 1 2 2"/></svg><span><small>Contactar con ventas</small><strong>+51 903 220 257</strong></span></a><a href="mailto:conecta@anlice.pe"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="m3 5 9 8 9-8"/></svg><span><small>Escríbenos a</small><strong>conecta@anlice.pe</strong></span></a></div></div><header class="site-header">
@@ -454,31 +466,60 @@
 </script><script id="anlice-carousel-script">(()=>{const root=document.getElementById('inicio');if(!root?.classList.contains('anlice-carousel'))return;const slides=[...root.querySelectorAll('.carousel-slide')],dots=[...root.querySelectorAll('[data-go]')],cards=[...document.querySelectorAll('.solutions .cards>article')],pause=root.querySelector('.carousel-pause'),reduce=matchMedia('(prefers-reduced-motion:reduce)');let current=0,timer,paused=reduce.matches,bag=[];slides.slice(1).forEach((slide,i)=>{const source=cards[i]?.querySelector('.program-image img'),img=slide.querySelector('.carousel-image');if(source){img.src=source.src;img.alt=source.alt;}slide.querySelector('h2').dataset.copy=slide.querySelector('h2').textContent;});function animate(slide){if(!slide.classList.contains('workshop-slide'))return;const title=slide.querySelector('h2');title.replaceChildren();title.dataset.copy.split(' ').forEach((word,i)=>{const span=document.createElement('span');span.className='carousel-word';span.style.setProperty('--word-delay',(.55+i*.15)+'s');span.textContent=word;title.append(span,document.createTextNode(' '));});[['.carousel-label',.1],['.carousel-applied',2.6],['.carousel-cta',3.1]].forEach(([selector,delay])=>{const el=slide.querySelector(selector);el.classList.remove('carousel-enter');void el.offsetWidth;el.style.setProperty('--enter-delay',delay+'s');el.classList.add('carousel-enter');});}function schedule(){clearTimeout(timer);if(!paused&&!document.hidden)timer=setTimeout(()=>{if(!bag.length)bag=[0,1,2,3].filter(i=>i!==current).sort(()=>Math.random()-.5);show(bag.shift());},10000);}function show(i){slides.forEach((s,j)=>{s.hidden=j!==i;s.inert=j!==i;s.classList.toggle('is-current',j===i)});current=i;dots.forEach((d,j)=>d.setAttribute('aria-pressed',String(j===i)));animate(slides[i]);schedule();}dots.forEach(d=>d.addEventListener('click',()=>{bag=[];show(Number(d.dataset.go))}));root.querySelector('.prev').addEventListener('click',()=>{bag=[];show((current+3)%4)});root.querySelector('.next').addEventListener('click',()=>{bag=[];show((current+1)%4)});function updatePause(){pause.textContent=paused?'▶':'Ⅱ';pause.setAttribute('aria-label',paused?'Reanudar rotación':'Pausar rotación');}pause.addEventListener('click',()=>{paused=!paused;updatePause();schedule()});root.addEventListener('focusin',()=>clearTimeout(timer));root.addEventListener('focusout',()=>schedule());document.addEventListener('visibilitychange',schedule);root.querySelectorAll('[data-program]').forEach(b=>b.addEventListener('click',()=>{paused=true;updatePause();clearTimeout(timer);const card=cards[Number(b.dataset.program)];if(!card)return;const details=card.querySelector('details');if(details)details.open=true;card.scrollIntoView({behavior:reduce.matches?'auto':'smooth',block:'center'});const target=details?.querySelector('summary')||card.querySelector('#openExperienceWorkshop');target?.focus({preventScroll:true});if(Number(b.dataset.program)===2)target?.click();}));updatePause();schedule();})();</script><aside id="an-guide" aria-label="An, guía de ANLICE"><div class="an-panel" id="anGuidePanel" hidden><div class="an-top"><strong class="an-name"><span>A</span><span>n</span></strong><button class="an-close" type="button" aria-label="Cerrar guía">×</button></div><div class="an-study" aria-hidden="true"></div><div class="an-home"><h3>¿Hacia dónde quieres avanzar?</h3><p>Te ayudo a encontrar tu próximo paso.</p><button class="an-action" type="button" data-workshops>Explora talleres →</button><button class="an-action yellow" type="button" data-choose>Diagnóstico de tu equipo<br>o para tu desarrollo →</button></div><div class="an-diags" hidden><h3>Elige tu diagnóstico gratuito</h3><button class="an-diagnostic" type="button" data-an-diagnostic="activa"><strong>ACTIVA · Tu equipo</strong><small>Para empresas: identifica brechas y prioridades.</small></button><button class="an-diagnostic" type="button" data-an-diagnostic="impulsa"><strong>IMPULSA · Tu desarrollo</strong><small>Perfil joven: descubre qué habilidades fortalecer.</small></button><button class="an-action" type="button" data-back>← Volver</button></div></div><button class="an-greeting" type="button">¿Te ayudo a encontrar tu taller?</button><button class="an-launch" type="button" aria-label="Abrir An, guía de ANLICE" aria-expanded="false" aria-controls="anGuidePanel"><span class="an-study-mini" aria-hidden="true"></span></button></aside><script id="an-floating-guide-script">(()=>{const r=document.getElementById('an-guide'),p=r.querySelector('.an-panel'),l=r.querySelector('.an-launch'),g=r.querySelector('.an-greeting'),home=r.querySelector('.an-home'),d=r.querySelector('.an-diags');function close(){p.hidden=true;g.hidden=true;l.setAttribute('aria-expanded','false');l.focus({preventScroll:true})}function open(){p.hidden=false;home.hidden=false;d.hidden=true;g.hidden=true;l.setAttribute('aria-expanded','true');r.querySelector('.an-close').focus()}l.onclick=()=>p.hidden?open():close();g.onclick=open;r.querySelector('.an-close').onclick=close;r.onkeydown=e=>{if(e.key==='Escape')close()};r.querySelector('[data-workshops]').onclick=()=>{close();document.getElementById('soluciones').scrollIntoView({behavior:'smooth'})};r.querySelector('[data-choose]').onclick=()=>{home.hidden=true;d.hidden=false;d.querySelector('button').focus()};r.querySelector('[data-back]').onclick=()=>{home.hidden=false;d.hidden=true;r.querySelector('[data-choose]').focus()};r.querySelectorAll('[data-an-diagnostic]').forEach(b=>b.onclick=()=>{let team=b.dataset.anDiagnostic==='activa';close();document.getElementById(team?'activa':'impulsa')?.scrollIntoView({behavior:'smooth'});document.getElementById(team?'startActiva':'startImpulsa')?.click();document.getElementById(team?'quizScale':'impulsaScale')?.querySelector('button')?.focus({preventScroll:true})});setTimeout(()=>{g.classList.add('cloud-leaving');setTimeout(()=>g.hidden=true,500)},6000)})();</script><script id="activa-chart-visibility">
 (() => {
   const chart = document.querySelector('#activa .activa-result .result-body');
-  const score = chart?.querySelector('.score');
-  const bars = chart?.querySelectorAll('.bars i');
-  if (!score || !bars?.length || !('IntersectionObserver' in window)) return;
-
-  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  if (!chart) return;
+  const score = chart.querySelector('.score');
+  const bars = [...chart.querySelectorAll('.bars i')];
   const fills = [[score, Number(score.querySelector('b').textContent)],
-    ...Array.from(bars, bar => [bar, parseFloat(bar.style.getPropertyValue('--p'))])];
+    ...bars.map(bar => [bar, parseFloat(bar.style.getPropertyValue('--p'))])];
+  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+  let frame = 0;
+  let timer = 0;
+  let visible = false;
+
   function paint(progress) {
     fills.forEach(([element, target]) => element.style.setProperty('--activa-fill', target * progress + '%'));
   }
-  if (reduceMotion.matches) return;
-  paint(0);
 
-  const observer = new IntersectionObserver(entries => {
-    if (!entries.some(entry => entry.isIntersecting && entry.intersectionRatio >= .15)) return;
-    observer.disconnect();
-    let start;
-    function animate(now) {
-      start ??= now;
-      const elapsed = Math.min(1, (now - start) / 1250);
-      paint(reduceMotion.matches ? 1 : 1 - (1 - elapsed) ** 2);
-      if (elapsed < 1 && !reduceMotion.matches) requestAnimationFrame(animate);
+  function play() {
+    clearTimeout(timer);
+    cancelAnimationFrame(frame);
+    paint(0);
+    const start = performance.now();
+    function tick(now) {
+      const progress = Math.min(1, (now - start) / 1800);
+      paint(1 - (1 - progress) ** 2);
+      if (progress < 1) frame = requestAnimationFrame(tick);
     }
-    requestAnimationFrame(animate);
-  }, { threshold: .15 });
+    frame = requestAnimationFrame(tick);
+  }
+
+  const replay = document.createElement('button');
+  replay.type = 'button';
+  replay.className = 'activa-chart-replay';
+  replay.textContent = 'Reproducir animación';
+  replay.addEventListener('click', play);
+  chart.after(replay);
+
+  if (!('IntersectionObserver' in window)) return;
+  function startWhenReady() {
+    if (!visible || reducedMotion.matches) return;
+    if (document.body.classList.contains('is-loading')) {
+      timer = setTimeout(startWhenReady, 150);
+      return;
+    }
+    play();
+  }
+  const observer = new IntersectionObserver(([entry]) => {
+    if (entry.intersectionRatio < .1) {
+      visible = false;
+      clearTimeout(timer);
+      cancelAnimationFrame(frame);
+      paint(1);
+    } else if (entry.intersectionRatio >= .35 && !visible) {
+      visible = true;
+      if (!reducedMotion.matches) timer = setTimeout(startWhenReady, 320);
+    }
+  }, { threshold: [.1, .35] });
   observer.observe(chart);
 })();
 </script>
