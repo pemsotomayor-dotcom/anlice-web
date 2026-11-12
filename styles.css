@@ -1847,3 +1847,19 @@ footer.anlice-footer {
 @media (max-width: 480px) {
   .anlice-footer .footer-columns { grid-template-columns: 1fr; }
 }
+
+footer.anlice-footer {
+  padding-block: clamp(48px, 7vw, 112px) 32px;
+}
+.anlice-footer .footer-columns { row-gap: 34px; }
+.anlice-footer .footer-columns a { margin-block: 12px; }
+.anlice-footer .footer-claims {
+  border: 1px solid #a5b5d080;
+  border-radius: 5px;
+  padding: 10px 14px;
+}
+.anlice-footer .footer-bottom {
+  margin-top: clamp(36px, 5vw, 72px);
+  padding-top: 26px;
+}
+.anlice-footer .footer-history:target { display: block; }

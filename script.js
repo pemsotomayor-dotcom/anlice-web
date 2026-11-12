@@ -171,59 +171,19 @@ document.addEventListener('click',function(e){
 })();
 
 (() => {
-  const footer = document.querySelector('body > footer') || document.querySelector('footer');
-  const story = document.getElementById('nosotros');
-  const profile = document.getElementById('expertos');
-  const brand = footer?.querySelector('.footer-logo');
-  const legal = footer?.querySelector('.privacy-footer');
-  if (!footer || !story || !profile || !brand || !legal) return;
-
-  const copyright = [...footer.children].find(element => element.textContent.startsWith('©'));
-  const columns = document.createElement('div');
-  columns.className = 'footer-columns';
-  columns.innerHTML = `
-    <div class="footer-brand-column"><p>Personas que generan resultados.</p></div>
-    <nav aria-label="ANLICE"><h2>ANLICE</h2>
-      <a href="#inicio">Inicio</a><a href="#nuestra-historia">Nuestra historia</a>
-      <a href="#expertos">Facilitador</a><a href="#contacto">Contacto</a>
-    </nav>
-    <nav aria-label="Soluciones ANLICE"><h2>Soluciones</h2>
-      <a href="#soluciones">Servicios</a><a href="#activa">anlice ACTIVA</a>
-      <a href="#impulsa">anlice IMPULSA</a>
-    </nav>
-    <div><h2>Contacto</h2><address>Hernando de Soto 224<br>San Miguel, Lima</address>
-      <a href="mailto:conecta@anlice.pe">conecta@anlice.pe</a>
-      <a href="tel:+51903220257">+51 903 220 257</a>
-    </div>`;
-  columns.firstElementChild.prepend(brand);
-
-  const history = document.createElement('details');
-  history.id = 'nuestra-historia';
-  history.className = 'footer-history';
-  const summary = document.createElement('summary');
-  summary.textContent = 'Nuestra historia';
-  story.id = 'historia-anlice';
-  history.append(summary, story);
-
-  const bottom = document.createElement('div');
-  bottom.className = 'footer-bottom';
-  if (copyright) bottom.append(copyright);
-  bottom.append(legal);
-  footer.replaceChildren(columns, history, bottom);
-  footer.classList.add('anlice-footer');
-
-  const profileAnchor = document.createElement('span');
-  profileAnchor.id = 'nosotros';
-  profile.prepend(profileAnchor);
+  const history = document.getElementById('nuestra-historia');
+  const link = document.querySelector('.anlice-footer a[href="#nuestra-historia"]');
+  if (!history || !link) return;
 
   function revealHistory() {
     if (location.hash !== '#nuestra-historia') return;
     history.open = true;
     requestAnimationFrame(() => history.scrollIntoView());
   }
-  columns.querySelector('[href="#nuestra-historia"]').addEventListener('click', () => {
+
+  link.addEventListener('click', () => {
     history.open = true;
-    summary.focus({ preventScroll: true });
+    history.querySelector('summary').focus({ preventScroll: true });
   });
   addEventListener('hashchange', revealHistory);
   revealHistory();
