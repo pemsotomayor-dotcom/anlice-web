@@ -136,3 +136,21 @@ document.addEventListener('click',function(e){
   consent.addEventListener('change',()=>consent.closest('label')?.classList.remove('privacy-attention'));
  });
 })();
+(() => {
+  const history = document.getElementById('nuestra-historia');
+  const link = document.querySelector('.anlice-footer a[href="#nuestra-historia"]');
+  if (!history || !link) return;
+
+  function revealHistory() {
+    if (location.hash !== '#nuestra-historia') return;
+    history.open = true;
+    requestAnimationFrame(() => history.scrollIntoView());
+  }
+
+  link.addEventListener('click', () => {
+    history.open = true;
+    history.querySelector('summary').focus({ preventScroll: true });
+  });
+  addEventListener('hashchange', revealHistory);
+  revealHistory();
+})();

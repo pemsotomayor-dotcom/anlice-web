@@ -1684,3 +1684,77 @@ img{max-width:100%}
 .profile-final .profile-orgs .exact-approved-band .anlice-band-track{
  background-color:#edf7ff!important;
 }
+
+/* Compact footer; the main navigation retains its own layout. */
+footer.anlice-footer {
+  display: block;
+  padding: 28px clamp(18px, 6vw, 100px) 18px;
+}
+.anlice-footer .footer-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) repeat(2, minmax(0, .85fr)) minmax(0, 1.25fr);
+  align-items: start;
+  gap: 20px 24px;
+  max-width: 1250px;
+  margin-inline: auto;
+}
+.anlice-footer .footer-columns > nav {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start;
+  position: static;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  min-width: 0;
+  background: none;
+  box-shadow: none;
+}
+.anlice-footer .footer-columns h2 {
+  margin: 0 0 5px;
+  color: #fff;
+  font-size: .82rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.anlice-footer .footer-columns p { margin: 7px 0; }
+.anlice-footer .footer-columns a,
+.anlice-footer .footer-columns address {
+  display: block;
+  color: inherit;
+  font-size: .9rem;
+  font-style: normal;
+  line-height: 1.5;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+.anlice-footer .footer-columns .footer-claims { text-decoration: underline; }
+.anlice-footer .footer-bottom,
+.anlice-footer .footer-history {
+  max-width: 1250px;
+  margin: 16px auto 0;
+  padding-top: 12px;
+  border-top: 1px solid #ffffff38;
+}
+.anlice-footer .footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 6px 18px;
+  font-size: .8rem;
+}
+.anlice-footer .footer-bottom p { margin: 0; }
+.anlice-footer .footer-bottom a { color: #dcecff; }
+.anlice-footer .footer-history:not([open]):not(:target) { display: none; }
+.anlice-footer .footer-history summary { cursor: pointer; }
+.anlice-footer .footer-history .about-story { background: #fff; color: #17395f; }
+.anlice-footer .footer-history,
+#expertos > #nosotros { scroll-margin-top: 135px; }
+#expertos > #nosotros { display: block; }
+@media (max-width: 840px) {
+  .anlice-footer .footer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 460px) {
+  .anlice-footer .footer-columns { grid-template-columns: 1fr; }
+}
