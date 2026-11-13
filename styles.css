@@ -1792,3 +1792,13 @@ footer.anlice-footer .footer-bottom a {
   footer.anlice-footer .footer-columns address,
   footer.anlice-footer .footer-columns p { font-size: 15px !important; }
 }
+
+
+/* IMPULSA: compact graphic, consistent with anlice's blue and yellow identity. */
+.anlice-impulsa .impulsa-journey{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:760px;margin:24px 0 10px;padding:16px 20px;border:1px solid #dce8f5;border-radius:20px;background:linear-gradient(120deg,#ffffff,#eef7ff);box-shadow:0 8px 24px #123b6410}
+.anlice-impulsa .impulsa-journey-step{display:flex;align-items:center;flex-direction:column;text-align:center;flex:1;min-width:0;gap:4px;color:#07356f}
+.anlice-impulsa .impulsa-journey-icon{display:grid;place-items:center;width:48px;height:48px;border-radius:16px;background:#fff2bf;color:#07356f;font-size:29px;font-weight:700;margin-bottom:3px}
+.anlice-impulsa .impulsa-journey-step strong{font-size:15px;font-weight:700}
+.anlice-impulsa .impulsa-journey-step small{font-size:12px;color:#506c89;line-height:1.3}
+.anlice-impulsa .impulsa-journey-arrow{color:#0877f9;font-size:24px;font-weight:700;flex:none}
+@media(max-width:600px){.anlice-impulsa .impulsa-journey{gap:4px;padding:12px 6px}.anlice-impulsa .impulsa-journey-icon{width:38px;height:38px;font-size:23px}.anlice-impulsa .impulsa-journey-step strong{font-size:12px}.anlice-impulsa .impulsa-journey-step small{font-size:10px}.anlice-impulsa .impulsa-journey-arrow{font-size:16px}}
