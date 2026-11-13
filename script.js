@@ -213,14 +213,29 @@ document.addEventListener('click',function(e){
    cta.textContent='Descubre tus fortalezas →';
    if(arrow)cta.appendChild(arrow);
   }
-  const anchor=cta?.parentElement||description?.parentElement||heading?.parentElement;
-  if(!anchor)return;
-  const visual=document.createElement('div');
-  visual.className='impulsa-journey';
-  visual.setAttribute('role','img');
-  visual.setAttribute('aria-label','Ruta visual: identifica tus fortalezas, descubre qué mejorar y da tu siguiente paso laboral');
-  visual.innerHTML='<div class="impulsa-journey-step"><span class="impulsa-journey-icon">✦</span><strong>Reconoce</strong><small>Tus fortalezas</small></div><span class="impulsa-journey-arrow">→</span><div class="impulsa-journey-step"><span class="impulsa-journey-icon">◎</span><strong>Descubre</strong><small>Qué mejorar</small></div><span class="impulsa-journey-arrow">→</span><div class="impulsa-journey-step"><span class="impulsa-journey-icon">↗</span><strong>Avanza</strong><small>Tu próximo paso</small></div>';
-  anchor.insertAdjacentElement('afterend',visual);
+  const content=heading?.closest('div') || description?.closest('div');
+  if(!content || content.querySelector('.impulsa-preview'))return;
+  const chart=document.createElement('aside');
+  chart.className='impulsa-preview';
+  chart.setAttribute('aria-label','Vista ilustrativa del diagnóstico de habilidades laborales');
+  const dimensions=[['Comunicación',82],['Trabajo en equipo',74],['Adaptabilidad',66],['Iniciativa',59]];
+  chart.innerHTML='<div class="impulsa-preview-head"><strong>Así conocerás tus fortalezas</strong><small>Vista de ejemplo · No es tu resultado</small></div><div class="impulsa-preview-body"><div class="impulsa-preview-ring"><span><b data-counter="70">0</b><small>/100</small></span></div><div class="impulsa-preview-bars">'+dimensions.map(([name,value])=>'<div class="impulsa-preview-line"><div><span>'+name+'</span><b data-counter="'+value+'">0</b><small>%</small></div><i><em data-width="'+value+'"></em></i></div>').join('')+'</div></div><p class="impulsa-preview-foot">Identifica tus puntos fuertes y descubre por dónde empezar a mejorar.</p>';
+  const copy=document.createElement('div');copy.className='impulsa-preview-copy';
+  while(content.firstChild)copy.appendChild(content.firstChild);
+  content.append(copy,chart);
+  content.classList.add('impulsa-preview-layout');
+  const animate=()=>{
+   chart.classList.remove('impulsa-preview-visible');
+   chart.querySelectorAll('[data-counter]').forEach(el=>el.textContent='0');
+   requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    chart.classList.add('impulsa-preview-visible');
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){chart.querySelectorAll('[data-counter]').forEach(el=>el.textContent=el.dataset.counter);return;}
+    const start=performance.now(),duration=1050;
+    const tick=now=>{const t=Math.min(1,(now-start)/duration),e=1-Math.pow(1-t,3);chart.querySelectorAll('[data-counter]').forEach(el=>el.textContent=Math.round(Number(el.dataset.counter)*e));if(t<1)requestAnimationFrame(tick)};
+    requestAnimationFrame(tick);
+   }));
+  };
+  if('IntersectionObserver' in window){const observer=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){animate();observer.disconnect();}},{threshold:.3});observer.observe(chart);}else animate();
  }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',enhanceImpulsa);
  else enhanceImpulsa();
