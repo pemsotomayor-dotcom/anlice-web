@@ -195,3 +195,33 @@ document.addEventListener('click',function(e){
   else mountAgenda();
   window.addEventListener('load',mountAgenda,{once:true});
 })();
+
+
+/* Clarify the IMPULSA benefit and add a compact visual skills journey. */
+(() => {
+ function enhanceImpulsa(){
+  const section=document.querySelector('.anlice-impulsa');
+  if(!section || section.querySelector('.impulsa-journey'))return;
+  const nodes=[...section.querySelectorAll('h1,h2,h3,p,a,button,small,span')];
+  const heading=nodes.find(e=>e.textContent?.includes('Competencias para tu primer gran paso'));
+  if(heading) heading.textContent='¿Sabes cuáles son tus fortalezas para empezar a trabajar?';
+  const description=nodes.find(e=>e.textContent?.includes('Creemos en el talento de los jóvenes peruanos'));
+  if(description)description.textContent='Descubre qué habilidades ya tienes y cuáles puedes desarrollar para dar tu primer gran paso en el mundo laboral.';
+  const cta=nodes.find(e=>e.textContent?.includes('Descubre tu Perfil IMPULSA'));
+  if(cta){
+   const arrow=cta.querySelector('svg');
+   cta.textContent='Descubre tus fortalezas →';
+   if(arrow)cta.appendChild(arrow);
+  }
+  const anchor=cta?.parentElement||description?.parentElement||heading?.parentElement;
+  if(!anchor)return;
+  const visual=document.createElement('div');
+  visual.className='impulsa-journey';
+  visual.setAttribute('role','img');
+  visual.setAttribute('aria-label','Ruta visual: identifica tus fortalezas, descubre qué mejorar y da tu siguiente paso laboral');
+  visual.innerHTML='<div class="impulsa-journey-step"><span class="impulsa-journey-icon">✦</span><strong>Reconoce</strong><small>Tus fortalezas</small></div><span class="impulsa-journey-arrow">→</span><div class="impulsa-journey-step"><span class="impulsa-journey-icon">◎</span><strong>Descubre</strong><small>Qué mejorar</small></div><span class="impulsa-journey-arrow">→</span><div class="impulsa-journey-step"><span class="impulsa-journey-icon">↗</span><strong>Avanza</strong><small>Tu próximo paso</small></div>';
+  anchor.insertAdjacentElement('afterend',visual);
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',enhanceImpulsa);
+ else enhanceImpulsa();
+})();
