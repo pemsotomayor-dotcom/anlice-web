@@ -1758,3 +1758,37 @@ footer.anlice-footer {
 @media (max-width: 460px) {
   .anlice-footer .footer-columns { grid-template-columns: 1fr; }
 }
+
+
+/* Footer typography aligned with the white header navigation (Nov 2026). */
+footer.anlice-footer .footer-columns,
+footer.anlice-footer .footer-bottom {
+  font-family: Inter, Arial, sans-serif !important;
+}
+footer.anlice-footer .footer-columns h2 {
+  font-family: inherit !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+  letter-spacing: 0 !important;
+}
+footer.anlice-footer .footer-columns a,
+footer.anlice-footer .footer-columns address,
+footer.anlice-footer .footer-columns p {
+  font-family: inherit !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  letter-spacing: normal !important;
+}
+footer.anlice-footer .footer-bottom,
+footer.anlice-footer .footer-bottom a {
+  font-family: inherit !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+}
+@media (max-width: 460px) {
+  footer.anlice-footer .footer-columns a,
+  footer.anlice-footer .footer-columns address,
+  footer.anlice-footer .footer-columns p { font-size: 15px !important; }
+}
