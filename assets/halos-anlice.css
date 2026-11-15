@@ -4,25 +4,43 @@ body {
   background-size: 480px 360px;
 }
 
-main > :is(.anlice-activa, .anlice-impulsa, .solutions, .method, .clients-showcase, .about-story) {
-  position: relative;
-  isolation: isolate;
+/* Use only the clear outer gutters of padded sections. */
+body:has(#expertos) {
+  background-image: none !important;
 }
 
-main > :is(.anlice-activa, .anlice-impulsa, .solutions, .method, .clients-showcase, .about-story)::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: url("halos-anlice.svg") center top / 480px 360px repeat;
-  mask-image:
-    linear-gradient(to right, #000 0%, #000 19%, transparent 34%, transparent 66%, #000 81%, #000 100%),
-    linear-gradient(to bottom, transparent, #000 min(70px, 18%), #000 calc(100% - min(70px, 18%)), transparent);
-  mask-composite: intersect;
+@media (min-width: 761px) {
+  main > :is(.anlice-impulsa, .solutions, .method, .clients-showcase) {
+    position: relative;
+    isolation: isolate;
+  }
+
+  main > :is(.anlice-impulsa, .solutions, .method, .clients-showcase)::before,
+  main > :is(.anlice-impulsa, .solutions, .method, .clients-showcase)::after {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    width: min(4%, 72px);
+    z-index: -1;
+    pointer-events: none;
+    background: url("halos-anlice.svg") 66.5% top / 245px 184px repeat-y;
+    mask-image:
+      linear-gradient(to right, transparent, #000 25%, #000 70%, transparent),
+      linear-gradient(to bottom, transparent, #000 min(70px, 18%), #000 calc(100% - min(70px, 18%)), transparent);
+    mask-composite: intersect;
+  }
+
+  main > :is(.anlice-impulsa, .solutions, .method, .clients-showcase)::before {
+    inset-inline-start: 0;
+  }
+
+  main > :is(.anlice-impulsa, .solutions, .method, .clients-showcase)::after {
+    inset-inline-end: 0;
+    background-position-y: 85px;
+  }
 }
 
-/* Keep the entire logo row visible and the blue band flush with the page edges. */
+/* Keep the blue band flush with the page edges and loop the two logo sets. */
 #expertos .profile-orgs .anlice-logos-viewport {
   width: 100cqw !important;
   max-width: none !important;
@@ -38,19 +56,25 @@ html:has(#expertos) {
   content: none !important;
 }
 
-#expertos .exact-approved-band .anlice-band-track,
-#expertos .exact-approved-band .anlice-band-set {
-  width: 100% !important;
-  animation: none !important;
-  transform: none !important;
+#expertos .exact-approved-band .anlice-band-track {
+  width: 200% !important;
+  animation: anlice-full-width-logo-loop 32s linear infinite !important;
 }
 
 #expertos .exact-approved-band .anlice-band-set {
-  flex: 0 0 100% !important;
+  width: 50% !important;
+  flex: 0 0 50% !important;
 }
 
-#expertos .exact-approved-band .anlice-band-set[aria-hidden="true"] {
-  display: none !important;
+@keyframes anlice-full-width-logo-loop {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #expertos .exact-approved-band .anlice-band-track {
+    animation: none !important;
+  }
 }
 
 #expertos .exact-approved-band .anlice-band-track .anlice-band-set img {
