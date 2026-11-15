@@ -4,17 +4,57 @@ body {
   background-size: 480px 360px;
 }
 
-main > :is(.anlice-activa, .anlice-impulsa, .solutions, .method, .profile-final, .clients-showcase, .about-story) {
+main > :is(.anlice-activa, .anlice-impulsa, .solutions, .method, .clients-showcase, .about-story) {
   position: relative;
   isolation: isolate;
 }
 
-main > :is(.anlice-activa, .anlice-impulsa, .solutions, .method, .profile-final, .clients-showcase, .about-story)::before {
+main > :is(.anlice-activa, .anlice-impulsa, .solutions, .method, .clients-showcase, .about-story)::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
   pointer-events: none;
   background: url("halos-anlice.svg") center top / 480px 360px repeat;
-  mask-image: linear-gradient(to right, #000 0%, #000 19%, transparent 34%, transparent 66%, #000 81%, #000 100%);
+  mask-image:
+    linear-gradient(to right, #000 0%, #000 19%, transparent 34%, transparent 66%, #000 81%, #000 100%),
+    linear-gradient(to bottom, transparent, #000 min(70px, 18%), #000 calc(100% - min(70px, 18%)), transparent);
+  mask-composite: intersect;
+}
+
+/* Keep the entire logo row visible and the blue band flush with the page edges. */
+#expertos .profile-orgs .anlice-logos-viewport {
+  width: 100cqw !important;
+  max-width: none !important;
+  margin-inline: calc((100% - 100cqw) / 2) !important;
+}
+
+html:has(#expertos) {
+  container-type: inline-size;
+}
+
+#expertos .exact-approved-band::before,
+#expertos .exact-approved-band::after {
+  content: none !important;
+}
+
+#expertos .exact-approved-band .anlice-band-track,
+#expertos .exact-approved-band .anlice-band-set {
+  width: 100% !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+#expertos .exact-approved-band .anlice-band-set {
+  flex: 0 0 100% !important;
+}
+
+#expertos .exact-approved-band .anlice-band-set[aria-hidden="true"] {
+  display: none !important;
+}
+
+#expertos .exact-approved-band .anlice-band-track .anlice-band-set img {
+  width: calc(100% - var(--interbank-slot)) !important;
+  flex: 0 0 calc(100% - var(--interbank-slot)) !important;
+  object-fit: contain !important;
 }
