@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360">
   <defs>
     <radialGradient id="halo">
-      <stop stop-color="#9bbfe1" stop-opacity=".24"/>
+      <stop stop-color="#9bbfe1" stop-opacity=".53"/>
       <stop offset="1" stop-color="#bfd9f1" stop-opacity="0"/>
     </radialGradient>
     <g id="bulb" fill="none" stroke="#98b7d1" stroke-width="6" stroke-linecap="round">
@@ -12,17 +12,17 @@
     .light { animation: glow 20s ease-in-out infinite alternate; }
     .later { animation-delay: -11s; }
     .faint { animation-delay: -5s; }
-    @keyframes glow { from { opacity: .28; } to { opacity: .83; } }
+    @keyframes glow { from { opacity: .53; } to { opacity: 1; } }
     @media (prefers-reduced-motion: reduce) { .light { animation: none; } }
   </style>
   <g class="light" opacity=".5">
     <ellipse cx="78" cy="79" rx="75" ry="72" fill="url(#halo)"/>
     <ellipse cx="382" cy="264" rx="82" ry="78" fill="url(#halo)"/>
-    <use href="#bulb" transform="translate(375 254) scale(.14)" opacity=".52"/>
+    <use href="#bulb" transform="translate(375 254) scale(.14)" opacity=".72"/>
   </g>
   <g class="light later" opacity=".5">
     <ellipse cx="319" cy="91" rx="84" ry="79" fill="url(#halo)"/>
-    <use href="#bulb" transform="translate(312 81) scale(.14)" opacity=".52"/>
+    <use href="#bulb" transform="translate(312 81) scale(.14)" opacity=".72"/>
   </g>
   <g class="light faint" opacity=".5">
     <ellipse cx="146" cy="265" rx="90" ry="83" fill="url(#halo)"/>
