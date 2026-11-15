@@ -1,0 +1,20 @@
+/* Decorative wallpaper on exposed page backgrounds. */
+body {
+  background-image: url("halos-anlice.svg") !important;
+  background-size: 480px 360px;
+}
+
+main > :is(.anlice-activa, .anlice-impulsa, .solutions, .method, .profile-final, .clients-showcase, .about-story) {
+  position: relative;
+  isolation: isolate;
+}
+
+main > :is(.anlice-activa, .anlice-impulsa, .solutions, .method, .profile-final, .clients-showcase, .about-story)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("halos-anlice.svg") center top / 480px 360px repeat;
+  mask-image: linear-gradient(to right, #000 0%, #000 4%, transparent 17%, transparent 83%, #000 96%, #000 100%);
+}
