@@ -1838,3 +1838,63 @@ footer.anlice-footer .footer-columns a,footer.anlice-footer .footer-columns addr
 footer.anlice-footer .footer-brand-column>p{font-size:14px!important}
 footer.anlice-footer .footer-bottom,footer.anlice-footer .footer-bottom a,footer.anlice-footer .footer-bottom p{font-size:12px!important;font-weight:400!important;line-height:1.5!important}
 @media(max-width:600px){footer.anlice-footer .footer-columns h2{font-size:14px!important}footer.anlice-footer .footer-columns a,footer.anlice-footer .footer-columns address,footer.anlice-footer .footer-columns p{font-size:13px!important}}
+
+/* Footer layout, scoped to the main site's footer. */
+footer.anlice-footer {
+  padding: 50px clamp(20px, 5.5vw, 100px) 24px;
+  padding-inline-end: max(100px, 5.5vw);
+}
+footer.anlice-footer .footer-columns {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 36px clamp(20px, 3vw, 46px);
+}
+footer.anlice-footer .footer-columns > nav {
+  align-items: stretch;
+  gap: 11px;
+}
+footer.anlice-footer .footer-columns h2 {
+  margin: 0 0 16px;
+  padding-bottom: 13px;
+  text-transform: none;
+  position: relative;
+  border-bottom: 1px solid #ffffff30;
+  font-size: 17px !important;
+}
+footer.anlice-footer .footer-columns h2::after {
+  content: "";
+  position: absolute;
+  inset: auto auto -1px 0;
+  width: 36px;
+  height: 2px;
+  background: #ffd334;
+}
+footer.anlice-footer .footer-columns > nav h2 { margin-bottom: 5px; }
+footer.anlice-footer .footer-columns > nav a {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+footer.anlice-footer .footer-columns > nav a::before {
+  content: "";
+  flex: 0 0 5px;
+  height: 5px;
+  background: #ffd334;
+  transform: translateY(-2px);
+}
+footer.anlice-footer .footer-columns address + a,
+footer.anlice-footer .footer-columns a[href^="tel:"] { margin-top: 10px; }
+footer.anlice-footer .footer-columns .footer-logo {
+  width: min(100%, 218px);
+  box-sizing: border-box;
+}
+footer.anlice-footer .footer-columns .footer-logo img { max-width: 100%; }
+footer.anlice-footer .footer-columns .footer-claims { margin-top: 14px; }
+footer.anlice-footer .footer-columns a { overflow-wrap: anywhere; }
+footer.anlice-footer .footer-bottom { margin-top: 32px; padding-top: 17px; }
+@media (max-width: 1000px) {
+  footer.anlice-footer .footer-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px) {
+  footer.anlice-footer { padding: 36px 22px 96px; }
+  footer.anlice-footer .footer-columns { grid-template-columns: 1fr; gap: 28px; }
+}
