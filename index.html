@@ -11,20 +11,7 @@ gtag('config', 'AW-18568032560');
 document.addEventListener('click', function(event) {
   const link = event.target.closest('a[href^="https://wa.me/51915147263"]');
   if (link && typeof gtag === 'function') {
-    const conversion = { send_to: 'AW-18568032560/veYmCIL03LkdELDi9pVF' };
-    if (!event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
-      event.preventDefault();
-      let opened = false;
-      const openChat = function() {
-        if (opened) return;
-        opened = true;
-        window.location.assign(link.href);
-      };
-      window.setTimeout(openChat, 950);
-      conversion.event_callback = openChat;
-      conversion.event_timeout = 900;
-    }
-    gtag('event', 'conversion', conversion);
+    gtag('event', 'conversion', { send_to: 'AW-18568032560/veYmCIL03LkdELDi9pVF' });
   }
 }, true);
 </script>
