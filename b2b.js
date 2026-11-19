@@ -1,8 +1,30 @@
+/* Complete workshop catalogue, using the existing workshop dialogs. */
+(()=>{
+ const track=document.querySelector('.b2b-needs-grid');if(!track)return;
+ const templates=[...track.children];
+ const workshops=[
+ ['LIDERAZGO 360','Líderes que movilizan.','Feedback, delegación y conversaciones que ayudan a actuar.','openLeadershipWorkshop','de Liderazgo 360',0],
+ ['VENTAS 360','Conversaciones que venden.','Conecta con el cliente, responde objeciones y acompaña el cierre.','sales','de Ventas 360',1],
+ ['VENTAS INMOBILIARIAS','Conecta con su próximo hogar.','Comprende al comprador y acompaña la decisión hasta el cierre.','openEstateWorkshop','de Ventas inmobiliarias',1],
+ ['VENTAS EDUCATIVAS','Detrás de cada matrícula, un futuro.','Conecta con las metas del postulante y acompaña su siguiente paso.','openEducationWorkshop','de Ventas educativas',1],
+ ['VENTAS HIPOTECARIAS','De la consulta a la casa propia.','Fortalece la asesoría, el seguimiento y la coordinación para avanzar.','mortgage','de Ventas hipotecarias',1],
+ ['VENTA CONSULTIVA','Haz visible el valor.','Descubre necesidades y convierte servicios en soluciones relevantes.','openServicesWorkshop','de Venta consultiva de servicios',1],
+ ['LIDERAZGO PARA JEFES','Activa el potencial de tu equipo.','Entrenamiento para jefes y supervisores que buscan movilizar resultados.','openLeadersResultsWorkshop','de Liderazgo para jefes y supervisores',0],
+ ['TEAM BUILDING','Equipos que conectan.','Fortalece la confianza y la coordinación para resolver retos juntos.','openTeamBuildingWorkshop','de Team Building',2],
+ ['EXPERIENCIA 360','Cada contacto cuenta.','Escucha, resuelve y recupera la confianza de tus clientes.','openExperienceWorkshop','de Experiencia del cliente',3]
+ ];
+ track.replaceChildren(...workshops.map(([category,title,description,target,name,icon])=>{const card=templates[icon].cloneNode(true);const label=document.createElement('span');label.className='b2b-category';label.textContent=category;card.querySelector('h3').before(label);card.querySelector('h3').textContent=title;card.querySelector('p').textContent=description;const button=card.querySelector('button');button.dataset.b2bTarget=target;button.querySelector('.sr-only').textContent=' '+name;return card;}));
+ const all=document.createElement('a');all.className='b2b-link';all.href='#programas';all.textContent='Ver todos los talleres';const row=document.createElement('p');row.style.textAlign='center';row.append(all);track.after(row);
+ const source=document.getElementById('estateWorkshop');
+ if(source){const dialog=source.cloneNode(true);dialog.id='mortgageWorkshop';dialog.setAttribute('aria-labelledby','mortgageTitle');dialog.setAttribute('aria-describedby','mortgageIntro');dialog.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id'));const title=dialog.querySelector('h2');title.id='mortgageTitle';title.innerHTML='Cada crédito empieza con <span>un proyecto de vida.</span>';dialog.querySelector('.estate-kicker').textContent='VENTAS 360 · TALLER DE VENTAS HIPOTECARIAS';const intro=dialog.querySelector('.estate-hero-copy > p:last-child');intro.id='mortgageIntro';intro.textContent='Entrenamiento práctico para asesores y equipos comerciales de créditos hipotecarios.';
+ const topics=[['Comprende al cliente','Identifica su proyecto, necesidades y dudas para orientar la conversación.'],['Asesora con claridad','Explica el proceso y trabaja objeciones de cuota, plazos y financiamiento.'],['Acompaña cada etapa','Ordena el seguimiento y coordina con clientes, inmobiliarias y áreas internas.']];dialog.querySelectorAll('.estate-topics > div').forEach((el,i)=>{el.querySelector('h3').textContent=topics[i][0];el.querySelector('p').textContent=topics[i][1];});dialog.querySelector('.estate-close').setAttribute('aria-label','Cerrar taller de Ventas hipotecarias');dialog.querySelector('.estate-close').addEventListener('click',()=>dialog.close());dialog.querySelector('.estate-proposal').href='https://wa.me/51915147263?text='+encodeURIComponent('Hola, anlice. Quisiera una propuesta del taller de Ventas hipotecarias para mi equipo.');document.body.append(dialog);}
+})();
 /* Route the new need cards into the existing workshop controls. */
 (()=>{
  const reduce=matchMedia('(prefers-reduced-motion: reduce)');
  document.querySelectorAll('[data-b2b-target]').forEach(button=>button.addEventListener('click',()=>{
   const id=button.dataset.b2bTarget;
+  if(id==='mortgage'){document.getElementById('mortgageWorkshop')?.showModal();return;}
   if(id==='sales'){
    const card=document.querySelector('#programas>article');
    const details=card?.querySelector('details');
@@ -17,8 +39,6 @@
 (()=>{
  const track=document.querySelector('.b2b-needs-grid');if(!track)return;
  const cards=[...track.children],reduce=matchMedia('(prefers-reduced-motion: reduce)');
- const copy=[['LIDERAZGO 360','Líderes que movilizan.','Feedback, delegación y conversaciones que ayudan a actuar.'],['VENTAS 360','Conversaciones que venden.','Conecta con el cliente, responde objeciones y acompaña el cierre.'],['TEAM BUILDING','Equipos que conectan.','Fortalece la confianza y la coordinación para resolver retos juntos.'],['EXPERIENCIA 360','Cada contacto cuenta.','Escucha, resuelve y recupera la confianza de tus clientes.']];
- cards.forEach((card,i)=>{const label=document.createElement('span');label.className='b2b-category';label.textContent=copy[i][0];card.querySelector('h3').before(label);card.querySelector('h3').textContent=copy[i][1];card.querySelector('p').textContent=copy[i][2];});
  const controls=document.createElement('div');controls.className='b2b-carousel-controls';
  controls.innerHTML='<button type="button" aria-label="Taller anterior">‹</button><span class="b2b-carousel-count" aria-live="off"></span><button type="button" aria-label="Taller siguiente">›</button><button type="button" class="b2b-carousel-toggle">Pausar movimiento</button>';
  track.after(controls);track.setAttribute('aria-label','Talleres según las necesidades de tu equipo');track.setAttribute('aria-roledescription','carrusel');
