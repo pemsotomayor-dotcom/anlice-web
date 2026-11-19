@@ -70,3 +70,5 @@ body .b2b-evidence-grid ul li:before{position:static!important;flex:0 0 21px!imp
 @media(max-width:600px){body .b2b-needs-grid{gap:16px}body .b2b-needs-grid>article{flex-basis:90%}.b2b-carousel-controls{gap:8px}.b2b-carousel-controls button{padding:9px 13px}}
 body section.b2b-needs{overflow:hidden}
 body .b2b-needs-grid{min-width:0;max-width:100%;box-sizing:border-box}
+/* Keep horizontal gestures inside the card rail, never on the whole page. */
+html:has(.b2b-needs-grid),body:has(.b2b-needs-grid){overflow-x:clip}
