@@ -13,8 +13,16 @@
  ['EXPERIENCIA 360','Cada contacto cuenta.','Escucha, resuelve y recupera la confianza de tus clientes.','openExperienceWorkshop','de Experiencia del cliente',3]
  ];
  track.replaceChildren(...workshops.map(([category,title,description,target,name,icon])=>{const card=templates[icon].cloneNode(true);const label=document.createElement('span');label.className='b2b-category';label.textContent=category;card.querySelector('h3').before(label);const svg=card.querySelector('.b2b-icon svg');
- if(category==='VENTAS EDUCATIVAS')svg.innerHTML='<path d="m2 8 10-5 10 5-10 5L2 8ZM6 10v6c3 3 9 3 12 0v-6M22 8v8"/>';
- if(category==='VENTAS 360')svg.innerHTML='<path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h4l4 4v-4h8a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/><path d="M6 9h12M6 13h7"/>';
+ const icons={
+ 'LIDERAZGO 360':'<circle cx="12" cy="12" r="9"/><path d="m16 8-2.5 5.5L8 16l2.5-5.5L16 8Z"/>',
+ 'VENTAS 360':'<path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h4l4 4v-4h8a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/><path d="M6 9h12M6 13h7"/>',
+ 'VENTAS EDUCATIVAS':'<path d="m2 8 10-5 10 5-10 5L2 8ZM6 10v6c3 3 9 3 12 0v-6M22 8v8"/>',
+ 'VENTAS HIPOTECARIAS':'<path d="m2 11 10-9 10 9M5 9v12h14V9M9 21v-8h6v8"/>',
+ 'VENTA CONSULTIVA':'<circle cx="10" cy="10" r="7"/><path d="m15 15 6 6M7 10l2 2 4-4"/>',
+ 'LIDERAZGO PARA JEFES':'<circle cx="12" cy="4" r="2"/><path d="M8 11V9a4 4 0 0 1 8 0v2M12 11v4M4 15h16M4 15v3M12 15v3M20 15v3"/><circle cx="4" cy="21" r="2"/><circle cx="12" cy="21" r="2"/><circle cx="20" cy="21" r="2"/>',
+ 'TEAM BUILDING':'<circle cx="12" cy="6" r="3"/><circle cx="4" cy="9" r="2"/><circle cx="20" cy="9" r="2"/><path d="M6 21v-4a6 6 0 0 1 12 0v4M1 20v-4a3 3 0 0 1 4-3m18 7v-4a3 3 0 0 0-4-3"/>',
+ 'EXPERIENCIA 360':'<path d="M4 13V9a8 8 0 0 1 16 0v4M4 10H2v7h4v-7H4m16 0h2v7h-4v-7h2m0 7c0 4-4 4-7 4"/>'
+ };svg.innerHTML=icons[category];
  card.querySelector('h3').textContent=title;card.querySelector('p').textContent=description;const button=card.querySelector('button');button.dataset.b2bTarget=target;button.querySelector('.sr-only').textContent=' '+name;return card;}));
  const all=document.createElement('a');all.className='b2b-link';all.href='#programas';all.textContent='Ver todos los talleres';const row=document.createElement('p');row.style.textAlign='center';row.append(all);track.after(row);
  const source=document.getElementById('estateWorkshop');
