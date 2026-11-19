@@ -81,3 +81,13 @@ body .b2b-needs-grid>article h3{font-family:Inter,Arial,sans-serif!important;fon
 body .b2b-needs-grid>article p{font-size:18px!important;line-height:1.5!important;text-align:left!important;margin:0 0 22px!important;max-width:100%;color:#17395f}
 body .b2b-needs-grid .b2b-link{font-size:18px!important;font-weight:800!important;padding:10px 0;border-radius:0;border-bottom:2px solid #ffd334}
 @media(max-width:760px){body .b2b-needs-grid>article{padding:28px 24px;min-height:380px}body .b2b-needs-grid>article h3{font-size:32px!important}body .b2b-needs-grid>article p{font-size:18px!important}}
+
+/* Give scheduling a clear visual priority. */
+.b2b-agenda summary{display:flex;align-items:center;gap:16px;list-style:none;padding:24px 28px;font-family:Inter,Arial,sans-serif;font-size:24px;font-weight:800;line-height:1.3;letter-spacing:-.025em;background:#fff;color:var(--b2b-navy)}
+.b2b-agenda summary::-webkit-details-marker{display:none}
+.b2b-calendar-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 52px;width:52px;height:52px;border-radius:15px;background:#e5f2ff;color:var(--b2b-blue)}
+.b2b-calendar-icon svg{width:29px;height:29px;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.b2b-agenda summary::after{content:'';width:10px;height:10px;flex:0 0 10px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-left:auto;margin-right:4px}
+.b2b-agenda[open] summary::after{transform:rotate(225deg)}
+.b2b-agenda summary:hover{background:#f0f7ff}
+@media(max-width:760px){.b2b-agenda summary{font-size:20px;padding:20px 18px;gap:12px}.b2b-calendar-icon{flex-basis:44px;width:44px;height:44px}.b2b-calendar-icon svg{width:26px;height:26px}}
