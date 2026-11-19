@@ -5,7 +5,6 @@
  const workshops=[
  ['LIDERAZGO 360','Líderes que movilizan.','Feedback, delegación y conversaciones que ayudan a actuar.','openLeadershipWorkshop','de Liderazgo 360',0],
  ['VENTAS 360','Conversaciones que venden.','Conecta con el cliente, responde objeciones y acompaña el cierre.','sales','de Ventas 360',1],
- ['VENTAS INMOBILIARIAS','Conecta con su próximo hogar.','Comprende al comprador y acompaña la decisión hasta el cierre.','openEstateWorkshop','de Ventas inmobiliarias',1],
  ['VENTAS EDUCATIVAS','Detrás de cada matrícula, un futuro.','Conecta con las metas del postulante y acompaña su siguiente paso.','openEducationWorkshop','de Ventas educativas',1],
  ['VENTAS HIPOTECARIAS','De la consulta a la casa propia.','Fortalece la asesoría, el seguimiento y la coordinación para avanzar.','mortgage','de Ventas hipotecarias',1],
  ['VENTA CONSULTIVA','Haz visible el valor.','Descubre necesidades y convierte servicios en soluciones relevantes.','openServicesWorkshop','de Venta consultiva de servicios',1],
@@ -13,7 +12,10 @@
  ['TEAM BUILDING','Equipos que conectan.','Fortalece la confianza y la coordinación para resolver retos juntos.','openTeamBuildingWorkshop','de Team Building',2],
  ['EXPERIENCIA 360','Cada contacto cuenta.','Escucha, resuelve y recupera la confianza de tus clientes.','openExperienceWorkshop','de Experiencia del cliente',3]
  ];
- track.replaceChildren(...workshops.map(([category,title,description,target,name,icon])=>{const card=templates[icon].cloneNode(true);const label=document.createElement('span');label.className='b2b-category';label.textContent=category;card.querySelector('h3').before(label);card.querySelector('h3').textContent=title;card.querySelector('p').textContent=description;const button=card.querySelector('button');button.dataset.b2bTarget=target;button.querySelector('.sr-only').textContent=' '+name;return card;}));
+ track.replaceChildren(...workshops.map(([category,title,description,target,name,icon])=>{const card=templates[icon].cloneNode(true);const label=document.createElement('span');label.className='b2b-category';label.textContent=category;card.querySelector('h3').before(label);const svg=card.querySelector('.b2b-icon svg');
+ if(category==='VENTAS EDUCATIVAS')svg.innerHTML='<path d="m2 8 10-5 10 5-10 5L2 8ZM6 10v6c3 3 9 3 12 0v-6M22 8v8"/>';
+ if(category==='VENTAS 360')svg.innerHTML='<path d="M20 4H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h4l4 4v-4h8a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Z"/><path d="M6 9h12M6 13h7"/>';
+ card.querySelector('h3').textContent=title;card.querySelector('p').textContent=description;const button=card.querySelector('button');button.dataset.b2bTarget=target;button.querySelector('.sr-only').textContent=' '+name;return card;}));
  const all=document.createElement('a');all.className='b2b-link';all.href='#programas';all.textContent='Ver todos los talleres';const row=document.createElement('p');row.style.textAlign='center';row.append(all);track.after(row);
  const source=document.getElementById('estateWorkshop');
  if(source){const dialog=source.cloneNode(true);dialog.id='mortgageWorkshop';dialog.setAttribute('aria-labelledby','mortgageTitle');dialog.setAttribute('aria-describedby','mortgageIntro');dialog.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id'));const title=dialog.querySelector('h2');title.id='mortgageTitle';title.innerHTML='Cada crédito empieza con <span>un proyecto de vida.</span>';dialog.querySelector('.estate-kicker').textContent='VENTAS 360 · TALLER DE VENTAS HIPOTECARIAS';const intro=dialog.querySelector('.estate-hero-copy > p:last-child');intro.id='mortgageIntro';intro.textContent='Entrenamiento práctico para asesores y equipos comerciales de créditos hipotecarios.';
