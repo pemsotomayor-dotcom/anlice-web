@@ -72,3 +72,12 @@ body section.b2b-needs{overflow:hidden}
 body .b2b-needs-grid{min-width:0;max-width:100%;box-sizing:border-box}
 /* Keep horizontal gestures inside the card rail, never on the whole page. */
 html:has(.b2b-needs-grid),body:has(.b2b-needs-grid){overflow-x:clip}
+/* Larger editorial typography, using the existing Inter family and palette. */
+body .b2b-needs-grid{scroll-snap-type:none!important}
+body .b2b-needs-grid>article{align-items:flex-start;text-align:left;padding:32px 28px 28px;min-height:390px;border-top:4px solid #0877f9}
+body .b2b-needs-grid .b2b-icon{width:70px;height:70px;margin-bottom:22px}
+body .b2b-category{color:#0877f9;font:800 13px/1.4 Inter,Arial,sans-serif;letter-spacing:.07em;margin-bottom:12px}
+body .b2b-needs-grid>article h3{font-family:Inter,Arial,sans-serif!important;font-size:clamp(28px,2.6vw,38px)!important;font-weight:800!important;letter-spacing:-.045em!important;line-height:1.08!important;text-align:left!important;margin:0 0 20px!important;max-width:100%;color:#07356f}
+body .b2b-needs-grid>article p{font-size:18px!important;line-height:1.5!important;text-align:left!important;margin:0 0 22px!important;max-width:100%;color:#17395f}
+body .b2b-needs-grid .b2b-link{font-size:18px!important;font-weight:800!important;padding:10px 0;border-radius:0;border-bottom:2px solid #ffd334}
+@media(max-width:760px){body .b2b-needs-grid>article{padding:28px 24px;min-height:380px}body .b2b-needs-grid>article h3{font-size:32px!important}body .b2b-needs-grid>article p{font-size:18px!important}}
