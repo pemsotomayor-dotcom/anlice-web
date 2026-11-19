@@ -55,7 +55,7 @@ window.matchMedia('(min-width: 1101px)').addEventListener('change', closeMenu);
     document.getElementById('quizTotal').textContent=total;document.getElementById('quizLevel').textContent=total>=80?'Fortaleza consolidada':total>=60?'En desarrollo':total>=40?'Requiere atención':'Prioridad de intervención';
     document.getElementById('quizGap').textContent=gap;document.getElementById('quizInsight').textContent=w[2];document.getElementById('quizWorkshop').textContent=w[0];document.getElementById('quizWorkshopFocus').textContent=w[1];
     document.getElementById('quizChart').innerHTML=qs.map((q,i)=>'<div><span>'+q.dataset.dim+'</span><b>'+scores[i]+'%</b><i><em style="width:'+scores[i]+'%"></em></i></div>').join('');
-    const contact=document.getElementById('quizContact');const msg='Hola anlice, realicé ACTIVA Express. Mi resultado general fue '+total+'/100 y mi principal oportunidad detectada fue '+gap+' ('+min+'%). Me recomendaron '+w[0]+'. Quisiera conversar sobre mi resultado.';contact.href='https://wa.me/51903220257?text='+encodeURIComponent(msg);contact.target='_blank';contact.rel='noopener noreferrer';contact.onclick=null;
+    const contact=document.getElementById('quizContact');const msg='Hola anlice, realicé ACTIVA Express. Mi resultado general fue '+total+'/100 y mi principal oportunidad detectada fue '+gap+' ('+min+'%). Me recomendaron '+w[0]+'. Quisiera conversar sobre mi resultado.';contact.href='https://wa.me/51915147263?text='+encodeURIComponent(msg);contact.target='_blank';contact.rel='noopener noreferrer';contact.onclick=null;
   }
   document.getElementById('restartActiva')?.addEventListener('click',reset);
 })();
@@ -83,7 +83,7 @@ window.matchMedia('(min-width: 1101px)').addEventListener('change', closeMenu);
  document.getElementById('impulsaTotal').textContent=total;document.getElementById('impulsaLevel').textContent=total>=85?'IMPULSA Ready':total>=70?'IMPULSA Avanzado':total>=50?'IMPULSA en Desarrollo':'IMPULSA Inicial';
  document.getElementById('impulsaGap').textContent=gap;document.getElementById('impulsaInsight').textContent=a[0];document.getElementById('impulsaNext').textContent=a[1];
  document.getElementById('impulsaChart').innerHTML=qs.map((q,i)=>'<div><span>'+q.dataset.dim+'</span><b>'+scores[i]+'%</b><i><em style="width:'+scores[i]+'%"></em></i></div>').join('');
- const contact=document.getElementById('impulsaContact');const msg='Hola anlice, hice mi Perfil IMPULSA. Obtuve '+total+'/100 y quiero reforzar '+gap+'. Mi siguiente paso recomendado es '+a[1]+'. Quisiera orientación para mejorar mi perfil.';contact.href='https://wa.me/51903220257?text='+encodeURIComponent(msg);contact.target='_blank';contact.rel='noopener noreferrer';}
+ const contact=document.getElementById('impulsaContact');const msg='Hola anlice, hice mi Perfil IMPULSA. Obtuve '+total+'/100 y quiero reforzar '+gap+'. Mi siguiente paso recomendado es '+a[1]+'. Quisiera orientación para mejorar mi perfil.';contact.href='https://wa.me/51915147263?text='+encodeURIComponent(msg);contact.target='_blank';contact.rel='noopener noreferrer';}
  document.getElementById('restartImpulsa').addEventListener('click',reset);
 })();
 
