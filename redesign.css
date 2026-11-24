@@ -27,3 +27,10 @@ body.anlice-redesign header.site-header .header-anlice-logo{width:210px!importan
 body.anlice-redesign header.site-header #main-nav a{font-size:20px!important;padding:12px!important}
 body.anlice-redesign header.site-header #main-nav.open{align-items:stretch!important;gap:8px!important}
 }
+
+/* Clear contrast for the training proposal panel */
+body.anlice-redesign #necesidades .b2b-organizer{background:#07356f!important;border:1px solid #164a85!important;box-shadow:none!important}
+body.anlice-redesign #necesidades .b2b-organizer h3{color:#ffffff!important}
+body.anlice-redesign #necesidades .b2b-organizer p{color:#e3efff!important;opacity:1!important}
+body.anlice-redesign #necesidades .b2b-organizer .btn{background:#ffcf28!important;color:#07356f!important;border:1px solid #ffcf28!important;font-weight:750!important}
+body.anlice-redesign #necesidades .b2b-organizer .btn:hover{background:#ffdc62!important;border-color:#ffdc62!important}
